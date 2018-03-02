@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_la.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-hdpi\\ic_la.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_home.xml.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_s_activity.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-mdpi\\s_activity.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_la.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-xxhdpi\\ic_la.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_splash.xml.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_s_activity.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-hdpi\\s_activity.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_s_activity.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-xhdpi\\s_activity.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_la.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-xhdpi\\ic_la.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_s_activity.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-ldpi\\s_activity.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_s_activity.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-xxhdpi\\s_activity.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_la.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-mdpi\\ic_la.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_la.jpg.flat",
+        "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\drawable-ldpi\\ic_la.jpg"
+    }
+]

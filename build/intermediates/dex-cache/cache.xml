@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudio\Gohospital1\app\libs\volley.jar"
+        jumboMode="false"
+        min-sdk-version="8"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4a94601db9bdfb7dc60efabb3dea91a0675f591d">
+        <dex dex="D:\AndroidStudio\Gohospital1\app\build\intermediates\transforms\preDex\release\2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudio\Gohospital1\app\libs\org.apache.http.legacy.jar"
+        jumboMode="false"
+        min-sdk-version="8"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5f0541a4298daa0590b22cfbde43f85e2a675545">
+        <dex dex="D:\AndroidStudio\Gohospital1\app\build\intermediates\transforms\preDex\release\1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudio\Gohospital1\app\libs\xUtils-2.5.5.jar"
+        jumboMode="false"
+        min-sdk-version="8"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7b27a19b6f7ed3d26d9157147545c94ea8ee535">
+        <dex dex="D:\AndroidStudio\Gohospital1\app\build\intermediates\transforms\preDex\release\3.jar" />
+    </item>
+
+</items>

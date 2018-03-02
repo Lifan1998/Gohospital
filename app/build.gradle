@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.example.life"
+        minSdkVersion 8
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/xUtils-2.5.5.jar')
+}
