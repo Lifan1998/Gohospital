@@ -4,22 +4,39 @@
             "outputFile": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\values\\color.xml",
                     "from": {
-                        "startLines": "6,15",
-                        "startColumns": "4,4",
-                        "startOffsets": "191,522",
-                        "endLines": "12,17",
-                        "endColumns": "12,12",
-                        "endOffsets": "481,679"
+                        "startLines": "2,3,6,5,4",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "57,102,242,196,147",
+                        "endColumns": "43,43,42,44,47",
+                        "endOffsets": "96,141,280,236,190"
                     },
                     "to": {
-                        "startLines": "3,10",
-                        "startColumns": "4,4",
-                        "startOffsets": "103,394",
-                        "endLines": "9,12",
-                        "endColumns": "12,12",
-                        "endOffsets": "389,549"
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,99,143,186,231",
+                        "endColumns": "43,43,42,44,47",
+                        "endOffsets": "94,138,181,226,274"
+                    }
+                },
+                {
+                    "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "6,15,29,20",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "192,525,1056,692",
+                        "endLines": "12,17,38,26",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "484,682,1506,1046"
+                    },
+                    "to": {
+                        "startLines": "8,15,18,28",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "327,618,778,1224",
+                        "endLines": "14,17,27,34",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "613,773,1219,1572"
                     }
                 },
                 {
@@ -32,11 +49,11 @@
                         "endOffsets": "62"
                     },
                     "to": {
-                        "startLines": "2",
+                        "startLines": "7",
                         "startColumns": "4",
-                        "startOffsets": "55",
+                        "startOffsets": "279",
                         "endColumns": "47",
-                        "endOffsets": "98"
+                        "endOffsets": "322"
                     }
                 }
             ]
