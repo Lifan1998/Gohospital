@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_menu_poi.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\tab_menu_poi.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_material.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_menu_user.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\tab_menu_user.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_menu_more.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\tab_menu_more.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\password_close.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\password_close.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_menu_user_on.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_user_on.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_menu_deal.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\tab_menu_deal.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_menu_text.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\tab_menu_text.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_menu_user_off.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_user_off.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_menu_meg_off.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_meg_off.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_menu_deal_off.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_deal_off.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_menu_better.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\tab_menu_better.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_menu_deal_on.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_deal_on.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_menu_bg.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\tab_menu_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_num.png",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\bg_num.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_menu_meg_on.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_meg_on.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_menu_more_on.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_more_on.jpg"
+    }
+]

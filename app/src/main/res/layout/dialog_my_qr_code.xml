@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#33000000"
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/doctor_null"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="10dip"
+            android:text="扫一扫上面的二维码，加我为好友"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dip"
+            android:text="（长按保存到本地）"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+</LinearLayout>

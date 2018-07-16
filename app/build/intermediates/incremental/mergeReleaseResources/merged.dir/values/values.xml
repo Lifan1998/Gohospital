@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="text_blue">#2fccff</color>
+    <color name="text_gray">#c9c9c9</color>
+    <color name="text_red">#FF0000</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
     <string name="app_name">Gohospital</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
@@ -10,5 +16,38 @@
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="tab_menu_bgnum">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+
+        <item name="android:layout_marginLeft">-10dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:background">@drawable/bg_num</item>
+    </style>
+    <style name="tab_menu_text">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@drawable/tab_menu_text</item>
+    </style>
+    <style name="textview12sp" parent="wrapcontent">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="textview14sp" parent="wrapcontent">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="textview16sp" parent="wrapcontent">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="wrapcontent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 </resources>

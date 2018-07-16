@@ -4,30 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/ly_top_bar"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@color/transparent">
-
-        <TextView
-            android:id="@+id/txt_topbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="信息"
-            android:textColor="@color/text_gray"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2px"
-            android:layout_alignParentBottom="true"
-            android:background="@color/text_gray" />
-
-    </RelativeLayout>
-
     <LinearLayout
         android:id="@+id/ly_tab_menu"
         android:layout_width="match_parent"
@@ -37,7 +13,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/ly_tab_menu_deal"
+            android:id="@+id/ly_tab_menu_home"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -49,22 +25,16 @@
                 android:padding="5dp">
 
                 <TextView
-                    android:id="@+id/tab_menu_deal"
+                    android:id="@+id/tab_menu_home"
                     style="@style/tab_menu_text"
                     android:drawableTop="@drawable/tab_menu_better"
                     android:text="主页" />
 
-                <TextView
-                    android:id="@+id/tab_menu_deal_num"
-                    style="@style/tab_menu_bgnum"
-                    android:layout_toRightOf="@+id/tab_menu_deal"
-                    android:text="99+"
-                    android:visibility="gone" />
             </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ly_tab_menu_poi"
+            android:id="@+id/ly_tab_menu_news"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -76,23 +46,16 @@
                 android:padding="5dp">
 
                 <TextView
-                    android:id="@+id/tab_menu_poi"
+                    android:id="@+id/tab_menu_news"
                     style="@style/tab_menu_text"
                     android:drawableTop="@drawable/tab_menu_poi"
-                    android:text="消息" />
+                    android:text="资讯" />
 
-                <TextView
-                    android:id="@+id/tab_menu_poi_num"
-                    style="@style/tab_menu_bgnum"
-                    android:layout_toRightOf="@+id/tab_menu_poi"
-                    android:text="99+"
-                    android:visibility="gone" />
             </RelativeLayout>
         </LinearLayout>
 
-
         <LinearLayout
-            android:id="@+id/ly_tab_menu_user"
+            android:id="@+id/ly_tab_menu_ask"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -104,53 +67,32 @@
                 android:padding="5dp">
 
                 <TextView
-                    android:id="@+id/tab_menu_user"
+                    android:id="@+id/tab_menu_ask"
                     style="@style/tab_menu_text"
-                    android:drawableTop="@drawable/tab_menu_user"
+                    android:drawableTop="@drawable/tab_menu_better"
+                    android:text="问答" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_my"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/tab_menu_my"
+                    style="@style/tab_menu_text"
+                    android:drawableTop="@drawable/tab_menu_better"
                     android:text="我的" />
 
-                <ImageView
-                    android:id="@+id/tab_menu_setting_partner"
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:layout_marginLeft="-5dp"
-                    android:layout_toRightOf="@id/tab_menu_user"
-                    android:visibility="gone"
-
-
-                    />
-
             </RelativeLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ly_tab_menu_more"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="5dp">
-
-                <TextView
-                    android:id="@+id/tab_menu_more"
-                    style="@style/tab_menu_text"
-                    android:drawableTop="@drawable/tab_menu_more"
-                    android:text="更多" />
-
-                <TextView
-                    android:id="@+id/tab_menu_more_num"
-                    style="@style/tab_menu_bgnum"
-                    android:layout_toRightOf="@+id/tab_menu_more"
-                    android:text="99+"
-                    android:visibility="gone" />
-            </RelativeLayout>
-        </LinearLayout>
-
-
 
 
     </LinearLayout>
@@ -166,8 +108,11 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/transparent"
-        android:layout_above="@id/div_tab_bar"
-        android:layout_below="@id/ly_top_bar"/>
+        android:layout_above="@+id/ly_tab_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/transparent" >
+
+    </FrameLayout>
 
 </RelativeLayout>

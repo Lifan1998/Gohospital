@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="text_blue">#ADD8E6</color>
-    <color name="text_gray">#808080</color>
+    <color name="text_blue">#2fccff</color>
+    <color name="text_gray">#c9c9c9</color>
     <color name="transparent">#00000000</color>
-    <color name="text_white">#FFFFFF</color>
-    <color name="text_red">#FF0000</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_red">#ff0000</color>
+    <color name="list_divider_color">#c8c7cc</color>
+    <color name="main_black">#333</color>
+    <color name="ques_bt_text_color_light">#24cf5f</color>
 </resources>

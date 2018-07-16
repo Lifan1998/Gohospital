@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/home/HomeActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/loading/DownLoadUtils.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/loading/MyUtils.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/loading/SplashActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/loading/VersionEntity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/loading/VersionUpdateUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/init/DownLoadUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/init/MyUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/init/SplashActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/init/VersionEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/init/VersionUpdateUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/main/MainActivity.java" charset="UTF-8" />
     <file url="file://D:/apache-tomcat-9.0.1-windows-x64/apache-tomcat-9.0.1/webapps/ROOT/updateinfo.html" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

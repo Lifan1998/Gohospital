@@ -1,42 +1,59 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "outputFile": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\values\\color.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "19",
-                        "endColumns": "47",
-                        "endOffsets": "62"
+                        "startLines": "2,3,6,5,4",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "57,102,242,196,147",
+                        "endColumns": "43,43,42,44,47",
+                        "endOffsets": "96,141,280,236,190"
                     },
                     "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "47",
-                        "endOffsets": "98"
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,99,143,186,231",
+                        "endColumns": "43,43,42,44,47",
+                        "endOffsets": "94,138,181,226,274"
                     }
                 },
                 {
-                    "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "6,15",
-                        "startColumns": "4,4",
-                        "startOffsets": "191,522",
-                        "endLines": "12,17",
-                        "endColumns": "12,12",
-                        "endOffsets": "481,679"
+                        "startLines": "6,15,29,20,48,53,44,40",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "192,525,1056,692,1867,2052,1687,1514",
+                        "endLines": "12,17,38,26,51,56,47,43",
+                        "endColumns": "12,12,12,12,12,12,12,12",
+                        "endOffsets": "484,682,1506,1046,2041,2226,1861,1681"
                     },
                     "to": {
-                        "startLines": "3,10",
+                        "startLines": "9,16,19,29,36,40,44,48",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "397,688,848,1294,1647,1823,1999,2175",
+                        "endLines": "15,18,28,35,39,43,47,51",
+                        "endColumns": "12,12,12,12,12,12,12,12",
+                        "endOffsets": "683,843,1289,1642,1818,1994,2170,2339"
+                    }
+                },
+                {
+                    "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "2,5",
                         "startColumns": "4,4",
-                        "startOffsets": "103,394",
-                        "endLines": "9,12",
-                        "endColumns": "12,12",
-                        "endOffsets": "389,549"
+                        "startOffsets": "19,129",
+                        "endColumns": "47,69",
+                        "endOffsets": "62,194"
+                    },
+                    "to": {
+                        "startLines": "7,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "279,327",
+                        "endColumns": "47,69",
+                        "endOffsets": "322,392"
                     }
                 }
             ]

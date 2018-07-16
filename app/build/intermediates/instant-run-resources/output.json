@@ -1,1 +1,1 @@
-[{"outputType":{"type":"INSTANT_RUN_PACKAGED_RESOURCES"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"resources-debug.ir.ap_","properties":{"packageId":"com.example.life","split":"","minSdkVersion":"8"}}]
+[{"outputType":{"type":"INSTANT_RUN_PACKAGED_RESOURCES"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":2},"path":"resources-debug.ir.ap_","properties":{"packageId":"com.example.life","split":"","minSdkVersion":"21"}}]

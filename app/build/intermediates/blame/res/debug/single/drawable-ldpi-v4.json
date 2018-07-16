@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_title_bar_icon_bg.xml",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\ic_title_bar_icon_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\email_delete_pressed.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\email_delete_pressed.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\hospital_null.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\hospital_null.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\password.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\password.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\erke1.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\erke1.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\yuyueguahao.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\yuyueguahao.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\gengduo.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\gengduo.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\s_activity.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\s_activity.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\fuchanke.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\fuchanke.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_arrow_right.png",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\ic_arrow_right.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\pifuke.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\pifuke.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\erke.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\erke.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\yan1.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\yan1.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\search_1.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\search_1.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\punei.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\punei.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\yan.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\yan.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\xiaohua.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\xiaohua.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\doctor_null.jpg",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\doctor_null.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\guke.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\guke.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\username.PNG",
+        "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\drawable-ldpi\\username.PNG"
+    }
+]

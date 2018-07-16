@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AndroidStudio\\Gohospital1\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "D:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "D:\\AndroidStudio\\Gohospital1\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "source": "D:\\AndroidStudio\\Gohospital\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",

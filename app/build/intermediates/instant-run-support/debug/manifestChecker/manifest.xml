@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.life"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="2.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="21" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 在SDCard中创建与删除文件权限 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 适配Android O 应用安装 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:allowBackup="true"
         android:debuggable="true"
-        android:icon="@drawable/ic_la"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="loading.SplashActivity"
+            android:name="init.SplashActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,9 +32,62 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="home.HomeActivity"
+            android:name="main.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="user.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="user.ForgetPassActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="user.RegisterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="appoint.AppointmentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="appoint.AppointSearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="my.MyInforActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="setting.SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.life"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+
+        <activity
+            android:name="com.azhon.appupdate.activity.PermissionActivity"
+            android:label=""
+            android:theme="@style/DialogActivity" />
+
+        <service android:name="com.azhon.appupdate.service.DownloadService" />
+
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
