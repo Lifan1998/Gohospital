@@ -49,15 +49,17 @@ public class AppointmentActivity extends Activity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_appoint);
+
         initView();
     }
 
     private void initView() {
-        mListView = (ListView) findViewById(R.id.appointment_listView);
-        ImageView searchImage = (ImageView)findViewById(R.id.search_image);
-        returnImage = (ImageView)findViewById(R.id.imgv_leftbtn) ;
+        mListView =  findViewById(R.id.appointment_listView);
+        ImageView searchImage = findViewById(R.id.search_image);
+        returnImage = findViewById(R.id.imgv_leftbtn) ;
         returnImage.setOnClickListener(this);
         searchImage.setOnClickListener(this);
+
         new Thread(){
             public void run() {
                 hospitals = HospitalParser.getHospitals();
@@ -72,7 +74,7 @@ public class AppointmentActivity extends Activity implements View.OnClickListene
                                     int position, long id) {
                 Hospital item = (Hospital) adapter.getItem(position);
                 Intent intent  = new Intent();
-                intent.putExtra("phone", item.name);
+                intent.putExtra("id", item.id);
                 setResult(0, intent);
                 finish();
             }
