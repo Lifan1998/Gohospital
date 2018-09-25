@@ -74,13 +74,54 @@ android:layout_marginRight="5dp"
             android:text="  搜索  " />
     </RelativeLayout>
 
-
-    <ListView
-        android:id="@+id/doctor_listview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="医院"/>
+
+        <ListView
+            android:id="@+id/li_search_hospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="查看更多"
+          android:gravity="center"/>
+    </LinearLayout>
 
 
-    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/li_search_hospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="医生" />
+
+        <ListView
+            android:id="@+id/li_search_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看更多"
+            android:gravity="center"/>
+    </LinearLayout>
 </LinearLayout>

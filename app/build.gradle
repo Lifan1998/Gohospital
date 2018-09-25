@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'com.jakewharton:butterknife'
+apply plugin: 'org.greenrobot.greendao'
+
 
 android {
     compileSdkVersion 26
@@ -18,7 +21,15 @@ android {
     }
 }
 
+greendao {
+    schemaVersion 1//数据库版本号
+    daoPackage 'greendao'//设置DaoMaster、DaoSession、Dao包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    //targetGenDirTest：设置生成单元测试目录
+    //generateTests：设置自动生成单元测试用例
+}
 dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/org.apache.http.legacy.jar')
     compile files('libs/volley.jar')
     compile files('libs/xUtils-2.5.5.jar')
@@ -26,4 +37,10 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.azhon:appupdate:1.5.6'
     implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+
+
 }

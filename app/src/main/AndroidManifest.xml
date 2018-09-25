@@ -47,6 +47,18 @@
         <activity android:name="setting.SettingActivity"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name="appoint.HospitalActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="appoint.ConfirmActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="appoint.DeptActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="appoint.DoctorActivity"
+            android:screenOrientation="portrait">
+        </activity>
 
 
         <provider

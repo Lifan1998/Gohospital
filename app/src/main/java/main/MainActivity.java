@@ -18,7 +18,7 @@ import android.widget.Toast;
 import ask.AskFragment;
 import home.HomeFragment;
 import init.MyUtils;
-import init.SplashActivity;
+
 import init.VersionUpdateUtils;
 import my.MyFragment;
 import news.NewsFragment;
@@ -41,13 +41,16 @@ public class MainActivity extends Activity implements View.OnClickListener{
 	private String mVersion;
 
 
-	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+
+
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);	
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_home);
 		bindView();
 		ly_one.performClick();
+
 		updatecheck();
 
 	}

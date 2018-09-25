@@ -4,43 +4,77 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.life.R;
 
+import org.json.JSONArray;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import appoint.adapter.HospitalAdapter;
 import appoint.entity.Hospital;
-import appoint.utils.HospitalParser;
+import appoint.utils.JsonParser;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import greendao.DatabaseUtils;
 
 /**
  * Created by lenovo on 2018/4/18.
  */
 
-public class AppointmentActivity extends Activity implements View.OnClickListener {
+public class AppointmentActivity extends Activity {
+
+
+    @BindView(R.id.search_image)
+    ImageView searchImage;
+    @BindView(R.id.appointment_listView)
+    ListView appointmentListView;
+    @BindView(R.id.layout_return)
+    LinearLayout layoutReturn;
+    @BindView(R.id.tv_title)
+    TextView tvTitle;
+    @BindView(R.id.iv_msg)
+    ImageView ivMsg;
+    @BindView(R.id.tv_msg_num)
+    TextView tvMsgNum;
 
     private ListView mListView;
-    private ImageView returnImage;
+
     private HospitalAdapter adapter;
     private List<Hospital> hospitals;
 
 
-    Handler mHandler  = new Handler(){
-        public void handleMessage(android.os.Message msg) {
+    Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
             switch (msg.what) {
-                case 10:
-                    if(hospitals != null){
-                        adapter = new HospitalAdapter(hospitals,AppointmentActivity.this);
+                case 0:
+                    if (hospitals != null) {
+                        adapter = new HospitalAdapter(hospitals, AppointmentActivity.this);
                         mListView.setAdapter(adapter);
                     }
                     break;
             }
-        };
+        }
+
+        ;
     };
 
 
@@ -49,50 +83,86 @@ public class AppointmentActivity extends Activity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_appoint);
-
+        ButterKnife.bind(this);
+        tvTitle.setText("预约挂号");
+        tvMsgNum.setVisibility(View.INVISIBLE);
         initView();
+        initListView();
     }
 
     private void initView() {
-        mListView =  findViewById(R.id.appointment_listView);
-        ImageView searchImage = findViewById(R.id.search_image);
-        returnImage = findViewById(R.id.imgv_leftbtn) ;
-        returnImage.setOnClickListener(this);
-        searchImage.setOnClickListener(this);
-
-        new Thread(){
-            public void run() {
-                hospitals = HospitalParser.getHospitals();
-
-                mHandler.sendEmptyMessage(10);
-            };
-        }.start();
+        mListView = findViewById(R.id.appointment_listView);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
+
                 Hospital item = (Hospital) adapter.getItem(position);
-                Intent intent  = new Intent();
-                intent.putExtra("id", item.id);
-                setResult(0, intent);
-                finish();
+                Intent intent = new Intent(AppointmentActivity.this, HospitalActivity.class);
+                intent.putExtra("id", item.getId());
+                intent.putExtra("name", item.getName());
+                intent.putExtra("score", item.getScore());
+                intent.putExtra("address", item.getAddress());
+                intent.putExtra("grade", item.getGrade()).putExtra("imageurl", item.getImageurl());
+                startActivity(intent);
+
             }
         });
 
 
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.search_image:
-                startActivity(new Intent(AppointmentActivity.this, AppointSearchActivity.class));
-                break;
-            case R.id.imgv_leftbtn:
-                finish();
-                break;
+
+
+    private void initListView() {
+        hospitals = new ArrayList<>();
+        hospitals = DatabaseUtils.getDaoSession(AppointmentActivity.this).getHospitalDao().loadAll();
+        if (hospitals.size() == 0) {
+            RequestQueue mQueue = Volley.newRequestQueue(AppointmentActivity.this);
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest("http://120.79.241.203:8080/GoHospital/getRecommendHosp",
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray jsonArray) {
+
+
+                            hospitals = JsonParser.jsonToHospitals(jsonArray.toString());
+
+                            mHandler.sendEmptyMessage(0);
+                            DatabaseUtils.getDaoSession(AppointmentActivity.this).getHospitalDao().insertOrReplaceInTx(hospitals);
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+
+                    Log.e("TAG", volleyError.getMessage(), volleyError);
+                }
+            });
+            mQueue.add(jsonArrayRequest);
+
+        } else {
+            mHandler.sendEmptyMessage(0);
         }
 
     }
+
+    @OnClick({R.id.layout_return, R.id.iv_msg, R.id.search_image,R.id.tv_msg_num})
+    public void onViewClicked(View v) {
+        switch (v.getId()) {
+            case R.id.layout_return:
+                finish();
+                break;
+            case R.id.search_image:
+                startActivity(new Intent(AppointmentActivity.this, AppointSearchActivity.class));
+                break;
+            case R.id.iv_msg:
+            case R.id.tv_msg_num:
+                Toast.makeText(AppointmentActivity.this,"消息",Toast.LENGTH_SHORT);
+                break;
+
+            default:break;
+
+        }
+    }
+
 }

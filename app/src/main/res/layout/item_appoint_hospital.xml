@@ -1,36 +1,53 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#10000000"
+    android:background="@color/text_white"
     android:orientation="vertical" >
 
-    <View
-        android:id="@+id/hospital_view"
+    <ImageView
+        android:id="@+id/item_hospital_view"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_centerVertical="true"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:background="@drawable/hospital_null" />
 
     <TextView
-        android:id="@+id/hospital_name"
+        android:id="@+id/item_hospital_name"
         style="@style/textview16sp"
-        android:layout_alignTop="@+id/hospital_view"
-        android:layout_toRightOf="@+id/hospital_view"
-        android:text="医院名"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_hospital_view"
+        android:layout_toRightOf="@+id/item_hospital_view"
+        android:text="南京市鼓楼医院" />
 
     <TextView
-        android:id="@+id/hospital_grade"
+        android:id="@+id/item_hospital_grade"
         style="@style/textview14sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hospital_name"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/hospital_view"
-        android:text="级别" />
 
+        android:layout_below="@+id/item_hospital_name"
+        android:layout_toEndOf="@+id/item_hospital_view"
+        android:text="三级甲等"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/item_hospital_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_hospital_grade"
+        android:layout_toEndOf="@+id/item_hospital_view"
+        android:text="南京市江宁区弘景大道1号"
+        android:textColor="?android:attr/textColorHint" />
+
+    <TextView
+        android:id="@+id/item_hospital_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_hospital_grade"
+        android:layout_centerHorizontal="true"
+        android:text="4.5" />
 
 
 </RelativeLayout>

@@ -8,4 +8,5 @@
     <color name="list_divider_color">#c8c7cc</color>
     <color name="main_black">#333</color>
     <color name="ques_bt_text_color_light">#24cf5f</color>
+    <color name="brank">#000000</color>
 </resources>
