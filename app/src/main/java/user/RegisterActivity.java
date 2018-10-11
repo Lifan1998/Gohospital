@@ -5,7 +5,7 @@ package user;
  */
 
 
-        //import android.support.v7.app.ActionBarActivity;
+
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -36,11 +36,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import user.util.Utils;
+
 import static android.content.ContentValues.TAG;
 import static android.os.Build.*;
 
 /**
- * 注册Demo
+ * 注册
  *
  * @author ZHY
  *
@@ -50,6 +52,8 @@ public class RegisterActivity extends Activity implements OnClickListener {
     private Button btn_register;
     private ImageView iv_return;
     private TextView tv_code;
+    //短信验证码
+    private String CAPTCHA;
 
 
 
@@ -85,6 +89,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
                 break;
             case R.id.tv_code:
                 Toast.makeText(RegisterActivity.this,"已发送验证短信",Toast.LENGTH_SHORT).show();
+                CAPTCHA = Utils.getCode(username.getText().toString());
                 break;
 
         }
@@ -93,45 +98,20 @@ public class RegisterActivity extends Activity implements OnClickListener {
     //注册
     private void register(){
 
-        //Volley上传数据给服务器
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        String httpurl = "";
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,httpurl,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        String token = "";
-                        SharedPreferences settings = getSharedPreferences("base", 0);
-                        SharedPreferences.Editor editor = settings.edit();
-                        editor.putString("token", token);
-                        // 提交本次编辑
-                        editor.commit();
+        if (CAPTCHA == null){
+            Toast.makeText(RegisterActivity.this,"未发送验证短信",Toast.LENGTH_SHORT).show();
+            return;
+        } else if (CAPTCHA.equals(code.getText().toString())){
 
-                        Log.d(TAG, "response -> " + response);
-                        Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
-                        finish();
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e(TAG, error.getMessage(), error);
-                Toast.makeText(RegisterActivity.this,"注册失败",Toast.LENGTH_SHORT).show();
-            }
-        }) {
-            @Override
-            protected Map<String, String> getParams() {
-                //在这里设置需要post的参数
-                Map<String, String> map = new HashMap<String, String>();
+            //验证码正确，上传账号密码，保存token，跳转Activity
 
-                map.put("username",username.getText().toString() );
-                map.put("name",name.getText().toString());
-                map.put("password",password.getText().toString());
-                map.put("code",code.getText().toString());
-                return map;
-            }
-        };
-        requestQueue.add(stringRequest);
+            Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(RegisterActivity.this,"验证码错误",Toast.LENGTH_SHORT).show();
+        }
+
+
+
     }
-
 
 }

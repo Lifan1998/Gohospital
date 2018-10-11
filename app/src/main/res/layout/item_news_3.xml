@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="100dp">
+
+
+        <TextView
+            android:id="@+id/item_news3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这里是标题"
+            android:textColor="@color/brank"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_news3_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_news3_title"
+            android:text="这里是简介" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/item_news3_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="每日一健" />
+
+            <TextView
+                android:id="@+id/item_news3_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/item_news3_author"
+                android:text="|2018.9.30" />
+
+            <TextView
+                android:id="@+id/item_news3_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/item_news3_recommend"
+                android:text="115评论" />
+
+            <TextView
+                android:id="@+id/item_news3_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="3k点赞" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

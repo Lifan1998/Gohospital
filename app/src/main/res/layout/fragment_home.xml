@@ -1,74 +1,163 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="main.MainActivity">
 
-    <LinearLayout
+    <include layout="@layout/layout_search"></include>
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
 
-        <ImageView
-            android:id="@+id/home_search_image"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/search_1" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="?android:attr/colorBackground" />
-
-        <ImageView
-            android:id="@+id/appointimage"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-
-            android:background="@drawable/yuyueguahao" />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="?android:attr/colorBackground" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
-            android:text="选科室  问医生"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/text_white">
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/appointimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/yuyueguohao" />
 
-            <GridView
-                android:id="@+id/gv_home"
+                <ImageView
+                    android:id="@+id/iv_forecast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/forecast" />
+
+            </LinearLayout>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+
+
+                android:text="选科室  问医生"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_white">
+
+                <GridView
+                    android:id="@+id/gv_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/text_white"
+                    android:cacheColorHint="#00000000"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:verticalSpacing="10dp"
+                    android:visibility="visible">
+
+
+                </GridView>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/list_divider_color"
+                android:layout_height="1px">
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+
                 android:background="@color/text_white"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="都在问"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="更多"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/list_divider_color"
+                android:layout_height="1px">
+            </View>
+
+            <ListView
+                android:id="@+id/home_ask_list"
+                android:layout_width="match_parent"
+                android:layout_height="370dp">
+
+            </ListView>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/list_divider_color"
+                android:layout_height="1px">
+            </View>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/text_white"
+                android:text="资讯"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/list_divider_color"
+                android:layout_height="1px">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/home_news_list"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
                 android:cacheColorHint="#00000000"
-                android:gravity="center"
-                android:horizontalSpacing="10dp"
-                android:numColumns="4"
-                android:verticalSpacing="10dp">
+                android:divider="@color/list_divider_color"
+                android:dividerHeight="1px"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:smoothScrollbar="true"
+                ptr:ptrMode="pullFromEnd" />
+        </LinearLayout>
+        </LinearLayout>
 
+    </ScrollView>
 
-            </GridView>
-        </RelativeLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="?android:attr/colorBackground" />
-    </LinearLayout>
-
-
-</FrameLayout>
+</LinearLayout>

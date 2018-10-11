@@ -22,12 +22,14 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="7dp">
 
                 <TextView
                     android:id="@+id/tab_menu_home"
                     style="@style/tab_menu_text"
-                    android:drawableTop="@drawable/tab_menu_better"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawableTop="@drawable/tab_menu_home"
                     android:text="主页" />
 
             </RelativeLayout>
@@ -43,12 +45,12 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="7dp">
 
                 <TextView
                     android:id="@+id/tab_menu_news"
                     style="@style/tab_menu_text"
-                    android:drawableTop="@drawable/tab_menu_poi"
+                    android:drawableTop="@drawable/tab_menu_news"
                     android:text="资讯" />
 
             </RelativeLayout>
@@ -64,12 +66,12 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="7dp">
 
                 <TextView
                     android:id="@+id/tab_menu_ask"
                     style="@style/tab_menu_text"
-                    android:drawableTop="@drawable/tab_menu_better"
+                    android:drawableTop="@drawable/tab_menu_ask"
                     android:text="问答" />
 
             </RelativeLayout>
@@ -84,11 +86,11 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="7dp">
                 <TextView
                     android:id="@+id/tab_menu_my"
                     style="@style/tab_menu_text"
-                    android:drawableTop="@drawable/tab_menu_better"
+                    android:drawableTop="@drawable/tab_menu_user"
                     android:text="我的" />
 
             </RelativeLayout>

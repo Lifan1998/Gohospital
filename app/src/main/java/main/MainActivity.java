@@ -3,11 +3,12 @@ package main;
 import com.example.life.R;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.FragmentTransaction;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -24,7 +25,8 @@ import my.MyFragment;
 import news.NewsFragment;
 
 
-public class MainActivity extends Activity implements View.OnClickListener{
+
+public class MainActivity extends FragmentActivity implements View.OnClickListener{
 	private long mExitTime;
 	private LinearLayout ly_one,ly_two,ly_three,ly_four;
 	private TextView mTextView1,mTextView2,mTextView3,mTextView4;
@@ -60,10 +62,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
 		final VersionUpdateUtils updateUtils = new VersionUpdateUtils(mVersion,
 				MainActivity.this);
 		new Thread() {
+			@Override
 			public void run() {
 				// 获取服务器版本号
 				updateUtils.getCloudVersion();
-			};
+			}
 		}.start();
 	}
 
@@ -97,7 +100,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 	}
 	@Override
 	public void onClick(View v) {
-		transaction = getFragmentManager().beginTransaction();
+		transaction = getSupportFragmentManager().beginTransaction();
 
 
 

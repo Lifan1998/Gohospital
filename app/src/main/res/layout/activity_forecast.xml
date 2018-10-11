@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/apptheme"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/layout_titie"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@color/text_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/forecast_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名：" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/tv_forecast_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="点击输入" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp"
+                        android:layout_alignLeft="@id/tv_forecast_name"
+                        android:layout_alignRight="@id/tv_forecast_name"
+                        android:layout_below="@id/tv_forecast_name"
+                        android:background="@color/text_blue"></View>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/background_dark"></View>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/background_dark"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/forecast_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="出生日期：" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_birth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="1998/06/22" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp"
+                        android:layout_alignLeft="@id/tv_birth"
+                        android:layout_alignRight="@id/tv_birth"
+                        android:layout_below="@id/tv_birth"
+                        android:background="@color/text_blue"></View>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/forecast_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="基本信息" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/forecast_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身高:" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="177cm" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp"
+                        android:layout_alignLeft="@id/tv_height"
+                        android:layout_alignRight="@id/tv_height"
+                        android:layout_below="@id/tv_height"
+                        android:background="@color/text_blue"></View>
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/forecast_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="体重:" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="60kg" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp"
+                        android:layout_alignLeft="@id/tv_weight"
+                        android:layout_alignRight="@id/tv_weight"
+                        android:layout_below="@id/tv_weight"
+                        android:background="@color/text_blue"></View>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/forecast_title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="BMI:19.27" />
+
+            <TextView
+                style="@style/forecast_title"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="呼吸系统症状描述" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/label_1_1"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="咳嗽" />
+
+                <TextView
+                    android:id="@+id/label_1_2"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="咳痰" />
+
+                <TextView
+                    android:id="@+id/label_1_3"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="咳血" />
+
+                <TextView
+                    android:id="@+id/label_1_4"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/forecast_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="慢性肺病与肺病史" />
+
+            <TextView
+                style="@style/forecast_title_1"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直系亲属是否患有或得过肺癌" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/label_2_1"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  是  " />
+
+                <TextView
+                    android:id="@+id/label_2_2"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  否  " />
+            </LinearLayout>
+
+            <TextView
+                style="@style/forecast_title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="是否患有其它癌症" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/label_3_1"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  是  " />
+
+                <TextView
+                    android:id="@+id/label_3_2"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  否  " />
+            </LinearLayout>
+
+            <TextView
+                style="@style/forecast_title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="是否患有下列慢性肺部疾病（多选）" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/label_4_1"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="慢性阻塞性肺病" />
+
+                <TextView
+                    android:id="@+id/label_4_2"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="慢性支气管炎" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/label_4_3"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="肺气肿" />
+
+                <TextView
+                    android:id="@+id/label_4_4"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="肺结核" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/forecast_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="肺癌风险评估" />
+
+            <TextView
+                style="@style/forecast_title_1"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="吸烟现状:" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/label_5_1"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="从不吸烟" />
+
+                <TextView
+                    android:id="@+id/label_5_2"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前吸烟" />
+
+                <TextView
+                    android:id="@+id/label_5_3"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已戒烟" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/forecast_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日均吸烟数量:" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_smoke_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="10支" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp"
+                        android:layout_alignLeft="@id/tv_smoke_num"
+                        android:layout_alignRight="@id/tv_smoke_num"
+                        android:layout_below="@id/tv_smoke_num"
+                        android:background="@color/text_blue"></View>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/forecast_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吸烟年数:" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_smoke_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="10年" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp"
+                        android:layout_alignLeft="@id/tv_smoke_year"
+                        android:layout_alignRight="@id/tv_smoke_year"
+                        android:layout_below="@id/tv_smoke_year"
+                        android:background="@color/text_blue"></View>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/forecast_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="二手烟状况:" />
+
+                <TextView
+                    android:id="@+id/label_6_1"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经常" />
+
+                <TextView
+                    android:id="@+id/label_6_2"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="偶尔" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/forecast_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="油烟暴露状况:" />
+
+                <TextView
+                    android:id="@+id/label_7_1"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经常" />
+
+                <TextView
+                    android:id="@+id/label_7_2"
+                    style="@style/forecast_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="偶尔" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_forecast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:background="@color/forecast_theme"
+                android:gravity="center"
+                android:text="预   测"
+                android:padding="10dp"
+                android:textColor="@color/qmui_config_color_white"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-#Thu Aug 16 17:28:07 CST 2018
-base.0=D\:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4
+#Wed Oct 10 20:02:12 CST 2018
+base.0=D\:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
 renamed.0=classes.dex
-file.0=D\:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4\\classes.dex
+file.0=D\:\\AndroidStudio\\Gohospital\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3\\classes.dex

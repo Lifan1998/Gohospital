@@ -7,7 +7,9 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* ic_launcher-web.png
+* LICENSE
+* build.xml
+* pom.xml
 * proguard-project.txt
 
 Moved Files:
@@ -15,13 +17,10 @@ Moved Files:
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => app\src\main\AndroidManifest.xml
-* assets\ => app\src\main\assets
-* libs\org.apache.http.legacy.jar => app\libs\org.apache.http.legacy.jar
-* libs\volley.jar => app\libs\volley.jar
-* libs\xUtils-2.5.5.jar => app\libs\xUtils-2.5.5.jar
-* res\ => app\src\main\res\
-* src\ => app\src\main\java\
+* AndroidManifest.xml => base_library_pullToRefresh_chenyoca\src\main\AndroidManifest.xml
+* assets\ => base_library_pullToRefresh_chenyoca\src\main\assets
+* res\ => base_library_pullToRefresh_chenyoca\src\main\res\
+* src\ => base_library_pullToRefresh_chenyoca\src\main\java\
 
 Next Steps:
 -----------

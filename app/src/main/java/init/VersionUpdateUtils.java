@@ -75,7 +75,7 @@ public class VersionUpdateUtils {
 	public void getCloudVersion(){
 		
 			RequestQueue mQueue =Volley.newRequestQueue(context);
-			JsonObjectRequest jsonObjectRequest = new JsonObjectRequest("http://192.168.137.1:8080/Test/updateinfo.html",null,
+			JsonObjectRequest jsonObjectRequest = new JsonObjectRequest("http://120.79.241.203:8080/GoHospital/updateinfo.html",null,
 					new Response.Listener<JSONObject>() {
 							
 						@Override
@@ -155,7 +155,7 @@ public class VersionUpdateUtils {
 				.setApkSize(versionEntity.size)
 				.setDownloadPath(Environment.getExternalStorageDirectory() + "/AppUpdate")
 				.setApkUrl(versionEntity.apkurl)
-				.setSmallIcon(R.drawable.ic_launcher)
+				.setSmallIcon(R.drawable.iv_logo)
 				.setShowNewerToast(true)
 				.download();
 	}

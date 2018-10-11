@@ -26,7 +26,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginTop="2dp"
             android:text="注册"
-            android:textColor="@color/ques_bt_text_color_light"
+            android:textColor="@color/apptheme"
             android:textSize="24sp" />
 
 
@@ -109,7 +109,7 @@
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/ques_bt_text_color_light"
+                android:background="@color/apptheme"
                 android:text="登录" />
 
             <TextView

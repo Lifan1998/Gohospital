@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.life"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="2.0" >
 
     <uses-sdk
         android:minSdkVersion="21"
-        android:targetSdkVersion="27" />
+        android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 在SDCard中创建与删除文件权限 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 适配Android O 应用安装 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_la"
+        android:icon="@drawable/iv_logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="loading.SplashActivity"
+            android:name="init.SplashActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,25 +30,75 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="home.HomeActivity"
+            android:name="main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        <activity
+            android:name="user.LoginActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="home.LoginActivity"
+            android:name="user.ForgetPassActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="home.RegisterActivity"
+            android:name="user.RegisterActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="appointment.AppointmentActivity"
+            android:name="appoint.AppointmentActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="appointment.SearchActivity"
+            android:name="appoint.AppointSearchActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="my.MyInforActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="setting.SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="appoint.HospitalActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="appoint.ConfirmActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="appoint.DeptActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="appoint.DoctorActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="home.ForecastActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.life"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+        <activity
+            android:name="com.azhon.appupdate.activity.PermissionActivity"
+            android:label=""
+            android:theme="@style/DialogActivity" />
+
+        <service android:name="com.azhon.appupdate.service.DownloadService" />
     </application>
 
 </manifest>

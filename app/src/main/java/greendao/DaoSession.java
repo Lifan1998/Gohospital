@@ -8,13 +8,13 @@ import org.greenrobot.greendao.database.Database;
 import org.greenrobot.greendao.identityscope.IdentityScopeType;
 import org.greenrobot.greendao.internal.DaoConfig;
 
-import appoint.entity.Hospital;
 import appoint.entity.Doctor;
+import appoint.entity.Hospital;
 import appoint.entity.Scheduling;
 import appoint.entity.UnlineOrder;
 
-import greendao.HospitalDao;
 import greendao.DoctorDao;
+import greendao.HospitalDao;
 import greendao.SchedulingDao;
 import greendao.UnlineOrderDao;
 
@@ -27,13 +27,13 @@ import greendao.UnlineOrderDao;
  */
 public class DaoSession extends AbstractDaoSession {
 
-    private final DaoConfig hospitalDaoConfig;
     private final DaoConfig doctorDaoConfig;
+    private final DaoConfig hospitalDaoConfig;
     private final DaoConfig schedulingDaoConfig;
     private final DaoConfig unlineOrderDaoConfig;
 
-    private final HospitalDao hospitalDao;
     private final DoctorDao doctorDao;
+    private final HospitalDao hospitalDao;
     private final SchedulingDao schedulingDao;
     private final UnlineOrderDao unlineOrderDao;
 
@@ -41,11 +41,11 @@ public class DaoSession extends AbstractDaoSession {
             daoConfigMap) {
         super(db);
 
-        hospitalDaoConfig = daoConfigMap.get(HospitalDao.class).clone();
-        hospitalDaoConfig.initIdentityScope(type);
-
         doctorDaoConfig = daoConfigMap.get(DoctorDao.class).clone();
         doctorDaoConfig.initIdentityScope(type);
+
+        hospitalDaoConfig = daoConfigMap.get(HospitalDao.class).clone();
+        hospitalDaoConfig.initIdentityScope(type);
 
         schedulingDaoConfig = daoConfigMap.get(SchedulingDao.class).clone();
         schedulingDaoConfig.initIdentityScope(type);
@@ -53,30 +53,30 @@ public class DaoSession extends AbstractDaoSession {
         unlineOrderDaoConfig = daoConfigMap.get(UnlineOrderDao.class).clone();
         unlineOrderDaoConfig.initIdentityScope(type);
 
-        hospitalDao = new HospitalDao(hospitalDaoConfig, this);
         doctorDao = new DoctorDao(doctorDaoConfig, this);
+        hospitalDao = new HospitalDao(hospitalDaoConfig, this);
         schedulingDao = new SchedulingDao(schedulingDaoConfig, this);
         unlineOrderDao = new UnlineOrderDao(unlineOrderDaoConfig, this);
 
-        registerDao(Hospital.class, hospitalDao);
         registerDao(Doctor.class, doctorDao);
+        registerDao(Hospital.class, hospitalDao);
         registerDao(Scheduling.class, schedulingDao);
         registerDao(UnlineOrder.class, unlineOrderDao);
     }
     
     public void clear() {
-        hospitalDaoConfig.clearIdentityScope();
         doctorDaoConfig.clearIdentityScope();
+        hospitalDaoConfig.clearIdentityScope();
         schedulingDaoConfig.clearIdentityScope();
         unlineOrderDaoConfig.clearIdentityScope();
     }
 
-    public HospitalDao getHospitalDao() {
-        return hospitalDao;
-    }
-
     public DoctorDao getDoctorDao() {
         return doctorDao;
+    }
+
+    public HospitalDao getHospitalDao() {
+        return hospitalDao;
     }
 
     public SchedulingDao getSchedulingDao() {

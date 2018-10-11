@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/text_white"
+    android:layout_height="40dp">
+
+    <ImageView
+        android:id="@+id/iv_richscan"
+        android:layout_width="28dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="7dp"
+        android:background="@drawable/ic_richscan" />
+
+    <FrameLayout
+        android:id="@+id/layout_search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@+id/iv_richscan">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:drawable/ic_menu_search" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_msg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/msg" />
+
+    <TextView
+        android:id="@+id/tv_msg_num"
+        style="@style/tab_menu_bgnum"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="6"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

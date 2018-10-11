@@ -16,64 +16,87 @@
 
         <include layout="@layout/item_appoint_doctor"></include>
 
-        <View
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="20dp"></View>
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_margin="10dp"
-            android:id="@+id/tv_appoint_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="8.1 周四 上午"
-            android:textSize="24sp" />
-        <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="填写就诊人信息"/>
+                <TextView
+                    android:id="@+id/tv_appoint_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:text="8.1 周四 上午"
+                    android:textSize="24sp" />
 
-        <EditText
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            android:id="@+id/confirm_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="姓名" />
+                <TextView
 
-        <EditText
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            android:id="@+id/confirm_tele"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="手机号"
-            android:inputType="phone" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="填写就诊人信息" />
 
-        <EditText
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            android:id="@+id/confirm_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="身份证号" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/appoint_desc"/>
+                <EditText
+                    android:id="@+id/confirm_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:hint="姓名" />
+
+                <EditText
+                    android:id="@+id/confirm_tele"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:hint="手机号"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:id="@+id/confirm_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:hint="身份证号" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="温馨提示"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/appoint_desc" />
+
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
 
     <TextView
         android:id="@+id/confirm"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

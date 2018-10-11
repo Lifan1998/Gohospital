@@ -98,7 +98,7 @@ public class DeptActivity extends Activity {
     private void initListView() {
         doctors = new ArrayList<>();
         //条件查询从本地数据库中读取数据
-        doctors = DatabaseUtils.getDaoSession(DeptActivity.this).getDoctorDao().loadAll();
+        //doctors = DatabaseUtils.getDaoSession(DeptActivity.this).getDoctorDao().loadAll();
         if (doctors.size() == 0) {
             RequestQueue mQueue = Volley.newRequestQueue(DeptActivity.this);
             JsonArrayRequest jsonArrayRequest = new JsonArrayRequest("http://120.79.241.203:8080/GoHospital/getDocByDept?hId=" + id_hos + "&hDept=" + keshi + "&hRoom=" + menzhen,
@@ -111,7 +111,7 @@ public class DeptActivity extends Activity {
                             Log.v("DeptActivity", doctors.toString());
                             //刷新list
                             mHandler.sendEmptyMessage(0);
-                            DatabaseUtils.getDaoSession(DeptActivity.this).getDoctorDao().insertOrReplaceInTx(doctors);
+                            //DatabaseUtils.getDaoSession(DeptActivity.this).getDoctorDao().insertOrReplaceInTx(doctors);
                         }
                     }, new Response.ErrorListener() {
                 @Override

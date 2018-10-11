@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/ques_bt_text_color_light"
+            android:background="@color/apptheme"
             android:text="重置密码" />
     </LinearLayout>
 

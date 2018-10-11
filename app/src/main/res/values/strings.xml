@@ -4,11 +4,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="appoint_desc">1.注意：互联网就医实行实名制，请如实填写信息
-    2.dfdfdffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-        ffffffffffffffffffdfdfmdskjfi8fryejsfb
-        ddbjvbxkbvbbvbbdnvkdfkvnnfnnh
-    rtrytygiuiuiuoipiopopooij</string>
+    <string name="appoint_desc">1.互联网就医实行实名制，请如实填写信息，信息填写错误将导致无法正常挂号。\n2.婴幼儿若未办理身份证，可在户口本中查看婴幼儿的身份证号码。\n3.诊查费由医院自行设定，平台未收取任何额外费用</string>
 
 
 </resources>

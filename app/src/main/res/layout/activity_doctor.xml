@@ -47,7 +47,7 @@
     </com.ms.square.android.expandabletextview.ExpandableTextView>
 
     <View
-        android:layout_marginTop="10dp"
+
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/list_divider_color"></View>
@@ -55,6 +55,7 @@
     <LinearLayout
         android:id="@+id/doctor_chat"
         android:layout_width="match_parent"
+        android:background="@color/text_white"
         android:layout_height="wrap_content">
 
 
@@ -96,10 +97,11 @@
         android:layout_height="1px"
         android:layout_gravity="center_horizontal"
         android:background="@color/list_divider_color"></View>
+
     <ListView
         android:id="@+id/li_appoint_time"
 
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
 

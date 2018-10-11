@@ -80,6 +80,7 @@ public class DoctorActivity extends Activity {
     private Doctor doctor;
     private DeptAdapter adapter;
     private List<String> times;
+    ExpandableTextView expTv1;
 
     @Override
     protected void onCreate(Bundle saveInstanceStart) {
@@ -87,15 +88,15 @@ public class DoctorActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_doctor);
         id_doctor = getIntent().getIntExtra("id", 0);
-        ExpandableTextView expTv1 = findViewById(R.id.expand_text_view);
-        expTv1.setText(getString(R.string.appoint_desc));
+        expTv1 = findViewById(R.id.expand_text_view);
+
 
         ButterKnife.bind(this);
 
 
         initDoctor();
         initView();
-        tvTitle.setText(doctor.getName());
+
 
 
     }
@@ -109,6 +110,7 @@ public class DoctorActivity extends Activity {
                 Intent intent = new Intent(DoctorActivity.this, ConfirmActivity.class);
                 intent.putExtra("time", time);
                 intent.putExtra("id", id_doctor);
+
                 startActivity(intent);
 
             }
@@ -119,8 +121,9 @@ public class DoctorActivity extends Activity {
     private void initDoctor() {
 
         RequestQueue mQueue = Volley.newRequestQueue(DoctorActivity.this);
-        doctor = DatabaseUtils.getDaoSession(DoctorActivity.this).getDoctorDao().queryBuilder().where(DoctorDao.Properties.Id.eq(id_doctor)).build().unique();
+        //doctor = DatabaseUtils.getDaoSession(DoctorActivity.this).getDoctorDao().queryBuilder().where(DoctorDao.Properties.Id.eq(id_doctor)).build().unique();
         if (doctor == null) {
+
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest("http://120.79.241.203:8080/GoHospital/getDocById?dId=" + id_doctor, null,
                     new Response.Listener<JSONObject>() {
 
@@ -129,6 +132,7 @@ public class DoctorActivity extends Activity {
 
                             Log.v("TAG", response.toString());
                             doctor = JsonParser.jsonToDoctor(response.toString());
+                            tvTitle.setText(doctor.getName());
                             mHandler.sendEmptyMessage(1);
                             //储存起来
                             DatabaseUtils.getDaoSession(DoctorActivity.this).getDoctorDao().insert(doctor);
@@ -207,6 +211,8 @@ public class DoctorActivity extends Activity {
                         itemDoctorName.setText(doctor.getName());
                         itemDoctorGroup.setText(doctor.getGroup());
                         itemDoctorScore.setText(doctor.getScore());
+                        expTv1.setText("简介："+doctor.getDesc());
+
                     }
                     break;
             }
