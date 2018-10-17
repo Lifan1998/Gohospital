@@ -8,26 +8,26 @@ package com.ms.square.android.expandabletextview;
 
 public final class R {
     public static final class attr {
-        public static final int animAlphaStart = 0x7f030035;
-        public static final int animDuration = 0x7f030036;
-        public static final int collapseDrawable = 0x7f030064;
-        public static final int expandDrawable = 0x7f030096;
-        public static final int maxCollapsedLines = 0x7f0300e5;
+        public static final int animAlphaStart = 0x7f030037;
+        public static final int animDuration = 0x7f030038;
+        public static final int collapseDrawable = 0x7f030069;
+        public static final int expandDrawable = 0x7f03009c;
+        public static final int maxCollapsedLines = 0x7f0300f5;
     }
     public static final class drawable {
-        public static final int ic_collapse_holo_light = 0x7f070073;
-        public static final int ic_collapse_large_holo_light = 0x7f070074;
-        public static final int ic_collapse_small_holo_light = 0x7f070075;
-        public static final int ic_expand_holo_light = 0x7f070078;
-        public static final int ic_expand_large_holo_light = 0x7f070079;
-        public static final int ic_expand_small_holo_light = 0x7f07007a;
+        public static final int ic_collapse_holo_light = 0x7f070075;
+        public static final int ic_collapse_large_holo_light = 0x7f070076;
+        public static final int ic_collapse_small_holo_light = 0x7f070077;
+        public static final int ic_expand_holo_light = 0x7f07007a;
+        public static final int ic_expand_large_holo_light = 0x7f07007b;
+        public static final int ic_expand_small_holo_light = 0x7f07007c;
     }
     public static final class id {
-        public static final int expand_collapse = 0x7f080072;
-        public static final int expandable_text = 0x7f080074;
+        public static final int expand_collapse = 0x7f08007c;
+        public static final int expandable_text = 0x7f08007e;
     }
     public static final class styleable {
-        public static final int[] ExpandableTextView = { 0x7f030035, 0x7f030036, 0x7f030064, 0x7f030096, 0x7f0300e5 };
+        public static final int[] ExpandableTextView = { 0x7f030037, 0x7f030038, 0x7f030069, 0x7f03009c, 0x7f0300f5 };
         public static final int ExpandableTextView_animAlphaStart = 0;
         public static final int ExpandableTextView_animDuration = 1;
         public static final int ExpandableTextView_collapseDrawable = 2;

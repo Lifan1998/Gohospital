@@ -117,10 +117,14 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="com.facebook.fresco:fbcore-0.14.1" level="project" />
     <orderEntry type="library" name="com.android.support:animated-vector-drawable-27.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:appcompat-v7-27.1.0" level="project" />
     <orderEntry type="library" name="org.greenrobot:greendao-api:3.2.2@jar" level="project" />
+    <orderEntry type="library" name="com.squareup.okio:okio:1.14.0@jar" level="project" />
+    <orderEntry type="library" name="com.facebook.fresco:fresco-0.14.1" level="project" />
     <orderEntry type="library" name="com.android.support:design-27.1.0" level="project" />
+    <orderEntry type="library" name="com.squareup.picasso:picasso-2.71828" level="project" />
     <orderEntry type="library" name="de.hdodenhof:circleimageview-2.2.0" level="project" />
     <orderEntry type="library" name="com.android.support:transition-27.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-utils-27.1.0" level="project" />
@@ -128,11 +132,15 @@
     <orderEntry type="library" name="com.jakewharton:butterknife-annotations:8.4.0@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-annotations:27.1.0@jar" level="project" />
     <orderEntry type="library" name="com.quinny898.library.persistentsearch:library-1.1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="com.facebook.fresco:drawee-0.14.1" level="project" />
     <orderEntry type="library" name="com.ms-square:expandableTextView-0.1.4" level="project" />
     <orderEntry type="library" name="com.android.support:recyclerview-v7-27.1.0" level="project" />
     <orderEntry type="library" name="com.nineoldandroids:library:2.4.0@jar" level="project" />
+    <orderEntry type="library" name="com.parse.bolts:bolts-tasks:1.4.0@jar" level="project" />
+    <orderEntry type="library" name="com.facebook.fresco:imagepipeline-0.14.1" level="project" />
     <orderEntry type="library" name="com.qmuiteam:qmui-1.1.3" level="project" />
     <orderEntry type="library" name="__local_aars__:D.\AndroidStudio\Gohospital\app\libs\xUtils-2.5.5.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.squareup.okhttp3:okhttp:3.11.0@jar" level="project" />
     <orderEntry type="library" name="org.greenrobot:greendao:3.2.2@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-vector-drawable-27.1.0" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:runtime-1.1.0" level="project" />
@@ -142,10 +150,13 @@
     <orderEntry type="library" name="com.google.code.gson:gson:2.2.4@jar" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:viewmodel-1.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-ui-27.1.0" level="project" />
+    <orderEntry type="library" name="com.youth.banner:banner-1.4.10" level="project" />
     <orderEntry type="library" name="__local_aars__:D.\AndroidStudio\Gohospital\app\libs\org.apache.http.legacy.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="__local_aars__:D.\AndroidStudio\Gohospital\app\libs\volley.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:livedata-core-1.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:exifinterface-27.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-media-compat-27.1.0" level="project" />
+    <orderEntry type="library" name="com.facebook.fresco:imagepipeline-base-0.14.1" level="project" />
     <orderEntry type="library" name="com.android.support:support-fragment-27.1.0" level="project" />
     <orderEntry type="library" name="com.azhon:appupdate-1.6.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-v4-27.1.0" level="project" />

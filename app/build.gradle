@@ -44,5 +44,9 @@ dependencies {
     implementation 'com.qmuiteam:qmui:1.1.3'
     implementation project(':base_library_pullToRefresh_chenyoca')
     implementation 'com.google.code.gson:gson:2.2.4'
-    compile 'com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT'
+    implementation 'com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT'
+    compile 'com.youth.banner:banner:1.4.10'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    compile 'com.facebook.fresco:fresco:0.14.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
 }

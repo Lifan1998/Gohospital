@@ -27,17 +27,29 @@ package user;
         import android.widget.Toast;
         import android.os.Bundle;
 
+        import com.android.volley.NetworkResponse;
+        import com.android.volley.ParseError;
         import com.android.volley.Request;
         import com.android.volley.RequestQueue;
         import com.android.volley.Response;
         import com.android.volley.Response.ErrorListener;
         import com.android.volley.VolleyError;
+        import com.android.volley.toolbox.HttpHeaderParser;
+        import com.android.volley.toolbox.JsonObjectRequest;
         import com.android.volley.toolbox.StringRequest;
         import com.android.volley.toolbox.Volley;
         import com.example.life.R;
 
+        import org.json.JSONException;
+        import org.json.JSONObject;
+
+        import java.io.UnsupportedEncodingException;
         import java.util.HashMap;
         import java.util.Map;
+
+        import appoint.ConfirmActivity;
+        import appoint.utils.JsonParser;
+        import appoint.utils.OtherUtils;
 
         import static android.content.ContentValues.TAG;
 
@@ -54,7 +66,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private Button btn_login;
     private LinearLayout sign_change;
     private TextView tvLabel;
-
+    private String TAG = "LoginActivity";
 
 
     private int login_way  = 0;
@@ -111,7 +123,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 changeSign();
                 break;
             case R.id.btn_login:
-                login();
+                //login();
+                login1();
                 break;
 
             case R.id.tv_forgetpass:
@@ -145,13 +158,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private   void login(){
         //Volley上传数据给服务器
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        String httpurl = "http://192.168.43.1:8080/login";
+        String httpurl = "http://120.79.241.203:8080/GoHospital/login";
         StringRequest stringRequest = new StringRequest(Request.Method.POST,httpurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.v("TAG",response);
-                        String token = "";
+                        Log.v(TAG,"sussse"+response);
+                        String token = "123";
                         SharedPreferences settings = getSharedPreferences("base", 0);
                         SharedPreferences.Editor editor = settings.edit();
                         editor.putString("token", token);
@@ -159,8 +172,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                         editor.commit();
 
 
-
-                        Log.d(TAG, "response -> " + response);
                         finish();
                     }
                 }, new ErrorListener() {
@@ -176,13 +187,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 //在这里设置需要post的参数
                 Map<String, String> map = new HashMap<String, String>();
                 if(login_way==0){
-                    map.put("login_way",login_way+"" );
-                    map.put("username", username.getText().toString());
-                    map.put("code",code.getText().toString());
+                    map.put("flag",login_way+"" );
+                    map.put("account", username.getText().toString());
+                    map.put("password",code.getText().toString());
 
                 }else{
-                    map.put("login_way",login_way+"" );
-                    map.put("username", username.getText().toString());
+                    map.put("flag",login_way+"" );
+                    map.put("account", username.getText().toString());
                     map.put("password",password.getText().toString());
                 }
 
@@ -192,5 +203,34 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         requestQueue.add(stringRequest);
 
     }
+
+    private void login1(){
+
+        RequestQueue mQueue = Volley.newRequestQueue(LoginActivity.this);
+        String httpurl = "http://120.79.241.203:8080/GoHospital/login?" +"flag="+login_way+"&account="+username.getText().toString()+
+                "&password="+password.getText().toString();
+        Log.v("LoginActivity",httpurl);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(httpurl, null,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.v("LoginActivity",response.toString());
+
+
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Log.e("LoginActivity", error.getMessage(), error);
+
+            }
+        });
+        mQueue.add(jsonObjectRequest);
+    }
+
+
 
 }

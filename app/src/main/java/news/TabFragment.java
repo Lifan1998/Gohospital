@@ -136,7 +136,7 @@ public class TabFragment extends Fragment {
 
 
     private String stringjson = "{\n" +
-            "    \"code\": 200,\n" +
+            "    \"type\": \"类型\",\n" +
             "    \"result\": [\n" +
             "        {\n" +
             "            \"imageUrl\": [\n" +

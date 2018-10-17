@@ -18,11 +18,11 @@ import java.lang.Override;
 public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements Unbinder {
   protected T target;
 
-  private View view2131230945;
+  private View view2131230966;
 
-  private View view2131230921;
+  private View view2131230942;
 
-  private View view2131231102;
+  private View view2131231127;
 
   @UiThread
   public HospitalActivity_ViewBinding(final T target, View source) {
@@ -38,7 +38,7 @@ public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements
     target.liMenzhen = Utils.findRequiredViewAsType(source, R.id.li_menzhen, "field 'liMenzhen'", ListView.class);
     view = Utils.findRequiredView(source, R.id.layout_return, "field 'layoutReturn' and method 'onViewClicked'");
     target.layoutReturn = Utils.castView(view, R.id.layout_return, "field 'layoutReturn'", LinearLayout.class);
-    view2131230945 = view;
+    view2131230966 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +48,7 @@ public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements
     target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg' and method 'onViewClicked'");
     target.ivMsg = Utils.castView(view, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
-    view2131230921 = view;
+    view2131230942 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,7 +57,7 @@ public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements
     });
     view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum' and method 'onViewClicked'");
     target.tvMsgNum = Utils.castView(view, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
-    view2131231102 = view;
+    view2131231127 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -84,12 +84,12 @@ public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements
     target.ivMsg = null;
     target.tvMsgNum = null;
 
-    view2131230945.setOnClickListener(null);
-    view2131230945 = null;
-    view2131230921.setOnClickListener(null);
-    view2131230921 = null;
-    view2131231102.setOnClickListener(null);
-    view2131231102 = null;
+    view2131230966.setOnClickListener(null);
+    view2131230966 = null;
+    view2131230942.setOnClickListener(null);
+    view2131230942 = null;
+    view2131231127.setOnClickListener(null);
+    view2131231127 = null;
 
     this.target = null;
   }

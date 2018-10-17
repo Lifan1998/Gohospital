@@ -118,7 +118,7 @@ public class ConfirmActivity extends Activity {
                             itemDoctorName.setText(doctor.getName());
                             itemDoctorGroup.setText(doctor.getGroup());
                             itemDoctorScore.setText(doctor.getScore());
-                            itemDoctorHospital.setText(OtherUtils.getHospitalName(getIntent().getIntExtra("id",0)));
+                            itemDoctorHospital.setText(OtherUtils.getHospitalName(getIntent().getIntExtra("id",0),ConfirmActivity.this));
 
                         }
 

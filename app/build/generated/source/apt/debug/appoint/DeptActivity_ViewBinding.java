@@ -18,7 +18,7 @@ import java.lang.Override;
 public class DeptActivity_ViewBinding<T extends DeptActivity> implements Unbinder {
   protected T target;
 
-  private View view2131230945;
+  private View view2131230966;
 
   @UiThread
   public DeptActivity_ViewBinding(final T target, View source) {
@@ -28,7 +28,7 @@ public class DeptActivity_ViewBinding<T extends DeptActivity> implements Unbinde
     target.liDoctors = Utils.findRequiredViewAsType(source, R.id.li_doctors, "field 'liDoctors'", ListView.class);
     view = Utils.findRequiredView(source, R.id.layout_return, "field 'layoutReturn' and method 'OnClicked1'");
     target.layoutReturn = Utils.castView(view, R.id.layout_return, "field 'layoutReturn'", LinearLayout.class);
-    view2131230945 = view;
+    view2131230966 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -52,8 +52,8 @@ public class DeptActivity_ViewBinding<T extends DeptActivity> implements Unbinde
     target.ivMsg = null;
     target.tvMsgNum = null;
 
-    view2131230945.setOnClickListener(null);
-    view2131230945 = null;
+    view2131230966.setOnClickListener(null);
+    view2131230966 = null;
 
     this.target = null;
   }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -23,12 +24,15 @@ import com.example.life.R;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+import com.youth.banner.Transformer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import appoint.AppointmentActivity;
-import ask.TabFragment;
 import ask.Utils;
 import ask.adapter.AskAdapter;
 import ask.model.AskItem;
@@ -40,6 +44,7 @@ import home.adapter.GridAdapter;
 import news.adapter.NewsAdapter;
 import news.model.DataBean;
 import news.model.Result;
+import util.App;
 
 /**
  * Created by lenovo on 2018/4/18.
@@ -58,6 +63,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @BindView(R.id.iv_forecast)
     ImageView ivForecast;
     Unbinder unbinder;
+    @BindView(R.id.banner)
+    Banner banner;
 
     private GridView gridView;
     private GridAdapter adapter;
@@ -67,6 +74,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private NewsAdapter newsAdapter;
     private PullToRefreshListView homeNewsList;
     private ListView homeAskList;
+    public  List<Integer> images=new ArrayList<>();
+    public  List<String> titles=new ArrayList<>();
 
     Handler mHandler = new Handler() {
         @Override
@@ -88,27 +97,25 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ImageView appointImage = view.findViewById(R.id.appointimage);
-        //View view1 = this.getLayoutInflater().inflate(R.layout.fragment_home,null);
         appointImage.setOnClickListener(this);
         gridView = view.findViewById(R.id.gv_home);
-        homeNewsList = (PullToRefreshListView)view.findViewById(R.id.home_news_list);
-        homeAskList = (ListView)view.findViewById(R.id.home_ask_list) ;
-
+        homeNewsList = (PullToRefreshListView) view.findViewById(R.id.home_news_list);
+        homeAskList = (ListView) view.findViewById(R.id.home_ask_list);
 
 
         homeAskList.setOnTouchListener(new View.OnTouchListener() {
 
-                                           @Override
-                                           public boolean onTouch(View view, MotionEvent event) {
-                                               switch (event.getAction()) {
-                                                   case MotionEvent.ACTION_MOVE:
-                                                       return true;
-                                                   default:
-                                                       break;
-                                               }
-                                               return true;
-                                           }
-                                       });
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_MOVE:
+                        return true;
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
 
         unbinder = ButterKnife.bind(this, view);
         initView();
@@ -126,13 +133,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }.start();
 
         initAskDate();
-        AskAdapter askAdapter = new AskAdapter(getActivity(),askItemList);
+        AskAdapter askAdapter = new AskAdapter(getActivity(), askItemList);
         homeAskList.setAdapter(askAdapter);
 
         initNewsDate();
 
-        newsAdapter = new NewsAdapter(getActivity(),newsList);
-        Log.v("HomeActivity",newsList.toString()+newsAdapter.toString());
+        newsAdapter = new NewsAdapter(getActivity(), newsList);
+        Log.v("HomeActivity", newsList.toString() + newsAdapter.toString());
         homeNewsList.setMode(PullToRefreshBase.Mode.PULL_FROM_END);
         homeNewsList.setAdapter(newsAdapter);
 
@@ -154,17 +161,53 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             }
         });
 
+        initBanner();
 
     }
 
     private void initAskDate() {
-       askItemList.addAll(Utils.getAskItems());
+        askItemList.addAll(Utils.getAskItems());
 
     }
 
     private void initNewsDate() {
 
         newsList = parseJson(stringjson);
+
+    }
+
+    private void initBanner(){
+        images.add(R.drawable.item_ask_iv1);
+        titles.add("第一张图片");
+        images.add(R.drawable.item_ask_iv2);
+        titles.add("第二张图片");
+        images.add(R.drawable.item_news_iv1);
+        titles.add("第三张图片");
+        images.add(R.drawable.item_news_iv2);
+        titles.add("第四张图片");
+
+
+
+        //设置banner样式
+        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE);
+        //设置图片加载器
+        banner.setImageLoader(new GlideImageLoader());
+        //设置图片集合
+        banner.setImages(images);
+        //设置banner的高度为手机屏幕的四分之一
+        //banner.setLayoutParams(new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, App.H/4));
+        //设置banner动画效果
+        banner.setBannerAnimation(Transformer.DepthPage);
+        //设置标题集合（当banner样式有显示title时）
+        banner.setBannerTitles(titles);
+        //设置自动轮播，默认为true
+        banner.isAutoPlay(true);
+        //设置轮播时间
+        banner.setDelayTime(1500);
+        //设置指示器位置（当banner模式中有指示器时）
+        banner.setIndicatorGravity(BannerConfig.CENTER);
+        //banner设置方法全部调用完毕时最后调用
+        banner.start();
 
     }
 
@@ -213,6 +256,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             homeNewsList.onRefreshComplete();
         }
     }
+
     private List<Result> parseJson(String jsonStr) {
         Gson gson = new Gson();
         DataBean dataBean = gson.fromJson(jsonStr, DataBean.class);
@@ -222,8 +266,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }
         return null;
     }
+
     private String stringjson = "{\n" +
-            "    \"code\": 200,\n" +
+            "    \"type\": \"类型\",\n" +
             "    \"result\": [\n" +
             "        {\n" +
             "            \"imageUrl\": [\n" +
