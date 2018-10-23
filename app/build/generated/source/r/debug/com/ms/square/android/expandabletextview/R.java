@@ -10,24 +10,24 @@ public final class R {
     public static final class attr {
         public static final int animAlphaStart = 0x7f030037;
         public static final int animDuration = 0x7f030038;
-        public static final int collapseDrawable = 0x7f030069;
-        public static final int expandDrawable = 0x7f03009c;
-        public static final int maxCollapsedLines = 0x7f0300f5;
+        public static final int collapseDrawable = 0x7f03006a;
+        public static final int expandDrawable = 0x7f0300ab;
+        public static final int maxCollapsedLines = 0x7f030104;
     }
     public static final class drawable {
-        public static final int ic_collapse_holo_light = 0x7f070075;
-        public static final int ic_collapse_large_holo_light = 0x7f070076;
-        public static final int ic_collapse_small_holo_light = 0x7f070077;
-        public static final int ic_expand_holo_light = 0x7f07007a;
-        public static final int ic_expand_large_holo_light = 0x7f07007b;
-        public static final int ic_expand_small_holo_light = 0x7f07007c;
+        public static final int ic_collapse_holo_light = 0x7f070093;
+        public static final int ic_collapse_large_holo_light = 0x7f070094;
+        public static final int ic_collapse_small_holo_light = 0x7f070095;
+        public static final int ic_expand_holo_light = 0x7f070099;
+        public static final int ic_expand_large_holo_light = 0x7f07009a;
+        public static final int ic_expand_small_holo_light = 0x7f07009b;
     }
     public static final class id {
-        public static final int expand_collapse = 0x7f08007c;
-        public static final int expandable_text = 0x7f08007e;
+        public static final int expand_collapse = 0x7f08007f;
+        public static final int expandable_text = 0x7f080081;
     }
     public static final class styleable {
-        public static final int[] ExpandableTextView = { 0x7f030037, 0x7f030038, 0x7f030069, 0x7f03009c, 0x7f0300f5 };
+        public static final int[] ExpandableTextView = { 0x7f030037, 0x7f030038, 0x7f03006a, 0x7f0300ab, 0x7f030104 };
         public static final int ExpandableTextView_animAlphaStart = 0;
         public static final int ExpandableTextView_animDuration = 1;
         public static final int ExpandableTextView_collapseDrawable = 2;
