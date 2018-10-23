@@ -12,8 +12,8 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:background="@color/ques_bt_text_color_light"
-        android:layout_height="220dp">
+        android:layout_height="220dp"
+        android:background="@drawable/item_news_4">
 
 
         <LinearLayout
@@ -52,7 +52,6 @@
                     android:scaleType="centerInside"
                     android:src="@mipmap/btn_qrcode"
                     tools:ignore="RtlHardcoded" />
-
 
 
             </FrameLayout>
