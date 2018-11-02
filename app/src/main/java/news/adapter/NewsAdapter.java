@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.life.R;
 import com.lidroid.xutils.BitmapUtils;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -35,23 +36,23 @@ public class NewsAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
 
-    private final int TYPE_COUNT = 3;
+    private final int TYPE_COUNT = 4;
 
-    private final int TYPE_ONE = 0;
+    private final int TYPE_ONE = 3;
 
     private final int TYPE_TWO = 1;
 
-    private final int TYPE_THREE = 2;
+    private final int TYPE_THREE = 0;
 
     private int currentType;
 
-    private BitmapUtils bitmapUtils;
+
 
     public NewsAdapter(Context context, List<Result> dataList) {
         this.context = context;
         this.dataList = dataList;
         inflater = LayoutInflater.from(context);
-        bitmapUtils = new BitmapUtils(context);
+
     }
 
     @Override
@@ -88,15 +89,15 @@ public class NewsAdapter extends BaseAdapter {
             } else {
                 viewHolderOne = (ViewHolderOne) convertView.getTag();
             }
-
-            //bitmapUtils.display(viewHolderOne.itemNews1Image1, imageUrls.get(0));
-            //bitmapUtils.display(viewHolderOne.itemNews1Image2, imageUrls.get(1));
-            //bitmapUtils.display(viewHolderOne.itemNews1Image3, imageUrls.get(2));
+            Picasso.get().load(imageUrls.get(0)).fit().into(viewHolderOne.itemNews1Image1);
+            Picasso.get().load(imageUrls.get(1)).fit().into(viewHolderOne.itemNews1Image2);
+            Picasso.get().load(imageUrls.get(2)).fit().into(viewHolderOne.itemNews1Image3);
+            Log.v("Adapter",imageUrls.get(0));
             viewHolderOne.itemNews1Title.setText(result.getTitle());
-            viewHolderOne.itemNews1Comment.setText(result.getComment()+"评论");
+            viewHolderOne.itemNews1Comment.setText(result.getComment()+"");
             viewHolderOne.itemNews1Time.setText(result.getTime());
             viewHolderOne.itemNews1Author.setText(result.getAuthor()+"|");
-            viewHolderOne.itemNews1Recommend.setText(result.getRecommend()+"赞");
+            viewHolderOne.itemNews1Recommend.setText(result.getRecommend()+"");
 
 
         } else if (currentType == TYPE_TWO) {
@@ -109,20 +110,19 @@ public class NewsAdapter extends BaseAdapter {
             } else {
                 viewHolderTwo = (ViewHolderTwo) convertView.getTag();
             }
-            //bitmapUtils.display(viewHolderTwo.itemNews2Image1, imageUrls.get(0));
+            Picasso.get().load(imageUrls.get(0)).fit().into(viewHolderTwo.itemNews2Image1);
+
             viewHolderTwo.itemNews2Title.setText(result.getTitle());
-            viewHolderTwo.itemNews2Comment.setText(result.getComment()+"评论");
+            viewHolderTwo.itemNews2Comment.setText(result.getComment()+"");
             viewHolderTwo.itemNews2Time.setText(result.getTime());
             viewHolderTwo.itemNews2Author.setText(result.getAuthor()+"|");
-            viewHolderTwo.itemNews2Recommend.setText(result.getRecommend()+"点赞");
+            viewHolderTwo.itemNews2Recommend.setText(result.getRecommend()+"");
 
         } else if (currentType == TYPE_THREE) {
             ViewHolderThree viewHolderThree;
             if (convertView == null) {
-
                 convertView = inflater.inflate(R.layout.item_news_3, null);
                 viewHolderThree = new ViewHolderThree(convertView);
-
                 convertView.setTag(viewHolderThree);
 
             } else {
@@ -130,10 +130,10 @@ public class NewsAdapter extends BaseAdapter {
             }
             viewHolderThree.itemNews3Title.setText(result.getTitle());
             viewHolderThree.itemNews3Intro.setText(result.getIntro());
-            viewHolderThree.itemNews3Comment.setText(result.getComment()+"评论");
+            viewHolderThree.itemNews3Comment.setText(result.getComment()+"");
             viewHolderThree.itemNews3Time.setText(result.getTime());
             viewHolderThree.itemNews3Author.setText(result.getAuthor()+"|");
-            viewHolderThree.itemNews3Recommend.setText(result.getRecommend()+"点赞");
+            viewHolderThree.itemNews3Recommend.setText(result.getRecommend()+"");
 
         }
 

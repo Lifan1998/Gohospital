@@ -8,8 +8,20 @@
     <color name="list_divider_color">#c8c7cc</color>
     <color name="main_black">#333</color>
     <color name="ques_bt_text_color_light">#24cf5f</color>
-    <color name="brank">#000000</color>
     <color name="forecast_theme">#2fccff</color>
     <color name="apptheme">#0eb7f2</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bar_grey">#393a3e</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="brank">#000000</color>
+    <color name="blue">#7D7DFF</color>
+    <color name="color_fa">#fafafa</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="color_c51">#f94c51</color>
+    <color name="color_green">#43c117</color>
 
 </resources>

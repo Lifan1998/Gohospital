@@ -10,11 +10,6 @@ package user;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,12 +28,16 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.life.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
+
+import user.util.Utils;
+import config.App;
 
 import static android.content.ContentValues.TAG;
-import static android.os.Build.*;
 
 /**
  * 注册Demo
@@ -51,7 +50,10 @@ public class ForgetPassActivity extends Activity implements OnClickListener {
     private ImageView iv_return;
     private TextView tv_code;
     private Button btn_reset;
-
+    /**
+     * 短信验证码
+     **/
+    public static String CAPTCHA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,8 +83,9 @@ public class ForgetPassActivity extends Activity implements OnClickListener {
             case R.id.iv_return:
                 finish();
                 break;
-            case R.id.btn_register:
-                if(password_.getText().equals(password.getText())){
+            case R.id.btn_reset:
+
+                if(password_.getText().toString().equals(password.getText().toString())){
                     reset();
                 }else{
                     Toast.makeText(ForgetPassActivity.this,"两次输入的密码不一致！",Toast.LENGTH_SHORT).show();
@@ -91,29 +94,40 @@ public class ForgetPassActivity extends Activity implements OnClickListener {
                 break;
             case R.id.tv_code:
                 Toast.makeText(ForgetPassActivity.this,"已发送验证短信",Toast.LENGTH_SHORT).show();
+                Utils.sendMessage(username.getText().toString(),this,tv_code);
                 break;
 
         }
     }
 
-    //重置密码
+
     private void reset(){
+        if (CAPTCHA == null){
+            Toast.makeText(ForgetPassActivity.this,"未发送验证短信",Toast.LENGTH_SHORT).show();
+            return;
+        } else if (CAPTCHA.equals(code.getText().toString())){
 
         //Volley上传数据给服务器
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        String httpurl = "";
+        String httpurl = App.testHttpUrl+"forgetPass";
         StringRequest stringRequest = new StringRequest(Request.Method.POST,httpurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        String token = "";
-                        SharedPreferences settings = getSharedPreferences("base", 0);
-                        SharedPreferences.Editor editor = settings.edit();
-                        editor.putString("token", token);
-                        // 提交本次编辑
-                        editor.commit();
+                        try {
+                            JSONObject jsonObject = new JSONObject(response.toString());
+                            JSONObject jsonObject1 = jsonObject.getJSONObject("model");
+                            String token = jsonObject1.getString("token");
+                            SharedPreferences settings = getSharedPreferences("base", 0);
+                            SharedPreferences.Editor editor = settings.edit();
+                            editor.putString("token", token);
+                            // 提交本次编辑
+                            editor.commit();
+                            Log.v("LoginActivity",token);
 
-                        Log.d(TAG, "response -> " + response);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                         Toast.makeText(ForgetPassActivity.this,"重置成功",Toast.LENGTH_SHORT).show();
                         finish();
                     }
@@ -128,15 +142,16 @@ public class ForgetPassActivity extends Activity implements OnClickListener {
             protected Map<String, String> getParams() {
                 //在这里设置需要post的参数
                 Map<String, String> map = new HashMap<String, String>();
-
-                map.put("username",username.getText().toString() );
+                map.put("tel",username.getText().toString() );
 
                 map.put("password",password.getText().toString());
-                map.put("code",code.getText().toString());
                 return map;
             }
         };
         requestQueue.add(stringRequest);
+        } else {
+            Toast.makeText(ForgetPassActivity.this,"验证码错误",Toast.LENGTH_SHORT).show();
+        }
     }
 
 

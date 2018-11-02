@@ -1,5 +1,8 @@
 package ask.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.List;
 
 /**
@@ -9,13 +12,63 @@ import java.util.List;
  * @desc
  */
 
-public class AskItem {
+public class AskItem implements Parcelable{
     private List<String> imageurl;
     private String title;
     private String intro;
     private String name;
+    /**
+     * 问题id
+     */
     private int id;
+    private String userUrl;
+    private String time;
+    private int collect = 0;
+    private int comment = 0;
+    public AskItem(){
 
+    }
+    protected AskItem(Parcel in) {
+        imageurl = in.createStringArrayList();
+        title = in.readString();
+        intro = in.readString();
+        name = in.readString();
+        id = in.readInt();
+        userUrl = in.readString();
+        time = in.readString();
+        collect = in.readInt();
+        comment = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeStringList(imageurl);
+        dest.writeString(title);
+        dest.writeString(intro);
+        dest.writeString(name);
+        dest.writeInt(id);
+        dest.writeString(userUrl);
+        dest.writeString(time);
+        dest.writeInt(collect);
+        dest.writeInt(comment);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<AskItem> CREATOR = new Creator<AskItem>() {
+        @Override
+        public AskItem createFromParcel(Parcel in) {
+            return new AskItem(in);
+        }
+
+        @Override
+        public AskItem[] newArray(int size) {
+            return new AskItem[size];
+        }
+    };
 
     @Override
     public String toString() {
@@ -25,10 +78,19 @@ public class AskItem {
                 ", intro='" + intro + '\'' +
                 ", name='" + name + '\'' +
                 ", id=" + id +
+                ", userUrl='" + userUrl + '\'' +
                 ", time='" + time + '\'' +
                 ", collect=" + collect +
                 ", comment=" + comment +
                 '}';
+    }
+
+    public String getUserUrl() {
+        return userUrl;
+    }
+
+    public void setUserUrl(String userUrl) {
+        this.userUrl = userUrl;
     }
 
     public int getId() {
@@ -95,8 +157,6 @@ public class AskItem {
         this.comment = comment;
     }
 
-    private String time;
-    private int collect;
-    private int comment;
+
 
 }

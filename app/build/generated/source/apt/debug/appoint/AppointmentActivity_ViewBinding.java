@@ -18,13 +18,13 @@ import java.lang.Override;
 public class AppointmentActivity_ViewBinding<T extends AppointmentActivity> implements Unbinder {
   protected T target;
 
-  private View view2131231059;
+  private View view2131296672;
 
-  private View view2131230966;
+  private View view2131296544;
 
-  private View view2131230942;
+  private View view2131296514;
 
-  private View view2131231127;
+  private View view2131296766;
 
   @UiThread
   public AppointmentActivity_ViewBinding(final T target, View source) {
@@ -33,7 +33,7 @@ public class AppointmentActivity_ViewBinding<T extends AppointmentActivity> impl
     View view;
     view = Utils.findRequiredView(source, R.id.search_image, "field 'searchImage' and method 'onViewClicked'");
     target.searchImage = Utils.castView(view, R.id.search_image, "field 'searchImage'", ImageView.class);
-    view2131231059 = view;
+    view2131296672 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -43,7 +43,7 @@ public class AppointmentActivity_ViewBinding<T extends AppointmentActivity> impl
     target.appointmentListView = Utils.findRequiredViewAsType(source, R.id.appointment_listView, "field 'appointmentListView'", ListView.class);
     view = Utils.findRequiredView(source, R.id.layout_return, "field 'layoutReturn' and method 'onViewClicked'");
     target.layoutReturn = Utils.castView(view, R.id.layout_return, "field 'layoutReturn'", LinearLayout.class);
-    view2131230966 = view;
+    view2131296544 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +53,7 @@ public class AppointmentActivity_ViewBinding<T extends AppointmentActivity> impl
     target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg' and method 'onViewClicked'");
     target.ivMsg = Utils.castView(view, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
-    view2131230942 = view;
+    view2131296514 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class AppointmentActivity_ViewBinding<T extends AppointmentActivity> impl
     });
     view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum' and method 'onViewClicked'");
     target.tvMsgNum = Utils.castView(view, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
-    view2131231127 = view;
+    view2131296766 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -84,14 +84,14 @@ public class AppointmentActivity_ViewBinding<T extends AppointmentActivity> impl
     target.ivMsg = null;
     target.tvMsgNum = null;
 
-    view2131231059.setOnClickListener(null);
-    view2131231059 = null;
-    view2131230966.setOnClickListener(null);
-    view2131230966 = null;
-    view2131230942.setOnClickListener(null);
-    view2131230942 = null;
-    view2131231127.setOnClickListener(null);
-    view2131231127 = null;
+    view2131296672.setOnClickListener(null);
+    view2131296672 = null;
+    view2131296544.setOnClickListener(null);
+    view2131296544 = null;
+    view2131296514.setOnClickListener(null);
+    view2131296514 = null;
+    view2131296766.setOnClickListener(null);
+    view2131296766 = null;
 
     this.target = null;
   }

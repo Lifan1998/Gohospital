@@ -13,13 +13,12 @@
           android:layout_height="wrap_content"
           android:id="@+id/fab"
           android:layout_margin="16dp"
+          android:backgroundTint="@color/white"
           android:layout_gravity="bottom|end"
-          android:src="@drawable/ic_menu_ask_off"
+            android:src="@drawable/plus"
           app:elevation="8dp"/>
 
-
-
-   <LinearLayout
+      <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical">

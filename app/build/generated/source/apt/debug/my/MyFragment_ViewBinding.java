@@ -18,11 +18,11 @@ import java.lang.Override;
 public class MyFragment_ViewBinding<T extends MyFragment> implements Unbinder {
   protected T target;
 
-  private View view2131231040;
+  private View view2131296589;
 
-  private View view2131231042;
+  private View view2131296592;
 
-  private View view2131231041;
+  private View view2131296590;
 
   @UiThread
   public MyFragment_ViewBinding(final T target, View source) {
@@ -32,7 +32,7 @@ public class MyFragment_ViewBinding<T extends MyFragment> implements Unbinder {
     target.tvUsername = Utils.findRequiredViewAsType(source, R.id.tv_username, "field 'tvUsername'", TextView.class);
     view = Utils.findRequiredView(source, R.id.my_appoint, "field 'myAppoint' and method 'startMyLove'");
     target.myAppoint = Utils.castView(view, R.id.my_appoint, "field 'myAppoint'", LinearLayout.class);
-    view2131231040 = view;
+    view2131296589 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -41,7 +41,7 @@ public class MyFragment_ViewBinding<T extends MyFragment> implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.my_love, "field 'myLove' and method 'startMyLove'");
     target.myLove = Utils.castView(view, R.id.my_love, "field 'myLove'", LinearLayout.class);
-    view2131231042 = view;
+    view2131296592 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class MyFragment_ViewBinding<T extends MyFragment> implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.my_ask, "field 'myAsk' and method 'startMyLove'");
     target.myAsk = Utils.castView(view, R.id.my_ask, "field 'myAsk'", LinearLayout.class);
-    view2131231041 = view;
+    view2131296590 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -78,12 +78,12 @@ public class MyFragment_ViewBinding<T extends MyFragment> implements Unbinder {
     target.profileImage = null;
     target.aboutLine = null;
 
-    view2131231040.setOnClickListener(null);
-    view2131231040 = null;
-    view2131231042.setOnClickListener(null);
-    view2131231042 = null;
-    view2131231041.setOnClickListener(null);
-    view2131231041 = null;
+    view2131296589.setOnClickListener(null);
+    view2131296589 = null;
+    view2131296592.setOnClickListener(null);
+    view2131296592 = null;
+    view2131296590.setOnClickListener(null);
+    view2131296590 = null;
 
     this.target = null;
   }

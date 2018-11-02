@@ -33,7 +33,7 @@ public class GlideImageLoader extends ImageLoader {
         //Glide.with(context).load(path).into(imageView);
 
         //Picasso 加载图片简单用法
-        Picasso.get().load((Integer) path).into(imageView);
+        Picasso.get().load((String) path).into(imageView);
 
 
         //用fresco加载图片简单用法，记得要写下面的createImageView方法

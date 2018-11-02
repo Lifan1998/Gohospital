@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +30,7 @@ public  class JsonParser {
             JSONArray jsonArray = new JSONArray(json);
             for (int i=0;i<jsonArray.length();i++){
                 Hospital hospital = new Hospital();
-                JSONObject jsonObject = (JSONObject)jsonArray.get(i);
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Log.v("JsonParser",jsonObject.toString());
 
                 hospital.setAddress(jsonObject.getString("haddr"));
@@ -55,7 +56,7 @@ public  class JsonParser {
             Log.v("JsonParser", jsonArray.toString());
             for (int i=0;i<jsonArray.length();i++) {
                 Doctor doctor = new Doctor();
-                JSONObject jsonObject = (JSONObject) jsonArray.get(i);
+                JSONObject jsonObject =(JSONObject) jsonArray.get(i);
                 Log.v("JsonParser", jsonObject.toString());
 
                 doctor.setDepartment(jsonObject.getString("hdept"));
@@ -115,31 +116,37 @@ public  class JsonParser {
                 String str = (String) jsonArray.get(i);
                 String time = "";
                 switch (str.substring(0,3)){
-                    case "Mon": time += "星期一 ";break;
-                    case "Tue": time += "星期二 ";break;
-                    case "Wed": time += "星期三 ";break;
-                    case "Thu": time += "星期四 ";break;
-                    case "Fri": time += "星期五 ";break;
-                    case "Sat": time += "星期六 ";break;
-                    case "Sun": time += "星期天 ";break;
+                    case "Mon": time += "周一 ";break;
+                    case "Tue": time += "周二 ";break;
+                    case "Wed": time += "周三 ";break;
+                    case "Thu": time += "周四 ";break;
+                    case "Fri": time += "周五 ";break;
+                    case "Sat": time += "周六 ";break;
+                    case "Sun": time += "周天 ";break;
 
                 }
+                time += str.substring(str.length()-4,str.length())+"-";
                 switch (str.substring(4,7)){
-                    case "Jan": time += "1.";break;
-                    case "Feb": time += "2.";break;
-                    case "Mar": time += "3.";break;
-                    case "Apr": time += "4.";break;
-                    case "May": time += "5.";break;
-                    case "Jun": time += "6.";break;
-                    case "Jul": time += "7.";break;
-                    case "Aug": time += "8.";break;
-                    case "Sep": time += "9.";break;
-                    case "Oct": time += "10.";break;
-                    case "Nov": time += "11.";break;
-                    case "Dec": time += "12.";break;
+                    case "Jan": time += "01-";break;
+                    case "Feb": time += "02-";break;
+                    case "Mar": time += "03-";break;
+                    case "Apr": time += "04-";break;
+                    case "May": time += "05-";break;
+                    case "Jun": time += "06-";break;
+                    case "Jul": time += "07-";break;
+                    case "Aug": time += "08-";break;
+                    case "Sep": time += "09-";break;
+                    case "Oct": time += "10-";break;
+                    case "Nov": time += "11-";break;
+                    case "Dec": time += "12-";break;
 
                 }
-                time +=str.substring(7,20)+"-";
+                Log.v("JsonParser",str);
+                time +=str.substring(8,16)+"-";
+                int t = Integer.valueOf( str.substring(11,13));
+                t += 2;
+                time += t+":00";
+
 
                 times.add(time);
 

@@ -9,15 +9,8 @@ package user;
         import android.app.Activity;
         import android.content.Intent;
         import android.content.SharedPreferences;
-        import android.provider.ContactsContract;
-        import android.text.Editable;
-        import android.text.Layout;
-        import android.text.TextWatcher;
-        import android.text.method.HideReturnsTransformationMethod;
-        import android.text.method.PasswordTransformationMethod;
         import android.util.Log;
         import android.view.View;
-        import android.view.View.OnClickListener;
         import android.view.Window;
         import android.widget.Button;
         import android.widget.EditText;
@@ -27,15 +20,10 @@ package user;
         import android.widget.Toast;
         import android.os.Bundle;
 
-        import com.android.volley.NetworkResponse;
-        import com.android.volley.ParseError;
         import com.android.volley.Request;
         import com.android.volley.RequestQueue;
         import com.android.volley.Response;
-        import com.android.volley.Response.ErrorListener;
         import com.android.volley.VolleyError;
-        import com.android.volley.toolbox.HttpHeaderParser;
-        import com.android.volley.toolbox.JsonObjectRequest;
         import com.android.volley.toolbox.StringRequest;
         import com.android.volley.toolbox.Volley;
         import com.example.life.R;
@@ -43,15 +31,10 @@ package user;
         import org.json.JSONException;
         import org.json.JSONObject;
 
-        import java.io.UnsupportedEncodingException;
-        import java.util.HashMap;
-        import java.util.Map;
-
-        import appoint.ConfirmActivity;
-        import appoint.utils.JsonParser;
-        import appoint.utils.OtherUtils;
-
-        import static android.content.ContentValues.TAG;
+        import config.App;
+        import config.Preferences;
+        import user.util.CountDownTimerUtils;
+        import user.util.Utils;
 
 /**
  * &#x767b;&#x5f55;&#x754c;&#x9762;Demo
@@ -67,6 +50,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private LinearLayout sign_change;
     private TextView tvLabel;
     private String TAG = "LoginActivity";
+    /**
+    * 短信验证码
+    **/
+   public static String CAPTCHA;
 
 
     private int login_way  = 0;
@@ -114,22 +101,25 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             case R.id.tv_register:
                 Intent intent = new Intent(this, RegisterActivity.class);
                 startActivity(intent);
-
+                finish();
                 break;
             case R.id.tv_code:
                 Toast.makeText(LoginActivity.this,"已发送验证短信",Toast.LENGTH_SHORT).show();
+                new CountDownTimerUtils(tv_code,30*1000,1000);
+
+                Utils.sendMessage(username.getText().toString(),this,tv_code);
                 break;
             case R.id.sign_change:
                 changeSign();
                 break;
             case R.id.btn_login:
-                //login();
-                login1();
+                login();
                 break;
 
             case R.id.tv_forgetpass:
                 intent = new Intent(this, ForgetPassActivity.class);
                 startActivity(intent);
+                finish();
 
                 break;
         }
@@ -140,14 +130,14 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private void changeSign() {
        if(login_way==0){
            login_way=1;
-            tvLabel.setText("用帐号密码登录");
+            tvLabel.setText("帐号密码登录");
            code.setVisibility(View.INVISIBLE);
            tv_code.setVisibility(View.INVISIBLE);
            password.setVisibility(View.VISIBLE);
 
        } else {
            login_way=0;
-           tvLabel.setText("用短信验证码登录");
+           tvLabel.setText("短信验证码登录");
            code.setVisibility(View.VISIBLE);
            tv_code.setVisibility(View.VISIBLE);
            password.setVisibility(View.INVISIBLE);
@@ -155,80 +145,52 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     }
 
 
-    private   void login(){
-        //Volley上传数据给服务器
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        String httpurl = "http://120.79.241.203:8080/GoHospital/login";
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,httpurl,
+    private void login(){
+        String httpurl = null;
+        if(login_way==0){
+
+            httpurl = App.testHttpUrl+"login?" +"flag="+login_way+"&tel="+username.getText().toString()+
+                    "&password="+code.getText().toString();
+
+        } else {
+            httpurl = App.testHttpUrl+"login?" +"flag="+login_way+"&tel="+username.getText().toString()+
+                    "&password="+password.getText().toString();
+        }
+        RequestQueue mQueue = Volley.newRequestQueue(LoginActivity.this);
+
+        Log.v("LoginActivity",httpurl);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, httpurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.v(TAG,"sussse"+response);
-                        String token = "123";
-                        SharedPreferences settings = getSharedPreferences("base", 0);
-                        SharedPreferences.Editor editor = settings.edit();
-                        editor.putString("token", token);
-                        // 提交本次编辑
-                        editor.commit();
+                        Log.v(getClass().getName(),"response:"+response.toString());
+                        try {
+                            JSONObject jsonObject = new JSONObject(response.toString());
+                            JSONObject jsonObject1 = jsonObject.getJSONObject("model");
+                            String token = jsonObject1.getString("token");
+                            //SharedPreferences settings = getSharedPreferences("base", 0);
+                            //SharedPreferences.Editor editor = settings.edit();
+                            //editor.putString("token", token);
+                            // 提交本次编辑
+                            //editor.commit();
+                            Preferences.getInstance().setToken(token);
+                            Log.v("LoginActivity",token);
 
-
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                         finish();
-                    }
-                }, new ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.e(TAG, error.getMessage(), error);
-                    Toast.makeText(LoginActivity.this,"登录失败",Toast.LENGTH_SHORT).show();
-
-                }
-        }) {
-            @Override
-            protected Map<String, String> getParams() {
-                //在这里设置需要post的参数
-                Map<String, String> map = new HashMap<String, String>();
-                if(login_way==0){
-                    map.put("flag",login_way+"" );
-                    map.put("account", username.getText().toString());
-                    map.put("password",code.getText().toString());
-
-                }else{
-                    map.put("flag",login_way+"" );
-                    map.put("account", username.getText().toString());
-                    map.put("password",password.getText().toString());
-                }
-
-                return map;
-            }
-        };
-        requestQueue.add(stringRequest);
-
-    }
-
-    private void login1(){
-
-        RequestQueue mQueue = Volley.newRequestQueue(LoginActivity.this);
-        String httpurl = "http://120.79.241.203:8080/GoHospital/login?" +"flag="+login_way+"&account="+username.getText().toString()+
-                "&password="+password.getText().toString();
-        Log.v("LoginActivity",httpurl);
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(httpurl, null,
-                new Response.Listener<JSONObject>() {
-
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Log.v("LoginActivity",response.toString());
-
 
                     }
                 }, new Response.ErrorListener() {
-
             @Override
-            public void onErrorResponse(VolleyError error) {
-
-                Log.e("LoginActivity", error.getMessage(), error);
-
+            public void onErrorResponse(VolleyError volleyError) {
+                Log.e(getClass().getSimpleName(),volleyError.getMessage(),volleyError);
             }
         });
-        mQueue.add(jsonObjectRequest);
+        mQueue.add(stringRequest);
+
+
     }
 
 

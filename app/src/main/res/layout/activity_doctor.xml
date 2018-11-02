@@ -3,19 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
     <include layout="@layout/layout_titie"></include>
     <View
         android:layout_width="match_parent"
         android:layout_height="20dp"
+        android:background="@color/qmui_config_color_gray_9"
 
         ></View>
     <include layout="@layout/item_appoint_doctor"></include>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
 
-        ></View>
 
 
     <com.ms.square.android.expandabletextview.ExpandableTextView
@@ -25,6 +23,7 @@
         android:layout_width="match_parent"
         android:background="@color/text_white"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         expandableTextView:maxCollapsedLines="2"
         expandableTextView:collapseDrawable="@drawable/expandable_textview_button_collapse"
         expandableTextView:expandDrawable="@drawable/expandable_textview_button_expand"
@@ -55,10 +54,9 @@
     <LinearLayout
         android:id="@+id/doctor_chat"
         android:layout_width="match_parent"
-        android:background="@color/text_white"
-        android:layout_height="wrap_content">
-
-
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/text_white">
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -86,12 +84,14 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/list_divider_color"></View>
+
     <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:gravity="center"
-        android:text="排班信息"/>
+        android:text="排班信息"
+        />
     <View
         android:layout_width="200dp"
         android:layout_height="1px"
@@ -101,7 +101,7 @@
     <ListView
         android:id="@+id/li_appoint_time"
 
-        android:layout_width="300dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
 

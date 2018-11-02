@@ -8,8 +8,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_margin="10dp"
-
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -44,16 +44,33 @@
                 android:id="@+id/item_news2_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@+id/item_ask_iv"
+                android:text="115" />
+
+            <ImageView
+                android:id="@+id/item_ask_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@+id/item_news2_recommend"
-                android:text="115评论" />
+                android:layout_toLeftOf="@id/item_news2_recommend"
+                android:background="@mipmap/ic_thumb_normal" />
 
             <TextView
                 android:id="@+id/item_news2_recommend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="3k点赞" />
+                android:layout_toLeftOf="@id/item_ask_iv2"
+                android:layout_marginRight="3dp"
+                android:text="3"/>
+            <ImageView
+                android:id="@+id/item_ask_iv2"
+                android:layout_width="17dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:background="@mipmap/ic_comment" />
 
         </RelativeLayout>
 
@@ -61,10 +78,10 @@
 
     <ImageView
         android:id="@+id/item_news2_image1"
-        android:layout_width="wrap_content"
-        android:layout_height="90dp"
-        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
         android:layout_weight="3"
-        android:background="@drawable/item_news_4" />
+        android:src="@drawable/login_background" />
 
 </LinearLayout>

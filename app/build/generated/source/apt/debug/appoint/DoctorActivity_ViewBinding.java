@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import butterknife.Unbinder;
+import butterknife.internal.DebouncingOnClickListener;
 import butterknife.internal.Utils;
 import com.example.life.R;
 import java.lang.IllegalStateException;
@@ -17,10 +18,13 @@ import java.lang.Override;
 public class DoctorActivity_ViewBinding<T extends DoctorActivity> implements Unbinder {
   protected T target;
 
+  private View view2131296513;
+
   @UiThread
-  public DoctorActivity_ViewBinding(T target, View source) {
+  public DoctorActivity_ViewBinding(final T target, View source) {
     this.target = target;
 
+    View view;
     target.itemDoctorImage = Utils.findRequiredViewAsType(source, R.id.item_doctor_image, "field 'itemDoctorImage'", ImageView.class);
     target.itemDoctorName = Utils.findRequiredViewAsType(source, R.id.item_doctor_name, "field 'itemDoctorName'", TextView.class);
     target.itemDoctorGroup = Utils.findRequiredViewAsType(source, R.id.item_doctor_group, "field 'itemDoctorGroup'", TextView.class);
@@ -33,6 +37,15 @@ public class DoctorActivity_ViewBinding<T extends DoctorActivity> implements Unb
     target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
     target.ivMsg = Utils.findRequiredViewAsType(source, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
     target.tvMsgNum = Utils.findRequiredViewAsType(source, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.iv_love, "field 'ivLove' and method 'selectLove'");
+    target.ivLove = Utils.castView(view, R.id.iv_love, "field 'ivLove'", ImageView.class);
+    view2131296513 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.selectLove();
+      }
+    });
   }
 
   @Override
@@ -53,6 +66,10 @@ public class DoctorActivity_ViewBinding<T extends DoctorActivity> implements Unb
     target.tvTitle = null;
     target.ivMsg = null;
     target.tvMsgNum = null;
+    target.ivLove = null;
+
+    view2131296513.setOnClickListener(null);
+    view2131296513 = null;
 
     this.target = null;
   }

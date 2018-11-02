@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
+import butterknife.internal.DebouncingOnClickListener;
 import butterknife.internal.Utils;
 import com.example.life.R;
 import java.lang.IllegalStateException;
@@ -18,11 +19,22 @@ import java.lang.Override;
 public class MyLoveActivity_ViewBinding<T extends MyLoveActivity> implements Unbinder {
   protected T target;
 
+  private View view2131296544;
+
   @UiThread
-  public MyLoveActivity_ViewBinding(T target, View source) {
+  public MyLoveActivity_ViewBinding(final T target, View source) {
     this.target = target;
 
-    target.layoutReturn = Utils.findRequiredViewAsType(source, R.id.layout_return, "field 'layoutReturn'", LinearLayout.class);
+    View view;
+    view = Utils.findRequiredView(source, R.id.layout_return, "field 'layoutReturn' and method 'exit'");
+    target.layoutReturn = Utils.castView(view, R.id.layout_return, "field 'layoutReturn'", LinearLayout.class);
+    view2131296544 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.exit();
+      }
+    });
     target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
     target.ivMsg = Utils.findRequiredViewAsType(source, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
     target.tvMsgNum = Utils.findRequiredViewAsType(source, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
@@ -42,6 +54,9 @@ public class MyLoveActivity_ViewBinding<T extends MyLoveActivity> implements Unb
     target.tvMsgNum = null;
     target.layoutTitle = null;
     target.mylovefragment = null;
+
+    view2131296544.setOnClickListener(null);
+    view2131296544 = null;
 
     this.target = null;
   }

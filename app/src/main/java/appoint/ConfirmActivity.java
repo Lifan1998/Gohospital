@@ -11,14 +11,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.dd.CircularProgressButton;
 import com.example.life.R;
 
 import org.json.JSONException;
@@ -31,7 +35,12 @@ import appoint.utils.JsonParser;
 import appoint.utils.OtherUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import greendao.DatabaseUtils;
+import butterknife.OnClick;
+import config.App;
+import config.Preferences;
+import user.ForgetPassActivity;
+import user.LoginActivity;
+import user.RegisterActivity;
 
 /**
  * @author lifan
@@ -61,8 +70,6 @@ public class ConfirmActivity extends Activity {
     EditText confirmTele;
     @BindView(R.id.confirm_id)
     EditText confirmId;
-    @BindView(R.id.confirm)
-    TextView confirm;
     @BindView(R.id.layout_return)
     LinearLayout layoutReturn;
     @BindView(R.id.tv_title)
@@ -75,41 +82,33 @@ public class ConfirmActivity extends Activity {
     ImageView itemDoctorImage;
 
 
-    private Doctor doctor;
 
+    private Doctor doctor;
+    private String time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_appoint_confirm);
         ButterKnife.bind(this);
+        time = getIntent().getStringExtra("time");
         initView();
-        Log.v("TAG",getIntent().getIntExtra("id",0)+"");
+
+
 
     }
 
     private void initView() {
-        tvAppointTime.setText(getIntent().getStringExtra("time"));
-        confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = confirmName.getText().toString();
-                String tele = confirmTele.getText().toString();
-                String id = confirmId.getText().toString();
-                Toast.makeText(ConfirmActivity.this, "预约成功", Toast.LENGTH_SHORT);
-            }
-        });
+        tvAppointTime.setText(time);
 
 
         RequestQueue mQueue = Volley.newRequestQueue(ConfirmActivity.this);
         //doctor = DatabaseUtils.getDaoSession(DoctorActivity.this).getDoctorDao().queryBuilder().where(DoctorDao.Properties.Id.eq(id_doctor)).build().unique();
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest("http://120.79.241.203:8080/GoHospital/getDocById?dId=" + getIntent().getIntExtra("id",0), null,
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest("http://120.79.241.203:8080/GoHospital/getDocById?dId=" + getIntent().getIntExtra("id", 0), null,
                 new Response.Listener<JSONObject>() {
 
                     @Override
                     public void onResponse(JSONObject response) {
-
-
                         doctor = JsonParser.jsonToDoctor(response.toString());
                         Log.v("TAG", doctor.getName());
                         if (doctor != null) {
@@ -118,40 +117,59 @@ public class ConfirmActivity extends Activity {
                             itemDoctorName.setText(doctor.getName());
                             itemDoctorGroup.setText(doctor.getGroup());
                             itemDoctorScore.setText(doctor.getScore());
-                            itemDoctorHospital.setText(OtherUtils.getHospitalName(getIntent().getIntExtra("id",0),ConfirmActivity.this));
-
+                            OtherUtils.getHospitalName(getIntent().getIntExtra("id", 0), ConfirmActivity.this,itemDoctorHospital);
                         }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("TAG", error.getMessage(), error);
+            }
+        });
+        mQueue.add(jsonObjectRequest);
+    }
 
+    @OnClick(R.id.btn_appoint_confirm)
+    public void confirm(){
+        RequestQueue mQueue = Volley.newRequestQueue(getApplicationContext());
+        String httpurl = App.LocalUrl+"underline?token="+ Preferences.getInstance().getToken()+
+                "&dId="+doctor.getId()+"&hId="+doctor.getId_hospital()+
+                "&hDept="+doctor.getDepartment()+
+                "&hRoom="+doctor.getGroup()+
+                "&tel="+confirmTele.getText().toString()+
+                "&identity="+confirmId.getText().toString()+
+                "&name="+confirmName.getText().toString()+
+                "&aType="+1+
+                "&apTime="+time.substring(3,19)+":00";
+        Log.v(ConfirmActivity.class.getSimpleName(),httpurl);
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, httpurl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.v(getClass().getName(),"response:"+response.toString());
+                        try {
+                            JSONObject jsonObject = new JSONObject(response.toString());
+                            JSONObject jsonObject1 = jsonObject.getJSONObject("model");
+                            boolean isSuccess = jsonObject1.getBoolean("isSuccess");
+                            if(isSuccess){
+                                Toast.makeText(getApplicationContext(),"预约成功",Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(),"预约失败",Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
                     }
                 }, new Response.ErrorListener() {
-
             @Override
-            public void onErrorResponse(VolleyError error) {
-
-                Log.e("TAG", error.getMessage(), error);
-
+            public void onErrorResponse(VolleyError volleyError) {
+                Log.e(getClass().getSimpleName(),volleyError.getMessage(),volleyError);
             }
-        }) {
-            @Override
-            protected Response<JSONObject> parseNetworkResponse(NetworkResponse response) {
-                JSONObject jsonObject;
-                try {
-                    jsonObject = new JSONObject(new String(response.data, "UTF-8"));
-                    return Response.success(jsonObject, HttpHeaderParser.parseCacheHeaders(response));
-                } catch (UnsupportedEncodingException e) {
-                    // TODO 自动生成的 catch 块
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    // TODO 自动生成的 catch 块
-                    e.printStackTrace();
-                    return Response.error(new ParseError(e));
-                }
-                return null;
-
-            }
-        };
-        mQueue.add(jsonObjectRequest);
+        });
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(10000,0,0f));
+        mQueue.add(stringRequest);
     }
 }
 

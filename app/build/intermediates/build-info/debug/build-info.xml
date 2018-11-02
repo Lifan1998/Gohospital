@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="3.0.0"
-    timestamp="1539755064018"
+    timestamp="1541151952248"
     token="-1969465435586615885"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -62,7 +62,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1539755064018"
+        timestamp="1541151952248"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\AndroidStudio\Gohospital\app\build\intermediates\split-apk\debug\slices\slice_9.apk"

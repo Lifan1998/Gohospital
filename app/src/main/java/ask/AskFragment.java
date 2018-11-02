@@ -1,7 +1,9 @@
 package ask;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,9 +11,14 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.example.life.R;
 
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+import main.SearchActivity;
 
 
 /**
@@ -19,17 +26,21 @@ import com.example.life.R;
  */
 
 public class AskFragment extends Fragment implements View.OnClickListener {
-    String[] mTitle = new String[]{"胸闷","中毒","摔伤","养生","母婴","两性","美食","美容","运动"};
+    String[] mTitle = new String[]{"推荐","儿科", "骨科", "妇产科", "皮肤科", "消化内科", "心血管", "精神心理科", "眼科", "耳鼻喉科"};
     TabLayout mTabLayout;
     ViewPager mViewPager;
+
+    FloatingActionButton fab;
+    Unbinder unbinder;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_ask,container,false);
+        View view = inflater.inflate(R.layout.fragment_ask, container, false);
+        fab = view.findViewById(R.id.fab);
         initView(view);
+        unbinder = ButterKnife.bind(this, view);
         return view;
     }
-
-
 
 
     @Override
@@ -43,7 +54,7 @@ public class AskFragment extends Fragment implements View.OnClickListener {
         mViewPager.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
             //此方法用来显示tab上的名字
             @Override
-            public CharSequence getPageTitle(int position){
+            public CharSequence getPageTitle(int position) {
                 return mTitle[position % mTitle.length];
             }
 
@@ -83,5 +94,25 @@ public class AskFragment extends Fragment implements View.OnClickListener {
 
             }
         });
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),AskNewActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+    @OnClick(R.id.searchedit)
+    public void search(){
+        Intent intent = new Intent(getActivity(), SearchActivity.class);
+        intent.putExtra("type",4);
+        startActivity(intent);
     }
 }

@@ -47,11 +47,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);	
+		super.onCreate(savedInstanceState);
+
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_home);
 		bindView();
 		ly_one.performClick();
+
 
 		updatecheck();
 
@@ -77,7 +79,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 		ly_two = findViewById(R.id.ly_tab_menu_news);
 		ly_three = findViewById(R.id.ly_tab_menu_ask);
 		ly_four =findViewById(R.id.ly_tab_menu_my);
-
 		mTextView1 = findViewById(R.id.tab_menu_home);
 		mTextView2 = findViewById(R.id.tab_menu_news);
 		mTextView3 = findViewById(R.id.tab_menu_ask);
@@ -101,8 +102,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 	@Override
 	public void onClick(View v) {
 		transaction = getSupportFragmentManager().beginTransaction();
-
-
 
 		if(homeFragment!=null) {
          transaction.hide(homeFragment);
@@ -133,7 +132,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 			case R.id.ly_tab_menu_news:
 				setSelected();
 				mTextView2.setSelected(true);
-
 				if(newsFragment==null){
 					newsFragment = new NewsFragment();
 					transaction.add(R.id.fragment_container,newsFragment);
@@ -145,8 +143,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             case R.id.ly_tab_menu_ask:
                 setSelected();
                 mTextView3.setSelected(true);
-
-
                 if(askFragment==null){
                     askFragment = new AskFragment();
                     transaction.add(R.id.fragment_container,askFragment);
@@ -159,8 +155,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 			case R.id.ly_tab_menu_my:
 				setSelected();
 				mTextView4.setSelected(true);
-
-
 				if(myFragment==null){
 					myFragment = new MyFragment();
 					transaction.add(R.id.fragment_container,myFragment);
@@ -188,6 +182,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		//super.onSaveInstanceState(outState);
+		//super.onSaveInstanceState(outState);
 	}
 
 

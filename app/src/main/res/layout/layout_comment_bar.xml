@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:ignore="KeyboardInaccessibleWidget">
+
+    <View
+        style="@style/h_line"
+        android:background="#d4d4d4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dip"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="8dip"
+            android:layout_weight="1"
+            android:background="@drawable/ic_bg_edit"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:hint="发表评论"
+                android:paddingLeft="8dip"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_comment_count"
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dip"
+            android:background="@drawable/ic_material_ripple"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_comment_40" />
+
+            <TextView
+                android:id="@+id/tv_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_comment_count"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="12"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText,SmallSp" />
+        </FrameLayout>
+
+
+        <ImageButton
+            android:id="@+id/ib_fav"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_material_ripple"
+            android:padding="8dip"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_fav_pressed" />
+        <LinearLayout
+            android:id="@+id/ll_dispatch"
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_material_ripple"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_dispatch_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:gravity="center_vertical"
+                android:text="转发"
+                android:textColor="#9d9d9d"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/iv_dispatch"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="2dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_forward" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_like"
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_material_ripple"
+            android:gravity="center"
+            android:paddingLeft="8dip"
+            android:paddingRight="12dip"
+            android:visibility="visible"
+            tools:ignore="RtlHardcoded">
+
+
+            <ImageView
+                android:id="@+id/iv_thumbup"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="4dip"
+                android:src="@drawable/selector_thumb"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_tweet_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:gravity="center_vertical"
+                android:text="点赞"
+                android:textColor="#9d9d9d"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

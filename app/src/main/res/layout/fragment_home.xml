@@ -17,61 +17,68 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:orientation="vertical">
 
             <com.youth.banner.Banner
-                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/banner"
                 android:layout_width="match_parent"
-                android:layout_height="100dp" />
+                android:layout_height="150dp"
+                ptr:title_height="35dp" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp">
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/layout_radius_10dip"
+                >
 
                 <ImageView
-                    android:layout_marginLeft="15dp"
+
                     android:id="@+id/appointimage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:background="@drawable/yuyueguohao" />
 
                 <ImageView
                     android:id="@+id/iv_forecast"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="15dp"
                     android:layout_weight="2"
                     android:background="@drawable/forecast" />
 
             </LinearLayout>
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/layout_10radius_white">
 
 
-                android:text="选科室  问医生"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:text="选科室  问医生"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/text_white">
+
 
                 <GridView
                     android:id="@+id/gv_home"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:layout_centerInParent="true"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:background="@color/text_white"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/white"
                     android:cacheColorHint="#00000000"
                     android:gravity="center"
                     android:horizontalSpacing="10dp"
@@ -81,16 +88,17 @@
 
 
                 </GridView>
-            </RelativeLayout>
-            <View
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:background="@color/list_divider_color"
-                android:layout_height="1px">
-            </View>
+                android:orientation="vertical"
+                android:background="@drawable/radius_stoke_30"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
             <RelativeLayout
                 android:layout_width="match_parent"
 
-                android:background="@color/text_white"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -98,6 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="都在问"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -105,9 +114,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_margin="10dp"
                     android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
                     android:text="更多"
+                    android:textColor="@color/color_orange"
                     android:textSize="14sp" />
             </RelativeLayout>
             <View
@@ -119,22 +129,24 @@
             <ListView
                 android:id="@+id/home_ask_list"
                 android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:scrollbars="none"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:layout_height="370dp">
 
             </ListView>
-            <View
-                android:layout_width="match_parent"
-                android:background="@color/list_divider_color"
-                android:layout_height="1px">
-            </View>
+            </LinearLayout>
+
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:background="@color/text_white"
+                android:padding="10dp"
                 android:text="资讯"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
             <View
@@ -143,15 +155,11 @@
                 android:layout_height="1px">
             </View>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
 
             <com.handmark.pulltorefresh.library.PullToRefreshListView
                 android:id="@+id/home_news_list"
                 android:layout_width="match_parent"
-                android:layout_height="1000dp"
+                android:layout_height="720dp"
                 android:cacheColorHint="#00000000"
                 android:divider="@color/list_divider_color"
                 android:dividerHeight="1px"
@@ -159,9 +167,11 @@
                 android:fastScrollEnabled="false"
                 android:footerDividersEnabled="false"
                 android:headerDividersEnabled="false"
+                android:scrollbars="none"
                 android:smoothScrollbar="true"
                 ptr:ptrMode="pullFromEnd" />
-        </LinearLayout>
+
+
         </LinearLayout>
 
     </ScrollView>

@@ -66,6 +66,7 @@
             android:visibility="invisible" />
 
         <LinearLayout
+            android:id="@+id/ask_layimage"
             android:layout_width="match_parent"
             android:layout_height="80dp">
 
@@ -75,7 +76,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/item_ask_iv1" />
+                />
 
             <ImageView
                 android:id="@+id/item_ask_image2"
@@ -85,7 +86,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
 
-                android:background="@drawable/item_ask_iv2" />
+                 />
 
             <ImageView
                 android:id="@+id/item_ask_image3"
@@ -93,7 +94,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/item_news_4" />
+                 />
         </LinearLayout>
     </FrameLayout>
 
@@ -105,27 +106,37 @@
             android:id="@+id/item_ask_collect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_toLeftOf="@+id/item_ask_comment"
-            android:text="13人关注"
+            android:layout_toLeftOf="@+id/item_ask_iv"
+            android:layout_marginRight="3dp"
+            android:text="13"
             android:textColor="@color/qmui_config_color_gray_5" />
+        <ImageView
+            android:id="@+id/item_ask_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/item_ask_comment"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/ic_thumb_normal" />
 
         <TextView
             android:id="@+id/item_ask_comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/item_ask_iv"
+            android:layout_toLeftOf="@+id/item_ask_iv2"
             android:text="211"
             android:textColor="@color/qmui_config_color_gray_5" />
 
-        <TextView
-            android:id="@+id/item_ask_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/item_ask_iv2"
+            android:layout_width="17dp"
+            android:layout_height="15dp"
             android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:text="评论"
-            android:textColor="@color/qmui_config_color_gray_5" />
+            android:background="@mipmap/ic_comment" />
 
 
     </RelativeLayout>

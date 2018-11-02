@@ -23,7 +23,10 @@ public class Doctor {
         private String grade;
         private String score;
         private String desc;
-        private String scheduing;
+    /**
+     * 对个人用户而言，此变量存储预约的医生的预约时间
+     */
+    private String scheduing;
 
         @Generated(hash = 278297808)
         public Doctor(int id, String imageurl, String name, int id_hospital,

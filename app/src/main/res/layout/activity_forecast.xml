@@ -3,19 +3,24 @@
     android:layout_height="match_parent"
     android:background="@color/apptheme"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <include layout="@layout/layout_titie"></include>
 
     <ScrollView
         android:layout_width="match_parent"
-
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_height="wrap_content">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_margin="20dp"
             android:background="@drawable/layout_radius"
             android:orientation="vertical">
@@ -23,22 +28,29 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:layout_marginTop="20dp">
 
                 <TextView
                     style="@style/forecast_title_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:text="姓名：" />
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/tv_forecast_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:background="@null"
                         android:hint="点击输入" />
 
@@ -86,7 +98,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="1998/06/22" />
+                        android:text="1998-06-22" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -127,13 +139,19 @@
                         android:id="@+id/tv_height"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="177cm" />
+                        android:text="177" />
+                    <TextView
+                        android:id="@+id/tv_height1"
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@id/tv_height"
+                        android:layout_height="wrap_content"
+                        android:text="cm"/>
 
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="5dp"
                         android:layout_alignLeft="@id/tv_height"
-                        android:layout_alignRight="@id/tv_height"
+                        android:layout_alignRight="@id/tv_height1"
                         android:layout_below="@id/tv_height"
                         android:background="@color/text_blue"></View>
 
@@ -155,13 +173,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:text="60kg" />
+                        android:text="60" />
+                    <TextView
+                        android:id="@+id/tv_weight1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_weight"
+                        android:text="kg" />
 
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="5dp"
                         android:layout_alignLeft="@id/tv_weight"
-                        android:layout_alignRight="@id/tv_weight"
+                        android:layout_alignRight="@id/tv_weight1"
                         android:layout_below="@id/tv_weight"
                         android:background="@color/text_blue"></View>
 
@@ -169,6 +193,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tv_bmi"
                 style="@style/forecast_title_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -385,13 +410,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:text="10支" />
+                        android:text="10" />
+                    <TextView
+                        android:id="@+id/tv_smoke_num1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_smoke_num"
+                        android:text="支" />
 
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="5dp"
                         android:layout_alignLeft="@id/tv_smoke_num"
-                        android:layout_alignRight="@id/tv_smoke_num"
+                        android:layout_alignRight="@id/tv_smoke_num1"
                         android:layout_below="@id/tv_smoke_num"
                         android:background="@color/text_blue"></View>
 
@@ -419,13 +450,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:text="10年" />
+                        android:text="10" />
+                    <TextView
+                        android:id="@+id/tv_smoke_year1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_smoke_year"
+                        android:text="年" />
 
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="5dp"
                         android:layout_alignLeft="@id/tv_smoke_year"
-                        android:layout_alignRight="@id/tv_smoke_year"
+                        android:layout_alignRight="@id/tv_smoke_year1"
                         android:layout_below="@id/tv_smoke_year"
                         android:background="@color/text_blue"></View>
 

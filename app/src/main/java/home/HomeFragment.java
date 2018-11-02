@@ -3,60 +3,71 @@ package home;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.AsyncTask;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.life.R;
-import com.google.gson.Gson;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
+import com.youth.banner.listener.OnBannerListener;
+
+import org.json.JSONArray;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 import appoint.AppointmentActivity;
-import ask.Utils;
+import ask.AskOpenActivity;
 import ask.adapter.AskAdapter;
 import ask.model.AskItem;
+import ask.util.Utils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import config.App;
+import config.Preferences;
 import home.adapter.GridAdapter;
+import main.SearchActivity;
+import main.SearchFragment;
+import news.NewsOpenActivity;
 import news.adapter.NewsAdapter;
-import news.model.DataBean;
 import news.model.Result;
-import util.App;
+
+import static com.android.volley.VolleyLog.TAG;
 
 /**
  * Created by lenovo on 2018/4/18.
  */
 
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends Fragment {
 
     @BindView(R.id.iv_richscan)
     ImageView ivRichscan;
-    @BindView(R.id.layout_search_edit)
-    FrameLayout layoutSearchEdit;
     @BindView(R.id.iv_msg)
     ImageView ivMsg;
     @BindView(R.id.tv_msg_num)
@@ -70,25 +81,28 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private GridView gridView;
     private GridAdapter adapter;
 
-    private List<Result> newsList = new
-            LinkedList<>();
+    private List<Result> newsList = new LinkedList<>();
     private List<AskItem> askItemList = new ArrayList<>();
+    private List<Result> newsList1 = new LinkedList<>();
+
     private NewsAdapter newsAdapter;
+    private AskAdapter askAdapter;
+
     private PullToRefreshListView homeNewsList;
     private ListView homeAskList;
-    public  List<Integer> images=new ArrayList<>();
-    public  List<String> titles=new ArrayList<>();
+
+    public List<String> images = new ArrayList<>();
+    public List<String> titles = new ArrayList<>();
 
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 10:
-
                     adapter = new GridAdapter(getActivity());
                     gridView.setAdapter(adapter);
-
                     break;
+
             }
         }
 
@@ -98,28 +112,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        ImageView appointImage = view.findViewById(R.id.appointimage);
-        appointImage.setOnClickListener(this);
+        unbinder = ButterKnife.bind(this, view);
         gridView = view.findViewById(R.id.gv_home);
         homeNewsList = (PullToRefreshListView) view.findViewById(R.id.home_news_list);
         homeAskList = (ListView) view.findViewById(R.id.home_ask_list);
-
-
-        homeAskList.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_MOVE:
-                        return true;
-                    default:
-                        break;
-                }
-                return true;
-            }
-        });
-
-        unbinder = ButterKnife.bind(this, view);
         initView();
         return view;
     }
@@ -133,66 +129,122 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
             ;
         }.start();
+        //加载问答
 
         initAskDate();
-        AskAdapter askAdapter = new AskAdapter(getActivity(), askItemList);
-        homeAskList.setAdapter(askAdapter);
+        initBannerData();
 
-        initNewsDate();
-
+        //加载文章
         newsAdapter = new NewsAdapter(getActivity(), newsList);
-        Log.v("HomeActivity", newsList.toString() + newsAdapter.toString());
-        homeNewsList.setMode(PullToRefreshBase.Mode.PULL_FROM_END);
+        initNewsDate();
         homeNewsList.setAdapter(newsAdapter);
+        homeNewsList.setOnTouchListener(new View.OnTouchListener() {
 
-
-        homeNewsList.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
             @Override
-            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
-                Log.e("TAG", "onPullDownToRefresh");
-                //这里写下拉刷新的任务
-                new GetDataTask().execute();
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_MOVE:
+                        return true;
+                    default:
+                        break;
+                }
+                return true;
             }
-
+        });
+        homeNewsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onPullUpToRefresh(
-                    PullToRefreshBase<ListView> refreshView) {
-                Log.e("TAG", "onPullUpToRefresh");
-                //这里写上拉加载更多的任务
-                new GetDataTask().execute();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Result item = (Result) newsAdapter.getItem(position-1);
+                Intent intent = new Intent(getContext(), NewsOpenActivity.class);
+                intent.putExtra("id", item.getId());
+                intent.putExtra("title",item.getTitle());
+                intent.putExtra("aurl",item.getAurl());
+                intent.putExtra("type","推荐");
+                startActivity(intent);
+            }
+        });
+        //initBanner();
+        homeAskList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getContext(), AskOpenActivity.class);
+                AskItem askItem = (AskItem) askAdapter.getItem(position);
+                intent.putExtra("askItem", askItem);
+                startActivity(intent);
             }
         });
 
-        initBanner();
 
     }
 
     private void initAskDate() {
-        askItemList.addAll(Utils.getAskItems());
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("base", 0);
+        String token = sharedPreferences.getString("token", "1");
+        if ("".equals(token)) {
+            token = "1";
+        }
+        String httpurl = App.testHttpUrl + "getRecommendForum?token=" + token + "&startId=0";
+        RequestQueue mQueue = Volley.newRequestQueue(getActivity());
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(httpurl,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray jsonArray) {
+
+                        Log.v("AskTab", "成功" + jsonArray.toString());
+                        askItemList = Utils.jsonToAskItems(jsonArray.toString()).subList(0,2);
+                        askAdapter = new AskAdapter(getActivity(), askItemList);
+                        homeAskList.setAdapter(askAdapter);
+
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+                Log.e(TAG, volleyError.getMessage(), volleyError);
+            }
+        });
+        jsonArrayRequest.setRetryPolicy(new DefaultRetryPolicy(10000, 0, 0f));
+        mQueue.add(jsonArrayRequest);
 
     }
 
     private void initNewsDate() {
+        String httpUrl;
+        String token = Preferences.getInstance(getActivity()).getToken();
+        httpUrl = App.testHttpUrl + "getRecommendArticle?token=" + token + "&startId=0";
+        RequestQueue mQueue = Volley.newRequestQueue(getActivity());
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(httpUrl,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray jsonArray) {
 
-       newsList.addAll(news.util.Utils.jsonToResult(stringjson));
-        Log.v("HomeFragment",newsList.toString());
+                        newsList.addAll(news.util.Utils.jsonToResult(jsonArray.toString()).subList(0,6));
+                        newsAdapter.notifyDataSetChanged();
 
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+                Log.e(TAG, volleyError.getMessage(), volleyError);
+            }
+        });
+        mQueue.add(jsonArrayRequest);
     }
 
-    private void initBanner(){
-        images.add(R.drawable.item_ask_iv1);
-        titles.add("第一张图片");
-        images.add(R.drawable.item_ask_iv2);
-        titles.add("第二张图片");
-        images.add(R.drawable.item_news_iv1);
-        titles.add("第三张图片");
-        images.add(R.drawable.item_news_iv2);
-        titles.add("第四张图片");
+    private void initBanner() {
 
 
-
+        Iterator iterator = newsList1.iterator();
+        Result result = null;
+        while (iterator.hasNext()){
+           result = (Result)iterator.next();
+           images.add(result.getImageUrl().get(0));
+           titles.add(result.getTitle());
+        }
         //设置banner样式
-        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE);
+        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
         //设置图片加载器
         banner.setImageLoader(new GlideImageLoader());
         //设置图片集合
@@ -208,23 +260,25 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         //设置轮播时间
         banner.setDelayTime(1500);
         //设置指示器位置（当banner模式中有指示器时）
-        banner.setIndicatorGravity(BannerConfig.CENTER);
+        banner.setIndicatorGravity(BannerConfig.LEFT);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
+        banner.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                Result item = (Result)newsList1.get(position);
+                Intent intent = new Intent(getContext(),NewsOpenActivity.class);
+                intent.putExtra("id", item.getId());
+                intent.putExtra("title",item.getTitle());
+                intent.putExtra("aurl",item.getAurl());
+                intent.putExtra("type","推荐");
+                startActivity(intent);
+            }
+        });
 
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.appointimage:
-                Activity context = getActivity();
-                context.startActivity(new Intent(context, AppointmentActivity.class));
-                break;
 
-        }
-
-    }
 
     @Override
     public void onDestroyView() {
@@ -236,31 +290,44 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClickF() {
         getActivity().startActivity(new Intent(getActivity(), ForecastActivity.class));
     }
-
-
-
-    private class GetDataTask extends AsyncTask<Void, Void, String> {
-        @Override
-        protected String doInBackground(Void... params) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            return stringjson;
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-
-            //initNewsDate();
-            //newsList.addAll(parseJson(stringjson));
-            newsAdapter.notifyDataSetChanged();
-            homeNewsList.onRefreshComplete();
-        }
+    @OnClick(R.id.appointimage)
+    public void appoint(){
+        getActivity().startActivity(new Intent(getActivity(), AppointmentActivity.class));
     }
 
+    @OnClick(R.id.searchedit)
+    public void search(){
+        Log.v("HomeFragment","R.id.searchedit");
+        Intent intent = new Intent(getActivity(), SearchActivity.class);
+        intent.putExtra("type", SearchFragment.TYPE_All);
+        getActivity().startActivity(intent);
+    }
 
-    private String stringjson = "[{\"tag\":\"运动\",\"img1Url\":null,\"img2Url\":null,\"img3Url\":null,\"aname\":\"运动把健康捍卫到底\",\"aid\":11,\"aurl\":\"http://120.79.241.203:8080/GoHospital/article/article11.html\",\"atime\":1520757272000,\"aauthor\":\"帆帆老师\"}]";
+    private void initBannerData(){
+        String httpUrl;
+        String token = Preferences.getInstance(getActivity()).getToken();
+        httpUrl = App.testHttpUrl + "getRecommendArticle2?token=" + token;
+        Log.v("HomeActivity",httpUrl);
+        RequestQueue mQueue = Volley.newRequestQueue(getActivity());
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(httpUrl,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray jsonArray) {
+                        Log.v("HomeActivity",jsonArray.toString());
+                        Log.v("HomeActivity",news.util.Utils.jsonToResult(jsonArray.toString()).toString());
+                        newsList1.addAll(news.util.Utils.jsonToResult(jsonArray.toString()));
+                        Log.v("HomeActivity",newsList1.toString());
+                        initBanner();
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+                Log.e(TAG, volleyError.getMessage(), volleyError);
+            }
+        });
+        mQueue.add(jsonArrayRequest);
+    }
 }
 

@@ -5,6 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
@@ -30,6 +31,7 @@ public class AskAdapter$ViewHolder_ViewBinding<T extends AskAdapter.ViewHolder> 
     target.itemAskImage3 = Utils.findRequiredViewAsType(source, R.id.item_ask_image3, "field 'itemAskImage3'", ImageView.class);
     target.itemAskCollect = Utils.findRequiredViewAsType(source, R.id.item_ask_collect, "field 'itemAskCollect'", TextView.class);
     target.itemAskComment = Utils.findRequiredViewAsType(source, R.id.item_ask_comment, "field 'itemAskComment'", TextView.class);
+    target.askLayImage = Utils.findRequiredViewAsType(source, R.id.ask_layimage, "field 'askLayImage'", LinearLayout.class);
   }
 
   @Override
@@ -48,6 +50,7 @@ public class AskAdapter$ViewHolder_ViewBinding<T extends AskAdapter.ViewHolder> 
     target.itemAskImage3 = null;
     target.itemAskCollect = null;
     target.itemAskComment = null;
+    target.askLayImage = null;
 
     this.target = null;
   }

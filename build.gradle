@@ -10,7 +10,6 @@ buildscript {
         //classpath 'com.google.gms:google-services:3.1.1'
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
-
     }
 }
 
@@ -24,8 +23,22 @@ allprojects {
         jcenter()
         maven {
             url "https://maven.google.com"
-            url "https://oss.sonatype.org/content/repositories/snapshots"
-        }
+            }
         google()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url "https://jitpack.io" }
     }
+}
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+    minSdkVersion = 21
+    targetSdkVersion = 26
+    appTargetSdkVersion = 26
+    //versionCode = 59
+    //versionName = '5.7.0'
+    sdkSourceCompatibility = 1.7
+    sdkTargetCompatibility = 1.7
+    appSourceCompatibility = 1.7
+    appTargetCompatibility = 1.7
 }

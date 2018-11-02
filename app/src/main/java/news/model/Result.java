@@ -18,6 +18,24 @@ public class Result {
     private int comment = 5;
     private int recommend = 34;
     private String intro = "简介";
+    private int id;
+    private String aurl;
+
+    public String getAurl() {
+        return aurl;
+    }
+
+    public void setAurl(String aurl) {
+        this.aurl = aurl;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getType() {
         return type;
@@ -35,8 +53,56 @@ public class Result {
         return comment;
     }
 
+    @Override
+    public String toString() {
+        return "Result{" +
+                "type=" + type +
+                ", title='" + title + '\'' +
+                ", imageUrl=" + imageUrl +
+                ", time='" + time + '\'' +
+                ", author='" + author + '\'' +
+                ", comment=" + comment +
+                ", recommend=" + recommend +
+                ", intro='" + intro + '\'' +
+                ", id=" + id +
+                ", aurl='" + aurl + '\'' +
+                '}';
+    }
+
     public int getRecommend() {
         return recommend;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setImageUrl(List<String> imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setComment(int comment) {
+        this.comment = comment;
+    }
+
+    public void setRecommend(int recommend) {
+        this.recommend = recommend;
+    }
+
+    public void setIntro(String intro) {
+        this.intro = intro;
     }
 
     public String getTitle() {

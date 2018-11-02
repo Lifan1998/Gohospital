@@ -5,9 +5,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.life.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -60,11 +62,31 @@ public class AskAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.itemAskCollect.setText(askItems.get(position).getCollect()+"关注");
+
+
+
+        holder.itemAskCollect.setText(askItems.get(position).getCollect()+"");
         holder.itemAskComment.setText(askItems.get(position).getComment()+"");
         holder.itemAskName.setText(askItems.get(position).getName());
         holder.itemAskTitle.setText(askItems.get(position).getTitle());
         holder.itemAskTime.setText(askItems.get(position).getTime());
+
+        //选择显示方式 图片or文字
+        switch (askItems.get(position).getImageurl().size()){
+            case 3:
+                Picasso.get().load(askItems.get(position).getImageurl().get(2)).fit().into(holder.itemAskImage3);
+            case 2:
+                Picasso.get().load(askItems.get(position).getImageurl().get(1)).fit().into(holder.itemAskImage2);
+            case 1:
+                Picasso.get().load(askItems.get(position).getImageurl().get(0)).fit().into(holder.itemAskImage1);
+                break;
+            case 0:
+                holder.askLayImage.setVisibility(View.INVISIBLE);
+                holder.itemAskIntro.setVisibility(View.VISIBLE);
+                holder.itemAskIntro.setText(askItems.get(position).getIntro());
+                break;
+        }
+
 
         return convertView;
     }
@@ -91,7 +113,8 @@ public class AskAdapter extends BaseAdapter {
         TextView itemAskCollect;
         @BindView(R.id.item_ask_comment)
         TextView itemAskComment;
-
+        @BindView(R.id.ask_layimage)
+        LinearLayout askLayImage;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

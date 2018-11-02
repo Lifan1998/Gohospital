@@ -58,7 +58,7 @@ public class DoctorAdapter extends BaseAdapter {
         }
         holder.itemDoctorGrade.setText(doctors.get(position).getGrade());
         holder.itemDoctorGroup.setText(doctors.get(position).getGroup());
-        holder.itemDoctorHospital.setText(OtherUtils.getHospitalName(doctors.get(position).getId_hospital(),context));
+        OtherUtils.getHospitalName(doctors.get(position).getId_hospital(),context,holder.itemDoctorHospital);
         holder.itemDoctorName.setText(doctors.get(position).getName());
         holder.itemDoctorScore.setText(doctors.get(position).getScore());
         return convertView;

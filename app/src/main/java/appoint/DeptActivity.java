@@ -88,6 +88,8 @@ public class DeptActivity extends Activity {
                 Doctor doctor = (Doctor) adapter.getItem(position);
                 Intent intent = new Intent(DeptActivity.this, DoctorActivity.class);
                 intent.putExtra("id", doctor.getId());
+                intent.putExtra("menzhen", menzhen);
+                intent.putExtra("keshi", keshi);
                 startActivity(intent);
 
 

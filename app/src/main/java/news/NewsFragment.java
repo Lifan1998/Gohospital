@@ -1,35 +1,55 @@
 package news;
 
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.life.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+import main.SearchActivity;
+import main.SearchFragment;
 
 /**
  * Created by lenovo on 2018/7/12.
  */
 
 public class NewsFragment extends Fragment implements View.OnClickListener {
-    String[] mTitle = new String[]{"减肥","常见病","养生","女性","母婴","两性","美食","美容","运动"};
+    String[] mTitle = new String[]{"推荐", "减肥", "养生", "母婴", "美容", "防癌", "男性", "女性", "运动", "营养", "其他"};
     TabLayout mTabLayout;
     ViewPager mViewPager;
+    @BindView(R.id.iv_richscan)
+    ImageView ivRichscan;
+    @BindView(R.id.searchedit)
+    EditText searchedit;
+    @BindView(R.id.iv_msg)
+    ImageView ivMsg;
+    @BindView(R.id.tv_msg_num)
+    TextView tvMsgNum;
+    Unbinder unbinder;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_news,container,false);
+        View view = inflater.inflate(R.layout.fragment_news, container, false);
         initData();
         initView(view);
 
+        unbinder = ButterKnife.bind(this, view);
         return view;
     }
-
-
 
 
     @Override
@@ -55,7 +75,8 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
             public Fragment getItem(int position) {
                 //创建Fragment并返回
                 TabFragment fragment = new TabFragment();
-                fragment.setTitle(mTitle[position % mTitle.length]);
+                fragment.setType(mTitle[position % mTitle.length]);
+                //fragment.init();
                 return fragment;
             }
 
@@ -87,5 +108,18 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
 
             }
         });
+    }
+
+    @OnClick(R.id.searchedit)
+    public void search() {
+        Intent intent = new Intent(getActivity(), SearchActivity.class);
+        intent.putExtra("type", SearchFragment.TYPE_News);
+        getActivity().startActivity(intent);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 }

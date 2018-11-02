@@ -20,9 +20,7 @@ import android.widget.Toast;
 import com.example.life.R;
 
 
-import main.MainActivity;
-import my.MyFragment;
-import util.ImageUtils;
+import config.ImageUtils;
 
 
 import java.io.File;

@@ -34,6 +34,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import greendao.DatabaseUtils;
+import main.SearchActivity;
 
 /**
  * Created by lenovo on 2018/4/18.
@@ -153,7 +154,9 @@ public class AppointmentActivity extends Activity {
                 finish();
                 break;
             case R.id.search_image:
-                startActivity(new Intent(AppointmentActivity.this, AppointSearchActivity.class));
+                Intent intent = new Intent(AppointmentActivity.this, SearchActivity.class);
+                intent.putExtra("type",2);
+                startActivity(intent);
                 break;
             case R.id.iv_msg:
             case R.id.tv_msg_num:

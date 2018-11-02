@@ -35,9 +35,6 @@ public class SplashActivity extends Activity {
 		// 设置没有标题栏 在加载布局之前调用
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_splash);
-
-
-
         initView();
 
 	}
@@ -49,6 +46,7 @@ public class SplashActivity extends Activity {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+
                 startActivity(intent);
                 finish();
             }

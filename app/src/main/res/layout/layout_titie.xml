@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_title"
     android:layout_width="match_parent"
-    android:background="@color/text_white"
-    android:layout_height="40dp">
+    android:layout_height="40dp"
+    android:background="@color/text_white">
 
     <LinearLayout
         android:id="@+id/layout_return"

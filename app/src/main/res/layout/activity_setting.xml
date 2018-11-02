@@ -19,11 +19,12 @@ android:layout_marginTop="30dp"
         ></View>
 
     <TextView
+        android:id="@+id/btn_about"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/text_white"
         android:gravity="center_vertical"
         android:paddingLeft="15dp"
-        android:background="@color/text_white"
         android:text="关于我们"
         android:textSize="16sp" />
     <View
@@ -34,11 +35,12 @@ android:layout_marginStart="15dp"
         ></View>
 
     <TextView
+        android:id="@+id/btn_complain"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/text_white"
         android:gravity="center_vertical"
         android:paddingLeft="15dp"
-        android:background="@color/text_white"
         android:text="意见反馈"
         android:textSize="16sp" />
     <View
@@ -49,11 +51,12 @@ android:layout_marginStart="15dp"
         ></View>
 
     <TextView
+        android:id="@+id/btn_update"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/text_white"
         android:gravity="center_vertical"
         android:paddingLeft="15dp"
-        android:background="@color/text_white"
         android:text="检查更新"
         android:textSize="16sp" />
     <View
@@ -64,11 +67,12 @@ android:layout_marginStart="15dp"
         ></View>
 
     <TextView
+        android:id="@+id/btn_destroy"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/text_white"
         android:gravity="center_vertical"
         android:paddingLeft="15dp"
-        android:background="@color/text_white"
         android:text="注销该帐户"
         android:textSize="16sp" />
 
@@ -87,11 +91,12 @@ android:layout_marginTop="20dp"
         ></View>
 
     <TextView
+        android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/text_white"
         android:gravity="center_vertical"
         android:paddingLeft="15dp"
-        android:background="@color/text_white"
         android:text="退出该帐户"
         android:textSize="16sp" />
     <View

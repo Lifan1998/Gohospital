@@ -16,6 +16,11 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    <style name="AppStart" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 
 
     <style name="tab_menu_text">
@@ -97,6 +102,13 @@
         <item name="android:padding">5dp</item>
         <item name="android:layout_margin">10dp</item>
     </style>
+    <style name="h_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/list_divider_color</item>
+    </style>
+
+
 
 
 </resources>

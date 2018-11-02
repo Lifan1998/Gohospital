@@ -1,7 +1,6 @@
 package my;
 
 import android.annotation.TargetApi;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -10,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,7 +17,9 @@ import com.example.life.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
+import config.Preferences;
 import de.hdodenhof.circleimageview.CircleImageView;
 import my.model.User;
 import my.widget.MyQRCodeDialog;
@@ -38,6 +40,14 @@ public class MyFragment extends Fragment implements View.OnClickListener {
     @BindView(R.id.my_ask)
     LinearLayout myAsk;
     Unbinder unbinder;
+    @BindView(R.id.iv_logo_setting)
+    ImageView ivLogoSetting;
+    @BindView(R.id.iv_logo_zx)
+    ImageView ivLogoZx;
+    @BindView(R.id.profile_image)
+    CircleImageView profileImage;
+    @BindView(R.id.about_line)
+    View aboutLine;
     private CircleImageView circleImageView;
     private boolean issign = true;
 
@@ -54,7 +64,8 @@ public class MyFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onStart() {
         super.onStart();
-        issign = checkLogin();
+        //issign = checkLogin();
+        issign = Preferences.getInstance(getContext()).isSign();
         if (issign) {
             tvUsername.setText("会飞的猪");
 
@@ -75,7 +86,7 @@ public class MyFragment extends Fragment implements View.OnClickListener {
 
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v){
         switch (v.getId()) {
             case R.id.profile_image:
                 if (issign) {
@@ -119,14 +130,24 @@ public class MyFragment extends Fragment implements View.OnClickListener {
     }
 
     /**
-     *  根据token获取用户信息
+     * 根据token获取用户信息
      */
-    private User getUser(String token){
+    private User getUser(String token) {
         User user = new User();
 
 
         return user;
     }
 
+    @OnClick({R.id.my_appoint,R.id.my_love,R.id.my_ask})
+    public void startMyLove(LinearLayout linearLayout) {
+        Intent intent =  new Intent(getActivity(), MyLoveActivity.class);
+        switch (linearLayout.getId()){
+            case R.id.my_appoint:intent.putExtra("type",1);break;
+            case R.id.my_love:intent.putExtra("type",2);break;
+            case R.id.my_ask:intent.putExtra("type",3);break;
+        }
+        startActivity(intent);
+    }
 
 }

@@ -11,52 +11,52 @@ public final class R {
         public static final int scale_with_alpha = 0x7f020001;
     }
     public static final class attr {
-        public static final int banner_default_image = 0x7f030048;
-        public static final int banner_layout = 0x7f030049;
-        public static final int delay_time = 0x7f030098;
-        public static final int image_scale_type = 0x7f0300d8;
-        public static final int indicator_drawable_selected = 0x7f0300da;
-        public static final int indicator_drawable_unselected = 0x7f0300db;
-        public static final int indicator_height = 0x7f0300dc;
-        public static final int indicator_margin = 0x7f0300dd;
-        public static final int indicator_width = 0x7f0300de;
-        public static final int is_auto_play = 0x7f0300e2;
-        public static final int scroll_time = 0x7f03026c;
-        public static final int title_background = 0x7f0302c3;
-        public static final int title_height = 0x7f0302c4;
-        public static final int title_textcolor = 0x7f0302c5;
-        public static final int title_textsize = 0x7f0302c6;
+        public static final int banner_default_image = 0x7f040048;
+        public static final int banner_layout = 0x7f040049;
+        public static final int delay_time = 0x7f0400a3;
+        public static final int image_scale_type = 0x7f0400e3;
+        public static final int indicator_drawable_selected = 0x7f0400e5;
+        public static final int indicator_drawable_unselected = 0x7f0400e6;
+        public static final int indicator_height = 0x7f0400e7;
+        public static final int indicator_margin = 0x7f0400e8;
+        public static final int indicator_width = 0x7f0400e9;
+        public static final int is_auto_play = 0x7f0400ed;
+        public static final int scroll_time = 0x7f040277;
+        public static final int title_background = 0x7f0402ce;
+        public static final int title_height = 0x7f0402cf;
+        public static final int title_textcolor = 0x7f0402d0;
+        public static final int title_textsize = 0x7f0402d1;
     }
     public static final class drawable {
-        public static final int black_background = 0x7f070062;
-        public static final int gray_radius = 0x7f070084;
-        public static final int no_banner = 0x7f0700ca;
-        public static final int white_radius = 0x7f07013e;
+        public static final int black_background = 0x7f080062;
+        public static final int gray_radius = 0x7f080086;
+        public static final int no_banner = 0x7f0800ce;
+        public static final int white_radius = 0x7f080142;
     }
     public static final class id {
-        public static final int bannerContainer = 0x7f080029;
-        public static final int bannerDefaultImage = 0x7f08002a;
-        public static final int bannerTitle = 0x7f08002b;
-        public static final int bannerViewPager = 0x7f08002c;
-        public static final int center = 0x7f080048;
-        public static final int center_crop = 0x7f08004b;
-        public static final int center_inside = 0x7f08004d;
-        public static final int circleIndicator = 0x7f080053;
-        public static final int fit_center = 0x7f08008c;
-        public static final int fit_end = 0x7f08008d;
-        public static final int fit_start = 0x7f08008e;
-        public static final int fit_xy = 0x7f08008f;
-        public static final int indicatorInside = 0x7f0800bc;
-        public static final int matrix = 0x7f080136;
-        public static final int numIndicator = 0x7f08014c;
-        public static final int numIndicatorInside = 0x7f08014d;
-        public static final int titleView = 0x7f0801c9;
+        public static final int bannerContainer = 0x7f09002b;
+        public static final int bannerDefaultImage = 0x7f09002c;
+        public static final int bannerTitle = 0x7f09002d;
+        public static final int bannerViewPager = 0x7f09002e;
+        public static final int center = 0x7f090050;
+        public static final int center_crop = 0x7f090053;
+        public static final int center_inside = 0x7f090055;
+        public static final int circleIndicator = 0x7f09005b;
+        public static final int fit_center = 0x7f090096;
+        public static final int fit_end = 0x7f090097;
+        public static final int fit_start = 0x7f090098;
+        public static final int fit_xy = 0x7f090099;
+        public static final int indicatorInside = 0x7f0900c7;
+        public static final int matrix = 0x7f090143;
+        public static final int numIndicator = 0x7f09015a;
+        public static final int numIndicatorInside = 0x7f09015b;
+        public static final int titleView = 0x7f0901d8;
     }
     public static final class layout {
-        public static final int banner = 0x7f0a0031;
+        public static final int banner = 0x7f0b0030;
     }
     public static final class styleable {
-        public static final int[] Banner = { 0x7f030048, 0x7f030049, 0x7f030098, 0x7f0300d8, 0x7f0300da, 0x7f0300db, 0x7f0300dc, 0x7f0300dd, 0x7f0300de, 0x7f0300e2, 0x7f03026c, 0x7f0302c3, 0x7f0302c4, 0x7f0302c5, 0x7f0302c6 };
+        public static final int[] Banner = { 0x7f040048, 0x7f040049, 0x7f0400a3, 0x7f0400e3, 0x7f0400e5, 0x7f0400e6, 0x7f0400e7, 0x7f0400e8, 0x7f0400e9, 0x7f0400ed, 0x7f040277, 0x7f0402ce, 0x7f0402cf, 0x7f0402d0, 0x7f0402d1 };
         public static final int Banner_banner_default_image = 0;
         public static final int Banner_banner_layout = 1;
         public static final int Banner_delay_time = 2;

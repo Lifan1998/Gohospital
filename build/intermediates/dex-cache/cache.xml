@@ -3,23 +3,13 @@
 
     <item
         is-multidex="false"
-        jar="D:\AndroidStudio\Gohospital\app\libs\volley.jar"
-        jumboMode="false"
-        min-sdk-version="21"
-        optimize="true"
-        revision="27.0.1"
-        sha1="4a94601db9bdfb7dc60efabb3dea91a0675f591d">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\qmui-1.1.3.aar\5dd3c0358741ff5dd65b77b9e9d76e33\jars\classes.jar"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ucrop-v2.2.3.aar\0ce68329f768acfb3425e8afc13c15ab\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="7f2dd6dcf99902a0e0988abb265be2991c20efef">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\8.jar" />
+        sha1="12a386ab8a358eea6e6f870787de568840ac58ab">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\16.jar" />
     </item>
     <item
         is-multidex="false"
@@ -33,13 +23,33 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\org.greenrobot\greendao\3.2.2\f8c7ebdc29310be23d076e5512bafe6bad3ce2f0\greendao-3.2.2.jar"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\fresco-0.14.1.aar\1f80fd4147b5ff0d5a879e9c919e0634\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="f8c7ebdc29310be23d076e5512bafe6bad3ce2f0">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\24.jar" />
+        sha1="c77602d43223db798b1ca56cf307ab0ee3c0e63f">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\782ad0d9109783b592d60a494fe0d4b3\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4c7250baed60ef7694c1c55723750831f3dbee67">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4a77dd97f559e5fdc641380539d31a71f2b0470c">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\9.jar" />
     </item>
     <item
         is-multidex="false"
@@ -50,6 +60,16 @@
         revision="26.0.2"
         sha1="e2bbe48deed35056023eed2cdc0cc92e5c7d3617">
         <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\41.jar" />
     </item>
     <item
         is-multidex="false"
@@ -93,53 +113,33 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.1.0\edf3f7bfb84a7521d0599efa3b0113a0ee90f85\common-1.1.0.jar"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\banner-1.4.10.aar\5ab54c7bff7e7e138cee13b974c20fe7\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="0edf3f7bfb84a7521d0599efa3b0113a0ee90f85">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\28.jar" />
+        sha1="a06299b94845356c731524654ba386d0877e6b53">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\4.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\1421e453e0256d1d82cb49713d5c4b52\jars\classes.jar"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\a6569970a6cd402b7ed000c88800a736\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="f7e3ff2cb093a99c8dc1ff3d50c176019fa5d7c1">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\9.jar" />
+        sha1="fa0e9d2e5cf14f7d154c95672b3d37a845f09d57">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\17.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\android_studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\4db38da9aba4dad104fc38308c9ca1cc\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\24.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\AndroidStudio\Gohospital\app\libs\org.apache.http.legacy.jar"
-        jumboMode="false"
-        min-sdk-version="21"
-        optimize="true"
-        revision="26.0.2"
-        sha1="5f0541a4298daa0590b22cfbde43f85e2a675545">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\b3b249a5ef31e6263ee1a5e2fef523d3\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="21"
-        optimize="true"
-        revision="26.0.2"
-        sha1="e70a3fed299d84cd868614e11021664d72b8e488">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\22.jar" />
+        sha1="0d6df4057d1620a785f5bd2e69dd0d7866f3613c">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\11.jar" />
     </item>
     <item
         is-multidex="false"
@@ -149,7 +149,7 @@
         optimize="true"
         revision="26.0.2"
         sha1="d7f67bb9028fb3bb1542924651c0254aa17f5a52">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\32.jar" />
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\55.jar" />
     </item>
     <item
         is-multidex="false"
@@ -173,53 +173,33 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\e53a5134dbe1f7b4f52efa533b05b94d\jars\classes.jar"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\org.reactivestreams\reactive-streams\1.0.0\14b8c877d98005ba3941c9257cfe09f6ed0e0d74\reactive-streams-1.0.0.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="668473027f40fa0cdd5b2db78ba02d676ffd3a2b">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\19.jar" />
+        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\47.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\jars\classes.jar"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\io.reactivex.rxjava2\rxjava\2.0.5\4f1ac7ec0215e8f87ac80269baadc82878b87ed8\rxjava-2.0.5.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="ca669524eda7cdea27bc5d13da560df17fbb09ae">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\22.jar" />
+        sha1="4f1ac7ec0215e8f87ac80269baadc82878b87ed8">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\43.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.1.0\8007981f7d7540d89cd18471b8e5dcd2b4f99167\common-1.1.0.jar"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="8007981f7d7540d89cd18471b8e5dcd2b4f99167">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\30.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\1777cfdee7e8dd527b61da7ad9bbcacf\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="21"
-        optimize="true"
-        revision="26.0.2"
-        sha1="705378853cb9f264315d7a0a8edb6743d72efe9b">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\14.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\2cf645c177a8ba93be0f06f02fb0587e\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="21"
-        optimize="true"
-        revision="26.0.2"
-        sha1="6f209b73a488f358673f39317df394bd7a99c05e">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\15.jar" />
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\44.jar" />
     </item>
     <item
         is-multidex="false"
@@ -253,23 +233,13 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\bfd18ece02a1e580e240bc1b9ac02ccb\jars\classes.jar"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\f14296bb7c266b3d40562b725bec6556\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="21"
         optimize="true"
         revision="26.0.2"
-        sha1="71d380aeac037e63bab7bda2ba211777e16a2f42">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\29.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\57da4910ce4a03d15df49ad877042893\jars\classes.jar"
-        jumboMode="false"
-        min-sdk-version="21"
-        optimize="true"
-        revision="26.0.2"
-        sha1="858c1e21a2570a2416153aecab70d27a11965e79">
-        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\10.jar" />
+        sha1="e6b659b5a5850e1bfd6d81393d35ca3b50297239">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\18.jar" />
     </item>
     <item
         is-multidex="false"
@@ -320,6 +290,246 @@
         revision="26.0.2"
         sha1="ad4a32e64e9efdc1d88c81fa5727b1333a8fcef4">
         <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudio\Gohospital\app\libs\volley.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="27.0.1"
+        sha1="4a94601db9bdfb7dc60efabb3dea91a0675f591d">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\qmui-1.1.3.aar\5dd3c0358741ff5dd65b77b9e9d76e33\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7f2dd6dcf99902a0e0988abb265be2991c20efef">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-0.14.1.aar\90975b588ba117b3af2fed50f3d33c43\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b881010e06dc39be15b7465cd16492eedbab246f">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.11.0\75966e05a49046ca2ae734e5626f28837a8d1e82\okhttp-3.11.0.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="75966e05a49046ca2ae734e5626f28837a8d1e82">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\37.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="147c3a0479cffc8b32ab7a661a907bb383bc2337">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\drawee-0.14.1.aar\87a9afe8356edda3907c310809649216\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cf5e2940501f8f7b9175df6491cebb84f5690f14">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.3.aar\9cabdb76dfa704b3621e8505c7dbc58c\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8a6ed980c74ad35b2dfc4e1daf97bfc0eea5d7c9">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.1.0\edf3f7bfb84a7521d0599efa3b0113a0ee90f85\common-1.1.0.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0edf3f7bfb84a7521d0599efa3b0113a0ee90f85">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\1421e453e0256d1d82cb49713d5c4b52\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f7e3ff2cb093a99c8dc1ff3d50c176019fa5d7c1">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\dc6e8cf7032e7a4da32f8fc3ac46407d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudio\Gohospital\app\libs\org.apache.http.legacy.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5f0541a4298daa0590b22cfbde43f85e2a675545">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\b3b249a5ef31e6263ee1a5e2fef523d3\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e70a3fed299d84cd868614e11021664d72b8e488">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\disklrucache\4.5.0\86950b32ea96cceece316b829cbe47b735892551\disklrucache-4.5.0.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="86950b32ea96cceece316b829cbe47b735892551">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\e53a5134dbe1f7b4f52efa533b05b94d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="668473027f40fa0cdd5b2db78ba02d676ffd3a2b">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.14.0\102d7be47241d781ef95f1581d414b0943053130\okio-1.14.0.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="102d7be47241d781ef95f1581d414b0943053130">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ca669524eda7cdea27bc5d13da560df17fbb09ae">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.1.0\8007981f7d7540d89cd18471b8e5dcd2b4f99167\common-1.1.0.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8007981f7d7540d89cd18471b8e5dcd2b4f99167">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\annotations\4.5.0\5c16a9f3c9e4c9b6dbea50374264ef26fb937423\annotations-4.5.0.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5c16a9f3c9e4c9b6dbea50374264ef26fb937423">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\46.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\1777cfdee7e8dd527b61da7ad9bbcacf\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="705378853cb9f264315d7a0a8edb6743d72efe9b">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\2cf645c177a8ba93be0f06f02fb0587e\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6f209b73a488f358673f39317df394bd7a99c05e">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\fbcore-0.14.1.aar\ec02c4a0a39da2dbf3b697271c31d3ae\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e5bf70f3683146e4875c006624543cb0a13eac91">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\bfd18ece02a1e580e240bc1b9ac02ccb\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="71d380aeac037e63bab7bda2ba211777e16a2f42">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\29.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\57da4910ce4a03d15df49ad877042893\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="858c1e21a2570a2416153aecab70d27a11965e79">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\imagepipeline-0.14.1.aar\5a1e56179ea209309ce017ef916c013d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8795af3e130206443f2d5ed45f1b26067aff70dc">
+        <dex dex="D:\AndroidStudio\Gohospital\app\build\intermediates\transforms\preDex\release\26.jar" />
     </item>
     <item
         is-multidex="false"

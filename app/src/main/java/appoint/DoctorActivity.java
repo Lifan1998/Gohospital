@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
@@ -38,8 +39,9 @@ import appoint.entity.Doctor;
 import appoint.utils.JsonParser;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import config.CollectionUtils;
 import greendao.DatabaseUtils;
-import greendao.DoctorDao;
 
 /**
  * @author lifan
@@ -74,6 +76,8 @@ public class DoctorActivity extends Activity {
     ImageView ivMsg;
     @BindView(R.id.tv_msg_num)
     TextView tvMsgNum;
+    @BindView(R.id.iv_love)
+    ImageView ivLove;
 
 
     private int id_doctor;
@@ -92,11 +96,11 @@ public class DoctorActivity extends Activity {
 
 
         ButterKnife.bind(this);
+        ivLove.setVisibility(View.VISIBLE);
 
 
         initDoctor();
         initView();
-
 
 
     }
@@ -211,7 +215,7 @@ public class DoctorActivity extends Activity {
                         itemDoctorName.setText(doctor.getName());
                         itemDoctorGroup.setText(doctor.getGroup());
                         itemDoctorScore.setText(doctor.getScore());
-                        expTv1.setText("简介："+doctor.getDesc());
+                        expTv1.setText("简介：" + doctor.getDesc());
 
                     }
                     break;
@@ -219,4 +223,19 @@ public class DoctorActivity extends Activity {
         }
 
     };
+
+
+    /**
+     * 是否收藏
+     */
+    @OnClick(R.id.iv_love)
+    public void selectLove(){
+        if(ivLove.isSelected()){
+            ivLove.setSelected(false);
+            CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_DOCTOR,id_doctor,0);
+        }else{
+            ivLove.setSelected(true);
+            CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_DOCTOR,id_doctor,1);
+        }
+    }
 }

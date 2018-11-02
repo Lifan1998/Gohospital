@@ -29,10 +29,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import appoint.adapter.DeptAdapter;
-import butterknife.BindColor;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import config.CollectionUtils;
 
 /**
  * @author lifan
@@ -65,6 +65,8 @@ public class HospitalActivity extends Activity {
     ImageView ivMsg;
     @BindView(R.id.tv_msg_num)
     TextView tvMsgNum;
+    @BindView(R.id.iv_love)
+    ImageView ivLove;
 
     private List<String> strs0;
     private List<String> strs1;
@@ -82,6 +84,7 @@ public class HospitalActivity extends Activity {
         ButterKnife.bind(this);
         tvTitle.setText(getIntent().getStringExtra("name"));
         tvMsgNum.setVisibility(View.INVISIBLE);
+        ivLove.setVisibility(View.VISIBLE);
         initView();
         initKeshi();
 
@@ -120,7 +123,6 @@ public class HospitalActivity extends Activity {
                 intent.putExtra("menzhen", str);
                 intent.putExtra("keshi", keshi);
                 startActivity(intent);
-
 
 
             }
@@ -228,7 +230,8 @@ public class HospitalActivity extends Activity {
 
         ;
     };
-    @OnClick({R.id.layout_return, R.id.iv_msg,R.id.tv_msg_num})
+
+    @OnClick({R.id.layout_return, R.id.iv_msg, R.id.tv_msg_num})
     public void onViewClicked(View v) {
         switch (v.getId()) {
             case R.id.layout_return:
@@ -237,10 +240,27 @@ public class HospitalActivity extends Activity {
 
             case R.id.iv_msg:
             case R.id.tv_msg_num:
-                Toast.makeText(HospitalActivity.this,"消息",Toast.LENGTH_SHORT);
+                Toast.makeText(HospitalActivity.this, "消息", Toast.LENGTH_SHORT);
                 break;
 
-            default:break;
+            default:
+                break;
+
+        }
+    }
+
+    /**
+     * 是否收藏
+     */
+    @OnClick(R.id.iv_love)
+    public void selectLove(){
+        if(ivLove.isSelected()){
+            ivLove.setSelected(false);
+            CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_HOSPITAL,id_hos,0);
+
+        }else{
+            ivLove.setSelected(true);
+            CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_HOSPITAL,id_hos,1);
 
         }
     }

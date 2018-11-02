@@ -10,10 +10,6 @@ package user;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,14 +28,11 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.life.R;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import user.util.Utils;
-
-import static android.content.ContentValues.TAG;
-import static android.os.Build.*;
+import config.App;
 
 /**
  * 注册
@@ -52,8 +45,10 @@ public class RegisterActivity extends Activity implements OnClickListener {
     private Button btn_register;
     private ImageView iv_return;
     private TextView tv_code;
-    //短信验证码
-    private String CAPTCHA;
+    /**
+     * 短信验证码
+     **/
+    public static String CAPTCHA;
 
 
 
@@ -89,7 +84,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
                 break;
             case R.id.tv_code:
                 Toast.makeText(RegisterActivity.this,"已发送验证短信",Toast.LENGTH_SHORT).show();
-                CAPTCHA = Utils.getCode(username.getText().toString());
+                Utils.sendMessage(username.getText().toString(),this,tv_code);
                 break;
 
         }
@@ -103,9 +98,43 @@ public class RegisterActivity extends Activity implements OnClickListener {
             return;
         } else if (CAPTCHA.equals(code.getText().toString())){
 
-            //验证码正确，上传账号密码，保存token，跳转Activity
+            RequestQueue mQueue = Volley.newRequestQueue(RegisterActivity.this);
 
-            Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
+            String httpurl = App.testHttpUrl+"registerAccount?tel="+username.getText().toString()+
+                    "&name="+name.getText().toString()+"&password="+password.getText().toString();
+            Log.v("LoginActivity",httpurl);
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, httpurl,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            Log.v("LoginActivity","response:"+response.toString());
+                            try {
+                                JSONObject jsonObject = new JSONObject(response.toString());
+                                JSONObject jsonObject1 = jsonObject.getJSONObject("model");
+                                String token = jsonObject1.getString("token");
+                                SharedPreferences settings = getSharedPreferences("base", 0);
+                                SharedPreferences.Editor editor = settings.edit();
+                                editor.putString("token", token);
+                                // 提交本次编辑
+                                editor.commit();
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
+                            finish();
+
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    Log.e(getClass().getSimpleName(),volleyError.getMessage(),volleyError);
+                    Toast.makeText(RegisterActivity.this,"注册失败",Toast.LENGTH_SHORT).show();
+                }
+            });
+            mQueue.add(stringRequest);
+
+
         } else {
             Toast.makeText(RegisterActivity.this,"验证码错误",Toast.LENGTH_SHORT).show();
         }
