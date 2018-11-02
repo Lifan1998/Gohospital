@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="false"
+        android:background="@color/white"
+        android:layout_margin="5dp">
+
+        <EditText
+            android:id="@+id/edit_commend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/order_edt_note_bg"
+            android:hint="评论点什么吧" />
+
+        <TextView
+            android:id="@+id/btn_commend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/order_edt_note_bg"
+            android:gravity="center"
+            android:text=" 评论 "
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_love"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/selector_iv_love" />
+
+        <ImageView
+            android:id="@+id/iv_commend"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/selector_thumb"
+            tools:ignore="RtlHardcoded" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
