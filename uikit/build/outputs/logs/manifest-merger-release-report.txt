@@ -1,0 +1,287 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:1:1-157:12
+INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:1:1-157:12
+INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:1:1-157:12
+	package
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:2:5-36
+		INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+		INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:1:11-69
+application
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:5:5-156:19
+meta-data#com.netease.nim.uikit.support.glide.NIMGlideModule
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:7:9-9:42
+	android:value
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:9:13-40
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:8:13-78
+activity#com.netease.nim.uikit.business.session.activity.P2PMessageActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:14:9-19:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:17:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:19:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:16:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:18:13-69
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:15:13-94
+activity#com.netease.nim.uikit.business.session.activity.TeamMessageActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:20:9-25:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:23:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:25:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:22:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:24:13-69
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:21:13-95
+activity#com.netease.nim.uikit.business.team.activity.NormalTeamInfoActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:28:9-33:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:31:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:33:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:30:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:32:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:29:13-95
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamInfoActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:34:9-39:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:37:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:39:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:36:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:38:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:35:13-97
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamMemberActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:40:9-45:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:43:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:45:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:42:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:44:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:41:13-99
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamAnnounceActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:46:9-51:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:49:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:51:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:48:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:50:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:47:13-101
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamMemberInfoActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:52:9-57:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:55:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:57:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:54:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:56:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:53:13-103
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamNicknameActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:58:9-63:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:61:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:63:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:60:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:62:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:59:13-101
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamCreateAnnounceActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:64:9-69:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:67:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:69:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:66:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:68:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:65:13-107
+activity#com.netease.nim.uikit.business.team.activity.TeamPropertySettingActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:70:9-75:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:73:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:75:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:72:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:74:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:71:13-100
+activity#com.netease.nim.uikit.business.contact.selector.activity.ContactSelectActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:78:9-84:67
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:82:13-49
+	android:label
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:81:13-53
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:84:13-64
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:80:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:83:13-69
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:79:13-106
+activity#com.netease.nim.uikit.business.ait.selector.AitContactSelectorActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:87:9-89:77
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:88:19-55
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:89:19-75
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:87:19-83
+activity#com.netease.nim.uikit.common.media.picker.activity.PickImageActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:92:9-95:59
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:94:13-49
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:95:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:93:13-96
+activity#com.netease.nim.uikit.common.media.picker.activity.CropImageActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:96:9-99:58
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:98:13-49
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:99:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:97:13-96
+activity#com.netease.nim.uikit.common.media.picker.activity.PickerAlbumActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:100:9-103:59
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:102:13-49
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:103:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:101:13-98
+activity#com.netease.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:104:9-107:59
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:106:13-49
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:107:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:105:13-105
+activity#com.netease.nim.uikit.common.media.picker.activity.PreviewImageFromLocalActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:108:9-113:58
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:111:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:112:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:110:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:113:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:109:13-108
+activity#com.netease.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:114:9-120:70
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:118:13-49
+	android:label
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:117:13-53
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:120:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:116:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:119:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:115:13-109
+activity#com.netease.nim.uikit.business.session.activity.CaptureVideoActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:123:9-128:58
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:126:13-49
+	android:windowSoftInputMode
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:127:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:125:13-63
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:128:13-56
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:124:13-96
+activity#com.netease.nim.uikit.business.session.activity.WatchVideoActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:130:9-134:48
+	android:label
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:133:13-47
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:132:13-74
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:134:13-45
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:131:13-94
+activity#com.netease.nim.uikit.business.session.activity.WatchMessagePictureActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:137:9-140:47
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:139:13-51
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:140:13-45
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:138:13-103
+activity#com.netease.nim.uikit.business.session.activity.WatchPicAndVideoMenuActivity
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:142:9-144:47
+	android:configChanges
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:143:13-51
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:144:13-45
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:142:19-89
+provider#com.netease.nim.uikit.common.media.picker.model.GenericFileProvider
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:147:9-155:20
+	android:grantUriPermissions
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:151:13-47
+	android:authorities
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:149:13-73
+	android:exported
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:150:13-37
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:148:13-95
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:152:13-154:57
+	android:resource
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:154:17-55
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml:153:17-67
+uses-sdk
+INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+		INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+		ADDED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
+		INJECTED from D:\AndroidStudio\Gohospital\uikit\AndroidManifest.xml
