@@ -17,7 +17,11 @@ import java.lang.Override;
 public class NewsFragment_ViewBinding<T extends NewsFragment> implements Unbinder {
   protected T target;
 
-  private View view2131296680;
+  private View view2131296905;
+
+  private View view2131296631;
+
+  private View view2131297052;
 
   @UiThread
   public NewsFragment_ViewBinding(final T target, View source) {
@@ -27,15 +31,31 @@ public class NewsFragment_ViewBinding<T extends NewsFragment> implements Unbinde
     target.ivRichscan = Utils.findRequiredViewAsType(source, R.id.iv_richscan, "field 'ivRichscan'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.searchedit, "field 'searchedit' and method 'search'");
     target.searchedit = Utils.castView(view, R.id.searchedit, "field 'searchedit'", EditText.class);
-    view2131296680 = view;
+    view2131296905 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.search();
       }
     });
-    target.ivMsg = Utils.findRequiredViewAsType(source, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
-    target.tvMsgNum = Utils.findRequiredViewAsType(source, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg' and method 'msgStart'");
+    target.ivMsg = Utils.castView(view, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
+    view2131296631 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.msgStart();
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum' and method 'msgStart'");
+    target.tvMsgNum = Utils.castView(view, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
+    view2131297052 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.msgStart();
+      }
+    });
   }
 
   @Override
@@ -49,8 +69,12 @@ public class NewsFragment_ViewBinding<T extends NewsFragment> implements Unbinde
     target.ivMsg = null;
     target.tvMsgNum = null;
 
-    view2131296680.setOnClickListener(null);
-    view2131296680 = null;
+    view2131296905.setOnClickListener(null);
+    view2131296905 = null;
+    view2131296631.setOnClickListener(null);
+    view2131296631 = null;
+    view2131297052.setOnClickListener(null);
+    view2131297052 = null;
 
     this.target = null;
   }

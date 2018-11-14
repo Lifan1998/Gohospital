@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
@@ -59,30 +61,69 @@
 
 
     </RelativeLayout>
-    <LinearLayout
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/layout_10radius_white"
+        android:layout_height="match_parent"
         android:layout_below="@id/layout_title"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="20dp"
-        android:layout_height="match_parent">
-        <WebView
-            android:id="@+id/newswebview"
-            android:layout_below="@id/layout_title"
-            android:layout_margin="10dp"
+
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        android:layout_marginBottom="45dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </WebView>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_10radius_white"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/newswebview"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_below="@id/layout_title"></WebView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:layout_alignParentBottom="true">
 
-        <include layout="@layout/layout_commend"></include>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginRight="2px"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_love"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/selector_iv_love" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:id="@+id/iv_commend"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/selector_thumb" />
+        </RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>

@@ -33,6 +33,7 @@ import ask.adapter.AskAdapter;
 import ask.model.AskItem;
 import ask.util.Utils;
 import config.App;
+import config.Preferences;
 
 import static com.android.volley.VolleyLog.TAG;
 import static com.android.volley.VolleyLog.e;
@@ -143,11 +144,7 @@ public class TabFragment extends Fragment {
 
     private void initData() {
         String httpurl = null;
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("base", 0);
-        String token = sharedPreferences.getString("token","1");
-        if ("".equals(token)){
-            token = "1";
-        }
+        String token = Preferences.getInstance().getToken();
         RequestQueue mQueue = Volley.newRequestQueue(getActivity());
 
 

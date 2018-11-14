@@ -2,11 +2,14 @@ package home;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,12 +24,15 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.life.R;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import butterknife.BindColor;
@@ -34,6 +40,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import config.App;
+import config.Preferences;
+import msg.MsgActivity;
+import user.LoginActivity;
 
 /**
  * @author lifan
@@ -159,6 +168,12 @@ public class ForecastActivity extends Activity {
         tv7 = new TextView[]{label72, label71};
         tv3 = new TextView[]{label32, label31};
         tv2 = new TextView[]{label22, label21};
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
 
 
     }
@@ -394,7 +409,7 @@ public class ForecastActivity extends Activity {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
                 btnForecast.setText("预测失败");
-                btnForecast.setBackgroundColor(getResources().getColor(R.color.cpb_red));
+                btnForecast.setBackgroundColor(getResources().getColor(R.color.text_red));
                 Log.e(getClass().getSimpleName(), volleyError.getMessage(), volleyError);
             }
         });
@@ -459,6 +474,26 @@ public class ForecastActivity extends Activity {
     @OnClick(R.id.layout_return)
     public void exit(){
         finish();
+    }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(this, MsgActivity.class));
+        } else {
+            startActivity(new Intent(this, LoginActivity.class));
+        }
+
+    }
+    @OnClick(R.id.tv_birth)
+    public void setTvBirth(){
+        Calendar calendar = Calendar.getInstance();
+        new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                tvBirth.setText(year+"-"+month+"-"+dayOfMonth);
+            }
+        },1998,06,05).show();
     }
 
 }

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.netease.nimlib.sdk.auth.LoginInfo;
+
 /**
  * @author lifan
  * @date 2018/10/30 18:58
@@ -60,6 +62,27 @@ public class Preferences {
             preferences = new Preferences();
         }
         return preferences;
+    }
+
+    public String getAccount(){
+        return sharedPreferences.getString("account","");
+    }
+    public boolean setAccount(String account){
+        editor.putString("account",account);
+        editor.commit();
+        return true;
+    }
+    public boolean deleteAccount(){
+        editor.remove("account");
+        editor.commit();
+        return true;
+    }
+
+    public LoginInfo getLoginInfo(){
+        if(getAccount().equals("")){
+            return null;
+        }
+        return new LoginInfo(getAccount(),getAccount());
     }
 
 }

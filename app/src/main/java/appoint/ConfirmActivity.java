@@ -1,6 +1,7 @@
 package appoint;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,23 +13,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.NetworkResponse;
-import com.android.volley.ParseError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.dd.CircularProgressButton;
 import com.example.life.R;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.UnsupportedEncodingException;
 
 import appoint.entity.Doctor;
 import appoint.utils.JsonParser;
@@ -38,9 +35,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import config.App;
 import config.Preferences;
-import user.ForgetPassActivity;
+import msg.MsgActivity;
+import my.MyLoveActivity;
 import user.LoginActivity;
-import user.RegisterActivity;
 
 /**
  * @author lifan
@@ -80,11 +77,13 @@ public class ConfirmActivity extends Activity {
     TextView tvMsgNum;
     @BindView(R.id.item_doctor_image)
     ImageView itemDoctorImage;
-
+    @BindView(R.id.btn_appoint_confirm)
+    TextView btnAppointConfirm;
 
 
     private Doctor doctor;
     private String time;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,8 +91,13 @@ public class ConfirmActivity extends Activity {
         setContentView(R.layout.activity_appoint_confirm);
         ButterKnife.bind(this);
         time = getIntent().getStringExtra("time");
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if (unreadNum == 0) {
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        } else {
+            tvMsgNum.setText(unreadNum + "");
+        }
         initView();
-
 
 
     }
@@ -117,7 +121,7 @@ public class ConfirmActivity extends Activity {
                             itemDoctorName.setText(doctor.getName());
                             itemDoctorGroup.setText(doctor.getGroup());
                             itemDoctorScore.setText(doctor.getScore());
-                            OtherUtils.getHospitalName(getIntent().getIntExtra("id", 0), ConfirmActivity.this,itemDoctorHospital);
+                            OtherUtils.getHospitalName(getIntent().getIntExtra("id", 0), ConfirmActivity.this, itemDoctorHospital);
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -130,32 +134,44 @@ public class ConfirmActivity extends Activity {
     }
 
     @OnClick(R.id.btn_appoint_confirm)
-    public void confirm(){
+    public void confirm() {
+        if (!Preferences.getInstance().isSign()) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return;
+        }
+        btnAppointConfirm.setText("预约中...");
         RequestQueue mQueue = Volley.newRequestQueue(getApplicationContext());
-        String httpurl = App.LocalUrl+"underline?token="+ Preferences.getInstance().getToken()+
-                "&dId="+doctor.getId()+"&hId="+doctor.getId_hospital()+
-                "&hDept="+doctor.getDepartment()+
-                "&hRoom="+doctor.getGroup()+
-                "&tel="+confirmTele.getText().toString()+
-                "&identity="+confirmId.getText().toString()+
-                "&name="+confirmName.getText().toString()+
-                "&aType="+1+
-                "&apTime="+time.substring(3,19)+":00";
-        Log.v(ConfirmActivity.class.getSimpleName(),httpurl);
+        String httpurl = App.RemoteUrl + "underline?token=" + Preferences.getInstance().getToken() +
+                "&dId=" + doctor.getId() + "&hId=" + doctor.getId_hospital() +
+                "&hDept=" + doctor.getDepartment() +
+                "&hRoom=" + doctor.getGroup() +
+                "&tel=" + confirmTele.getText().toString() +
+                "&identity=" + confirmId.getText().toString() +
+                "&name=" + confirmName.getText().toString() +
+                "&aType=" + 1 +
+                "&apTime=" + time.substring(3, 19) + ":00";
+        Log.v(ConfirmActivity.class.getSimpleName(), httpurl);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, httpurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.v(getClass().getName(),"response:"+response.toString());
+                        Log.v(getClass().getName(), "response:" + response.toString());
                         try {
                             JSONObject jsonObject = new JSONObject(response.toString());
                             JSONObject jsonObject1 = jsonObject.getJSONObject("model");
                             boolean isSuccess = jsonObject1.getBoolean("isSuccess");
-                            if(isSuccess){
-                                Toast.makeText(getApplicationContext(),"预约成功",Toast.LENGTH_SHORT).show();
+                            if (isSuccess) {
+                                btnAppointConfirm.setText("预约成功");
+                                Toast.makeText(getApplicationContext(), "预约成功", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), MyLoveActivity.class);
+                                intent.putExtra("type", 1);
+                                startActivity(intent);
+                                finish();
                             } else {
-                                Toast.makeText(getApplicationContext(),"预约失败",Toast.LENGTH_SHORT).show();
+                                btnAppointConfirm.setText("预约失败");
+                                Toast.makeText(getApplicationContext(), "预约失败", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -165,11 +181,22 @@ public class ConfirmActivity extends Activity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Log.e(getClass().getSimpleName(),volleyError.getMessage(),volleyError);
+                Log.e(getClass().getSimpleName(), volleyError.getMessage(), volleyError);
             }
         });
-        stringRequest.setRetryPolicy(new DefaultRetryPolicy(10000,0,0f));
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(10000, 0, 0f));
         mQueue.add(stringRequest);
+    }
+
+    @OnClick({R.id.iv_msg, R.id.tv_msg_num})
+    public void msgStart() {
+
+        if (Preferences.getInstance().isSign()) {
+            startActivity(new Intent(this, MsgActivity.class));
+        } else {
+            startActivity(new Intent(this, LoginActivity.class));
+        }
+
     }
 }
 

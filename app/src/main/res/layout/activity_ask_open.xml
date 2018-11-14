@@ -5,20 +5,20 @@
 
     xmlns:tools="http://schemas.android.com/tools">
 
-    <include layout="@layout/layout_titie"></include>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_below="@+id/layout_title"
-        android:layout_height="match_parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+
             android:background="@color/white"
             android:orientation="vertical">
-
+            <include layout="@layout/layout_titie"></include>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/list_divider_color"></View>
 
             <TextView
                 android:id="@+id/ask_title"
@@ -27,6 +27,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="问题标题"
                 android:textSize="22sp" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -72,18 +73,18 @@
                 android:layout_margin="10dp"
                 android:text="问题详情"
                 android:textSize="18sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_margin="10dp"
-                android:layout_height="80dp">
+                android:layout_height="80dp"
+                android:layout_margin="10dp">
 
                 <ImageView
                     android:id="@+id/item_ask_image1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_ask_iv1" />
+                    android:layout_weight="1" />
 
                 <ImageView
                     android:id="@+id/item_ask_image2"
@@ -93,23 +94,71 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
 
-                    android:background="@drawable/item_ask_iv2" />
+                    />
 
                 <ImageView
                     android:id="@+id/item_ask_image3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_news_4" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
-        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/list_divider_color"></View>
 
-    </ScrollView>
+            <LinearLayout
+                android:id="@+id/my_ask_type"
+                android:padding="4dp"
+                style="@style/option_item_rl">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_my_question" />
+
+                <TextView
+                    style="@style/option_item_text"
+                    android:layout_weight="1"
+                    android:text="所有评论"
+                    tools:ignore="InefficientWeight" />
+
+                <TextView
+                    android:id="@+id/tv_ask_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="按热度" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/list_divider_color"></View>
+
+            <ListView
+                android:id="@+id/item_comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+
+        </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
+        android:background="@color/white"
         android:layout_height="wrap_content">
         <include layout="@layout/layout_commend">
         </include>

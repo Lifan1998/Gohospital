@@ -65,11 +65,11 @@ public class MyQRCodeDialog extends Dialog {
                     if (file.exists()) file.delete();
                     ImageUtils.saveImageToSD(context, file.getAbsolutePath(), bitmap, 100);
                     //AppContext.showToast("二维码已保存");
-                    Toast.makeText(context,"二维码已保存",Toast.LENGTH_SHORT);
+                    Toast.makeText(context,"二维码已保存",Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                     //AppContext.showToast("SD卡不可写，二维码保存失败");
-                    Toast.makeText(context,"保存失败",Toast.LENGTH_SHORT);
+                    Toast.makeText(context,"保存失败",Toast.LENGTH_SHORT).show();
 
                 }
                 dismiss();

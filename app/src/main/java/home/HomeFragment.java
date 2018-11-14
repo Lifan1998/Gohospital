@@ -27,7 +27,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.life.R;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -41,6 +44,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import appoint.AppointmentActivity;
+import appoint.DeptActivity;
 import ask.AskOpenActivity;
 import ask.adapter.AskAdapter;
 import ask.model.AskItem;
@@ -54,9 +58,11 @@ import config.Preferences;
 import home.adapter.GridAdapter;
 import main.SearchActivity;
 import main.SearchFragment;
+import msg.MsgActivity;
 import news.NewsOpenActivity;
 import news.adapter.NewsAdapter;
 import news.model.Result;
+import user.LoginActivity;
 
 import static com.android.volley.VolleyLog.TAG;
 
@@ -93,6 +99,7 @@ public class HomeFragment extends Fragment {
 
     public List<String> images = new ArrayList<>();
     public List<String> titles = new ArrayList<>();
+    private String token;
 
     Handler mHandler = new Handler() {
         @Override
@@ -101,6 +108,22 @@ public class HomeFragment extends Fragment {
                 case 10:
                     adapter = new GridAdapter(getActivity());
                     gridView.setAdapter(adapter);
+                    gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            String s = (String) gridView.getAdapter().getItem(position);
+                            Log.v("HomeFragment",s);
+                            Intent intent = new Intent(getActivity(), DeptActivity.class);
+                            intent.putExtra("online",true);
+                            intent.putExtra("onlineKey",s);
+                            intent.putExtra("id", 1);
+                            intent.putExtra("menzhen", s);
+                            intent.putExtra("keshi", "内科");
+                            startActivity(intent);
+
+
+                        }
+                    });
                     break;
 
             }
@@ -116,11 +139,19 @@ public class HomeFragment extends Fragment {
         gridView = view.findViewById(R.id.gv_home);
         homeNewsList = (PullToRefreshListView) view.findViewById(R.id.home_news_list);
         homeAskList = (ListView) view.findViewById(R.id.home_ask_list);
+        token = Preferences.getInstance().getToken();
         initView();
+
         return view;
     }
 
     public void initView() {
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
         new Thread() {
             @Override
             public void run() {
@@ -151,6 +182,7 @@ public class HomeFragment extends Fragment {
                 return true;
             }
         });
+        homeNewsList.setMode(PullToRefreshBase.Mode.DISABLED);
         homeNewsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -178,11 +210,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void initAskDate() {
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("base", 0);
-        String token = sharedPreferences.getString("token", "1");
-        if ("".equals(token)) {
-            token = "1";
-        }
+
         String httpurl = App.testHttpUrl + "getRecommendForum?token=" + token + "&startId=0";
         RequestQueue mQueue = Volley.newRequestQueue(getActivity());
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(httpurl,
@@ -191,7 +219,12 @@ public class HomeFragment extends Fragment {
                     public void onResponse(JSONArray jsonArray) {
 
                         Log.v("AskTab", "成功" + jsonArray.toString());
-                        askItemList = Utils.jsonToAskItems(jsonArray.toString()).subList(0,2);
+                        if(Utils.jsonToAskItems(jsonArray.toString()).size()>2){
+                            askItemList = Utils.jsonToAskItems(jsonArray.toString()).subList(0,2);
+                        }else {
+                            askItemList = Utils.jsonToAskItems(jsonArray.toString());
+                        }
+
                         askAdapter = new AskAdapter(getActivity(), askItemList);
                         homeAskList.setAdapter(askAdapter);
 
@@ -211,15 +244,21 @@ public class HomeFragment extends Fragment {
 
     private void initNewsDate() {
         String httpUrl;
-        String token = Preferences.getInstance(getActivity()).getToken();
+
         httpUrl = App.testHttpUrl + "getRecommendArticle?token=" + token + "&startId=0";
         RequestQueue mQueue = Volley.newRequestQueue(getActivity());
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(httpUrl,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray jsonArray) {
+                        LinkedList<Result> list = (LinkedList<Result>) news.util.Utils.jsonToResult(jsonArray.toString());
+                        if (list.size()>7){
+                            newsList.addAll(list.subList(0,7));
+                        } else {
+                            newsList.addAll(list);
+                        }
 
-                        newsList.addAll(news.util.Utils.jsonToResult(jsonArray.toString()).subList(0,6));
+
                         newsAdapter.notifyDataSetChanged();
 
                     }
@@ -299,13 +338,13 @@ public class HomeFragment extends Fragment {
     public void search(){
         Log.v("HomeFragment","R.id.searchedit");
         Intent intent = new Intent(getActivity(), SearchActivity.class);
-        intent.putExtra("type", SearchFragment.TYPE_All);
+        intent.putExtra("type", SearchFragment.Companion.getTYPE_All());
         getActivity().startActivity(intent);
     }
 
     private void initBannerData(){
         String httpUrl;
-        String token = Preferences.getInstance(getActivity()).getToken();
+
         httpUrl = App.testHttpUrl + "getRecommendArticle2?token=" + token;
         Log.v("HomeActivity",httpUrl);
         RequestQueue mQueue = Volley.newRequestQueue(getActivity());
@@ -328,6 +367,16 @@ public class HomeFragment extends Fragment {
             }
         });
         mQueue.add(jsonArrayRequest);
+    }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(getActivity(), MsgActivity.class));
+        } else {
+            startActivity(new Intent(getActivity(), LoginActivity.class));
+        }
+
     }
 }
 

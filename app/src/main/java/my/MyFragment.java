@@ -6,21 +6,42 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+
+import com.alibaba.fastjson.JSONException;
+import com.alibaba.fastjson.JSONObject;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+
+
+import com.android.volley.Response;
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.life.R;
+import com.netease.nim.uikit.api.NimUIKit;
+
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import config.App;
 import config.Preferences;
 import de.hdodenhof.circleimageview.CircleImageView;
+import msg.MsgUtils;
 import my.model.User;
 import my.widget.MyQRCodeDialog;
 import setting.SettingActivity;
@@ -51,12 +72,12 @@ public class MyFragment extends Fragment implements View.OnClickListener {
     private CircleImageView circleImageView;
     private boolean issign = true;
 
+    private User user =new User();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my, container, false);
         initView(view);
-
-
         unbinder = ButterKnife.bind(this, view);
         return view;
     }
@@ -68,6 +89,7 @@ public class MyFragment extends Fragment implements View.OnClickListener {
         issign = Preferences.getInstance(getContext()).isSign();
         if (issign) {
             tvUsername.setText("会飞的猪");
+            getUser(Preferences.getInstance().getToken());
 
         } else {
             tvUsername.setText("  登录/注册  ");
@@ -91,6 +113,7 @@ public class MyFragment extends Fragment implements View.OnClickListener {
             case R.id.profile_image:
                 if (issign) {
                     Intent intent = new Intent(getActivity(), MyInforActivity.class);
+                    intent.putExtra("user",user);
                     startActivity(intent);
                 } else {
                     Intent intent = new Intent(getActivity(), LoginActivity.class);
@@ -100,9 +123,14 @@ public class MyFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.iv_logo_setting:
                 Intent intent = new Intent(getActivity(), SettingActivity.class);
+
                 startActivity(intent);
                 break;
             case R.id.iv_logo_zx:
+                if(!Preferences.getInstance().isSign()){
+                    Toast.makeText(getContext(),"您还未登录",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 MyQRCodeDialog dialog = new MyQRCodeDialog(getActivity());
                 dialog.show();
                 break;
@@ -110,18 +138,6 @@ public class MyFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    /**
-     * 检查登录状态
-     */
-    private boolean checkLogin() {
-        SharedPreferences settings = getActivity().getSharedPreferences("base", 0);
-        String token = settings.getString("token", "");
-        if (token.equals("")) {
-            return false;
-        } else {
-            return true;
-        }
-    }
 
     @Override
     public void onDestroyView() {
@@ -132,15 +148,54 @@ public class MyFragment extends Fragment implements View.OnClickListener {
     /**
      * 根据token获取用户信息
      */
-    private User getUser(String token) {
-        User user = new User();
+    private void getUser(String token) {
+
+        //1为医生，0为用户
+        final int flag = 0;
+        RequestQueue mQueue = Volley.newRequestQueue(getActivity());
+        String httpurl = App.LocalUrl+"getInfoByToken?token="+Preferences.getInstance().getToken()+
+                "&flag="+flag;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, httpurl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.v(getClass().getName(),"response:"+response.toString());
+                        try {
+                            JSONObject jsonObject = JSON.parseObject(response);
+                            JSONObject jsonObject0 = jsonObject.getJSONObject("model");
+                            JSONObject jsonObject1 = jsonObject0.getJSONObject("user");
+                            tvUsername.setText(jsonObject1.getString("uName"));
+                            user.setName(jsonObject1.getString("name"));
+                            user.setuAge(jsonObject1.getString("uAge"));
+                            user.setuEmail(jsonObject1.getString("uEmail"));
+                            user.setuSex(jsonObject1.getString("uSex"));
+                            user.setuName(jsonObject1.getString("uName"));
+                            user.setuTel(jsonObject1.getString("uTel"));
+                            Log.v("MyFragment",user.toString());
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
 
-        return user;
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                Log.e(getClass().getSimpleName(),volleyError.getMessage(),volleyError);
+            }
+        });
+        mQueue.add(stringRequest);
+
     }
 
     @OnClick({R.id.my_appoint,R.id.my_love,R.id.my_ask})
     public void startMyLove(LinearLayout linearLayout) {
+        if(!Preferences.getInstance().isSign()){
+            Toast.makeText(getContext(),"您还未登录",Toast.LENGTH_SHORT).show();
+            return;
+        }
         Intent intent =  new Intent(getActivity(), MyLoveActivity.class);
         switch (linearLayout.getId()){
             case R.id.my_appoint:intent.putExtra("type",1);break;

@@ -18,13 +18,21 @@ import java.lang.Override;
 public class SettingActivity_ViewBinding<T extends SettingActivity> implements Unbinder {
   protected T target;
 
-  private View view2131296544;
+  private View view2131296662;
 
-  private View view2131296514;
+  private View view2131296631;
 
-  private View view2131296766;
+  private View view2131297052;
 
-  private View view2131296328;
+  private View view2131296344;
+
+  private View view2131296350;
+
+  private View view2131296358;
+
+  private View view2131296351;
+
+  private View view2131296355;
 
   @UiThread
   public SettingActivity_ViewBinding(final T target, View source) {
@@ -33,7 +41,7 @@ public class SettingActivity_ViewBinding<T extends SettingActivity> implements U
     View view;
     view = Utils.findRequiredView(source, R.id.layout_return, "field 'layoutReturn' and method 'exit'");
     target.layoutReturn = Utils.castView(view, R.id.layout_return, "field 'layoutReturn'", LinearLayout.class);
-    view2131296544 = view;
+    view2131296662 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -41,32 +49,64 @@ public class SettingActivity_ViewBinding<T extends SettingActivity> implements U
       }
     });
     target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
-    view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg' and method 'startMessage'");
+    view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg' and method 'msgStart'");
     target.ivMsg = Utils.castView(view, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
-    view2131296514 = view;
+    view2131296631 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
-        target.startMessage();
+        target.msgStart();
       }
     });
-    view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum' and method 'startMessage'");
+    view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum' and method 'msgStart'");
     target.tvMsgNum = Utils.castView(view, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
-    view2131296766 = view;
+    view2131297052 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
-        target.startMessage();
+        target.msgStart();
       }
     });
     target.layoutTitle = Utils.findRequiredViewAsType(source, R.id.layout_title, "field 'layoutTitle'", RelativeLayout.class);
-    target.btnAbout = Utils.findRequiredViewAsType(source, R.id.btn_about, "field 'btnAbout'", TextView.class);
-    target.btnComplain = Utils.findRequiredViewAsType(source, R.id.btn_complain, "field 'btnComplain'", TextView.class);
-    target.btnUpdate = Utils.findRequiredViewAsType(source, R.id.btn_update, "field 'btnUpdate'", TextView.class);
-    target.btnDestroy = Utils.findRequiredViewAsType(source, R.id.btn_destroy, "field 'btnDestroy'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.btn_about, "field 'btnAbout' and method 'setBtnAbout'");
+    target.btnAbout = Utils.castView(view, R.id.btn_about, "field 'btnAbout'", TextView.class);
+    view2131296344 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.setBtnAbout();
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.btn_complain, "field 'btnComplain' and method 'setBtnComplain'");
+    target.btnComplain = Utils.castView(view, R.id.btn_complain, "field 'btnComplain'", TextView.class);
+    view2131296350 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.setBtnComplain();
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.btn_update, "field 'btnUpdate' and method 'setBtnUpdate'");
+    target.btnUpdate = Utils.castView(view, R.id.btn_update, "field 'btnUpdate'", TextView.class);
+    view2131296358 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.setBtnUpdate();
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.btn_destroy, "field 'btnDestroy' and method 'logout'");
+    target.btnDestroy = Utils.castView(view, R.id.btn_destroy, "field 'btnDestroy'", TextView.class);
+    view2131296351 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.logout();
+      }
+    });
     view = Utils.findRequiredView(source, R.id.btn_logout, "field 'btnLogout' and method 'logout'");
     target.btnLogout = Utils.castView(view, R.id.btn_logout, "field 'btnLogout'", TextView.class);
-    view2131296328 = view;
+    view2131296355 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -92,14 +132,22 @@ public class SettingActivity_ViewBinding<T extends SettingActivity> implements U
     target.btnDestroy = null;
     target.btnLogout = null;
 
-    view2131296544.setOnClickListener(null);
-    view2131296544 = null;
-    view2131296514.setOnClickListener(null);
-    view2131296514 = null;
-    view2131296766.setOnClickListener(null);
-    view2131296766 = null;
-    view2131296328.setOnClickListener(null);
-    view2131296328 = null;
+    view2131296662.setOnClickListener(null);
+    view2131296662 = null;
+    view2131296631.setOnClickListener(null);
+    view2131296631 = null;
+    view2131297052.setOnClickListener(null);
+    view2131297052 = null;
+    view2131296344.setOnClickListener(null);
+    view2131296344 = null;
+    view2131296350.setOnClickListener(null);
+    view2131296350 = null;
+    view2131296358.setOnClickListener(null);
+    view2131296358 = null;
+    view2131296351.setOnClickListener(null);
+    view2131296351 = null;
+    view2131296355.setOnClickListener(null);
+    view2131296355 = null;
 
     this.target = null;
   }

@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.quinny898.library.persistentsearch:library-1.1.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.0-SNAPSHOT.aar/782ad0d9109783b592d60a494fe0d4b3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.0-SNAPSHOT.aar/782ad0d9109783b592d60a494fe0d4b3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.0-SNAPSHOT.aar/13e51e7f68fb46f62b30cbea3a0889c8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.1.0-SNAPSHOT.aar/13e51e7f68fb46f62b30cbea3a0889c8/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

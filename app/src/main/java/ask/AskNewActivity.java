@@ -3,11 +3,17 @@ package ask;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.session.MediaSession;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -17,24 +23,49 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.life.R;
+
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.entity.LocalMedia;
 import com.luck.picture.lib.permissions.RxPermissions;
 import com.luck.picture.lib.tools.PictureFileUtils;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import ask.adapter.GridImageAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import config.App;
+import config.Preferences;
+
 import home.ForecastActivity;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import msg.MsgActivity;
+import user.ForgetPassActivity;
+import user.LoginActivity;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * @author lifan
@@ -80,7 +111,12 @@ public class AskNewActivity extends Activity {
         tvTitle.setText("发布问题");
         themeId = R.style.picture_default_style;
 
-
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
 
         FullyGridLayoutManager manager = new FullyGridLayoutManager(AskNewActivity.this, 4, GridLayoutManager.VERTICAL, false);
@@ -248,6 +284,7 @@ public class AskNewActivity extends Activity {
                     for (LocalMedia media : selectList) {
                         Log.i("图片-----》", media.getPath());
                     }
+
                     adapter.setList(selectList);
                     adapter.notifyDataSetChanged();
                     break;
@@ -263,9 +300,9 @@ public class AskNewActivity extends Activity {
                 .setItems(selected, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //tv.setText(selected[which]);
+
                         tvAskType.setText(selected[which]);
-                        //Toast.makeText(ForecastActivity.this,"选择了第"+which+"个",Toast.LENGTH_SHORT).show();
+
                     }
                 }).create();
         alertDialog.show();
@@ -276,5 +313,117 @@ public class AskNewActivity extends Activity {
     public void exit(){
         finish();
     }
+
+    @OnClick(R.id.btn_ask_commit)
+    public void onBtnAskCommit(){
+        if(!Preferences.getInstance().isSign()){
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return;
+        }
+        Bitmap[] bitmaps = new Bitmap[selectList.size()];
+        int i = 0;
+        for (LocalMedia media : selectList) {
+            Log.i("图片-----》", media.getPath());
+           bitmaps[i++] = BitmapFactory.decodeFile(media.getPath());
+        }
+        reg(AskNewActivity.this,bitmaps,"");
+    }
+    public  void reg(final Context cont, Bitmap[] photodata, String regData) {
+        final String[] imgs = new String[3];
+        try {
+            for (int i=0;i<photodata.length;i++){
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                //将bitmap一字节流输出 Bitmap.CompressFormat.PNG 压缩格式，100：压缩率，baos：字节流
+                photodata[i].compress(Bitmap.CompressFormat.PNG, 100, baos);
+                baos.close();
+                byte[] buffer = baos.toByteArray();
+                System.out.println("图片的大小："+buffer.length);
+                //将图片的字节流数据加密成base64字符输出
+                imgs[i] = Base64.encodeToString(buffer, 0, buffer.length,Base64.DEFAULT);
+                Log.v("AskNewActivity",imgs[i]);
+            }
+
+            final String token = Preferences.getInstance().getToken();
+            Log.v("AskNewActivity",token);
+
+            String url = App.LocalUrl+"insertIntoForum";
+            /**
+            AsyncHttpClient client = new AsyncHttpClient();
+            client.post(url, params, new AsyncHttpResponseHandler() {
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                    Toast.makeText(cont, "头像上传成功!"+responseBody.toString(), Toast.LENGTH_SHORT)
+                            .show();
+                }
+
+                @Override
+                public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                    Toast.makeText(cont, "头像上传失败!", Toast.LENGTH_SHORT)
+                            .show();
+                }
+
+
+            });
+*/
+
+            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+            //String httpurl = App.testHttpUrl+"forgetPass";
+            StringRequest stringRequest = new StringRequest(Request.Method.POST,url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            //JSONObject jsonObject = new JSONObject(response.toString());
+                            Log.v("AskNewActivity",token);
+
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e(TAG, error.getMessage(), error);
+                    Toast.makeText(AskNewActivity.this,"重置失败",Toast.LENGTH_SHORT).show();
+                }
+            }) {
+                @Override
+                protected Map<String, String> getParams() {
+                    //在这里设置需要post的参数
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("token",token);
+                    params.put("tTitle",editAskTitle.getText().toString());
+                    params.put("tContent",editAskIntro.getText().toString());
+                    params.put("keyword",tvAskType.getText().toString());
+                    params.put("img1",imgs[0]);
+                    params.put("img2",imgs[1]);
+                    params.put("img3",imgs[2]);
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss") ;
+                    params.put("tDate",simpleDateFormat.format(new Date()));
+                    Log.v("AskNew",params.toString());
+                    return params;
+                }
+            };
+            requestQueue.add(stringRequest);
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //Volley上传数据给服务器
+
+
+    }
+
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(this, MsgActivity.class));
+        } else {
+            startActivity(new Intent(this,LoginActivity.class));
+        }
+
+    }
+
+
 
 }

@@ -18,7 +18,11 @@ import java.lang.Override;
 public class DeptActivity_ViewBinding<T extends DeptActivity> implements Unbinder {
   protected T target;
 
-  private View view2131296544;
+  private View view2131296662;
+
+  private View view2131296631;
+
+  private View view2131297052;
 
   @UiThread
   public DeptActivity_ViewBinding(final T target, View source) {
@@ -28,7 +32,7 @@ public class DeptActivity_ViewBinding<T extends DeptActivity> implements Unbinde
     target.liDoctors = Utils.findRequiredViewAsType(source, R.id.li_doctors, "field 'liDoctors'", ListView.class);
     view = Utils.findRequiredView(source, R.id.layout_return, "field 'layoutReturn' and method 'OnClicked1'");
     target.layoutReturn = Utils.castView(view, R.id.layout_return, "field 'layoutReturn'", LinearLayout.class);
-    view2131296544 = view;
+    view2131296662 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -36,8 +40,24 @@ public class DeptActivity_ViewBinding<T extends DeptActivity> implements Unbinde
       }
     });
     target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
-    target.ivMsg = Utils.findRequiredViewAsType(source, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
-    target.tvMsgNum = Utils.findRequiredViewAsType(source, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg' and method 'msgStart'");
+    target.ivMsg = Utils.castView(view, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
+    view2131296631 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.msgStart();
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum' and method 'msgStart'");
+    target.tvMsgNum = Utils.castView(view, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
+    view2131297052 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.msgStart();
+      }
+    });
   }
 
   @Override
@@ -52,8 +72,12 @@ public class DeptActivity_ViewBinding<T extends DeptActivity> implements Unbinde
     target.ivMsg = null;
     target.tvMsgNum = null;
 
-    view2131296544.setOnClickListener(null);
-    view2131296544 = null;
+    view2131296662.setOnClickListener(null);
+    view2131296662 = null;
+    view2131296631.setOnClickListener(null);
+    view2131296631 = null;
+    view2131297052.setOnClickListener(null);
+    view2131297052 = null;
 
     this.target = null;
   }

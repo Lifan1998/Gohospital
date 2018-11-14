@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="text_blue">#2fccff</color>
-    <color name="text_gray">#c9c9c9</color>
+    <color name="text_gray">#a2a2a2</color>
     <color name="transparent">#00000000</color>
     <color name="text_white">#ffffff</color>
     <color name="text_red">#ff0000</color>
@@ -20,8 +20,9 @@
     <color name="brank">#000000</color>
     <color name="blue">#7D7DFF</color>
     <color name="color_fa">#fafafa</color>
-    <color name="divider">#B6B6B6</color>
+    <color name="divider">#b6b6b6</color>
     <color name="color_c51">#f94c51</color>
     <color name="color_green">#43c117</color>
+    <color name="cpb_white">#ffffff</color>
 
 </resources>

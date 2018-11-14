@@ -11,14 +11,21 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.life.R;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import config.Preferences;
 import main.SearchActivity;
+import msg.MsgActivity;
+import user.LoginActivity;
 
 
 /**
@@ -26,19 +33,30 @@ import main.SearchActivity;
  */
 
 public class AskFragment extends Fragment implements View.OnClickListener {
-    String[] mTitle = new String[]{"推荐","儿科", "骨科", "妇产科", "皮肤科", "消化内科", "心血管", "精神心理科", "眼科", "耳鼻喉科"};
+    String[] mTitle = new String[]{"推荐", "儿科", "骨科", "妇产科", "皮肤科", "消化内科", "心血管", "精神心理科", "眼科", "耳鼻喉科"};
     TabLayout mTabLayout;
     ViewPager mViewPager;
 
     FloatingActionButton fab;
     Unbinder unbinder;
+    @BindView(R.id.iv_msg)
+    ImageView ivMsg;
+    @BindView(R.id.tv_msg_num)
+    TextView tvMsgNum;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_ask, container, false);
         fab = view.findViewById(R.id.fab);
-        initView(view);
+
         unbinder = ButterKnife.bind(this, view);
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
+        initView(view);
         return view;
     }
 
@@ -98,7 +116,7 @@ public class AskFragment extends Fragment implements View.OnClickListener {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),AskNewActivity.class);
+                Intent intent = new Intent(getActivity(), AskNewActivity.class);
                 startActivity(intent);
             }
         });
@@ -109,10 +127,21 @@ public class AskFragment extends Fragment implements View.OnClickListener {
         super.onDestroyView();
         unbinder.unbind();
     }
+
     @OnClick(R.id.searchedit)
-    public void search(){
+    public void search() {
         Intent intent = new Intent(getActivity(), SearchActivity.class);
-        intent.putExtra("type",4);
+        intent.putExtra("type", 4);
         startActivity(intent);
+    }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(getActivity(), MsgActivity.class));
+        } else {
+            startActivity(new Intent(getActivity(), LoginActivity.class));
+        }
+
     }
 }

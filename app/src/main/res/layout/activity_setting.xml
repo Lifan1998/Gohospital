@@ -30,7 +30,7 @@ android:layout_marginTop="30dp"
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-android:layout_marginStart="15dp"
+        android:layout_marginStart="15dp"
         android:background="@color/list_divider_color"
         ></View>
 

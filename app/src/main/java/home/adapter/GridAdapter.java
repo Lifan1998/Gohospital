@@ -15,9 +15,9 @@ public class GridAdapter extends BaseAdapter {
 	
 	int[] imageId = { R.drawable.erke,
 			 R.drawable.fuchanke, R.drawable.pifuke, R.drawable.erke1, R.drawable.punei,R.drawable.xiaohua,
-			 R.drawable.guke,R.drawable.gengduo };
-	String[] names = { "儿科",   "妇产科","皮肤科","中医科","普内科","消化内科",
-			"骨科", "更多" };
+			 R.drawable.guke,R.drawable.gengduo};
+	public String[] names = { "儿科","妇产科","心血管科","中医科","眼科","消化内科",
+			"泌尿外科", "心胸外科" };
 	private Context context;
 	
 	public GridAdapter(Context context) {
@@ -41,10 +41,10 @@ public class GridAdapter extends BaseAdapter {
 	//  后面两个方法暂时不需要设置
 	@Override
 	public Object getItem(int position) {
-		return null;
+		return names[position];
 	}
 	@Override
 	public long getItemId(int position) {
-		return 0;
+		return position;
 	}
 }

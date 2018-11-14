@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_ask_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/erke" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/item_ask_image"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/item_ask_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="武则天" />
+            <TextView
+                android:layout_toRightOf="@id/item_ask_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:id="@+id/item_ask_identity"
+                android:text="医生"
+                android:background="@drawable/order_edt_note_bg"/>
+            <TextView
+                android:id="@+id/item_ask_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_ask_name"
+                android:text="2018-10-4"
+                android:textColor="@color/qmui_config_color_gray_5" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/item_comment_commend_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/iv_commend"
+            android:text="23"/>
+
+        <ImageView
+            android:id="@+id/iv_commend"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+           android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/selector_thumb"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_ask_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="评论内容" />
+
+</LinearLayout>

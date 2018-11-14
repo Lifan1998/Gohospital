@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import ask.AskFragment;
+import butterknife.OnClick;
 import home.HomeFragment;
 import init.MyUtils;
 

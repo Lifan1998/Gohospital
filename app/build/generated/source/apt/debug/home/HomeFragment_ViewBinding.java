@@ -17,11 +17,15 @@ import java.lang.Override;
 public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinder {
   protected T target;
 
-  private View view2131296509;
+  private View view2131296631;
 
-  private View view2131296289;
+  private View view2131297052;
 
-  private View view2131296680;
+  private View view2131296626;
+
+  private View view2131296307;
+
+  private View view2131296905;
 
   @UiThread
   public HomeFragment_ViewBinding(final T target, View source) {
@@ -29,11 +33,27 @@ public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinde
 
     View view;
     target.ivRichscan = Utils.findRequiredViewAsType(source, R.id.iv_richscan, "field 'ivRichscan'", ImageView.class);
-    target.ivMsg = Utils.findRequiredViewAsType(source, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
-    target.tvMsgNum = Utils.findRequiredViewAsType(source, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
+    view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg' and method 'msgStart'");
+    target.ivMsg = Utils.castView(view, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
+    view2131296631 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.msgStart();
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum' and method 'msgStart'");
+    target.tvMsgNum = Utils.castView(view, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
+    view2131297052 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.msgStart();
+      }
+    });
     view = Utils.findRequiredView(source, R.id.iv_forecast, "field 'ivForecast' and method 'onClickF'");
     target.ivForecast = Utils.castView(view, R.id.iv_forecast, "field 'ivForecast'", ImageView.class);
-    view2131296509 = view;
+    view2131296626 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -42,7 +62,7 @@ public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinde
     });
     target.banner = Utils.findRequiredViewAsType(source, R.id.banner, "field 'banner'", Banner.class);
     view = Utils.findRequiredView(source, R.id.appointimage, "method 'appoint'");
-    view2131296289 = view;
+    view2131296307 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +70,7 @@ public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinde
       }
     });
     view = Utils.findRequiredView(source, R.id.searchedit, "method 'search'");
-    view2131296680 = view;
+    view2131296905 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -71,12 +91,16 @@ public class HomeFragment_ViewBinding<T extends HomeFragment> implements Unbinde
     target.ivForecast = null;
     target.banner = null;
 
-    view2131296509.setOnClickListener(null);
-    view2131296509 = null;
-    view2131296289.setOnClickListener(null);
-    view2131296289 = null;
-    view2131296680.setOnClickListener(null);
-    view2131296680 = null;
+    view2131296631.setOnClickListener(null);
+    view2131296631 = null;
+    view2131297052.setOnClickListener(null);
+    view2131297052 = null;
+    view2131296626.setOnClickListener(null);
+    view2131296626 = null;
+    view2131296307.setOnClickListener(null);
+    view2131296307 = null;
+    view2131296905.setOnClickListener(null);
+    view2131296905 = null;
 
     this.target = null;
   }

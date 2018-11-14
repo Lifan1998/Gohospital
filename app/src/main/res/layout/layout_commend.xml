@@ -14,7 +14,7 @@
         android:layout_margin="5dp">
 
         <EditText
-            android:id="@+id/edit_commend"
+            android:id="@+id/edit_comment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
@@ -23,7 +23,7 @@
             android:hint="评论点什么吧" />
 
         <TextView
-            android:id="@+id/btn_commend"
+            android:id="@+id/btn_comment"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"

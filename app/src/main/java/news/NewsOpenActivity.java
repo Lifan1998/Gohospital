@@ -1,9 +1,11 @@
 package news;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
 import android.widget.EditText;
@@ -20,6 +22,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.life.R;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,6 +34,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import config.App;
 import config.CollectionUtils;
+import config.Preferences;
+import msg.MsgActivity;
+import user.LoginActivity;
 
 import static com.android.volley.VolleyLog.TAG;
 
@@ -53,10 +60,7 @@ public class NewsOpenActivity extends Activity {
     RelativeLayout layoutTitle;
     @BindView(R.id.newswebview)
     WebView newswebview;
-    @BindView(R.id.edit_commend)
-    EditText editCommend;
-    @BindView(R.id.btn_commend)
-    TextView btnCommend;
+
     @BindView(R.id.iv_love)
     ImageView ivLove;
     @BindView(R.id.iv_commend)
@@ -76,6 +80,12 @@ public class NewsOpenActivity extends Activity {
         aurl = getIntent().getStringExtra("aurl");
         CollectionUtils.isInCollect(getApplicationContext(),CollectionUtils.FLAG_NEWS,id,ivLove);
         initView();
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
         updateType(getIntent().getStringExtra("type"));
     }
 
@@ -126,6 +136,10 @@ public class NewsOpenActivity extends Activity {
 
     @OnClick(R.id.iv_love)
     public void selectLove(){
+        if(!Preferences.getInstance().isSign()){
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
         if(ivLove.isSelected()){
             ivLove.setSelected(false);
             CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_NEWS,id,0);
@@ -138,10 +152,24 @@ public class NewsOpenActivity extends Activity {
     }
     @OnClick(R.id.iv_commend)
     public void selectCommend(){
+        if(!Preferences.getInstance().isSign()){
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
         ivCommend.setSelected(true);
     }
     @OnClick(R.id.layout_return)
     public void close(){
         finish();
+    }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(this, MsgActivity.class));
+        } else {
+            startActivity(new Intent(this,LoginActivity.class));
+        }
+
     }
 }

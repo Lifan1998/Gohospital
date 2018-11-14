@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Random;
 
 import ask.model.AskItem;
+import ask.model.Comment;
 import news.model.Result;
 
 /**
@@ -62,6 +63,29 @@ public class Utils {
 
         return askItems;
     }
+    public static List<Comment> jsonToComments(String json){
+        List<Comment> comments = new LinkedList<>();
+        Comment comment;
+        try {
+            JSONArray jsonArray = new JSONArray(json);
+            for (int i=0;i<jsonArray.length();i++){
+                comment = new Comment();
+                JSONObject jsonObject = (JSONObject)jsonArray.get(i);
+                Log.v("JsonParser",jsonObject.toString());
+
+                comment.setCommentID(jsonObject.getInt("rId"));
+                comment.setCommentText(jsonObject.getString("rContent"));
+                comment.setDate(dataToString(jsonObject.getLong("rTime")));
+                comment.setName(jsonObject.getString("username"));
+                comment.setUserType(jsonObject.getInt("flag"));
+                comments.add(comment);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return comments;
+    }
 
     public static String dataToString(long data){
         Date date = new Date(data);
@@ -77,6 +101,5 @@ public class Utils {
             date1 = "昨天"+simpleDateFormat1.format(date);
         }
        return date1;
-
     }
 }

@@ -1,14 +1,14 @@
 package home;
 
 import android.content.Context;
-import android.net.Uri;
+
 import android.widget.ImageView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
+
 import com.squareup.picasso.Picasso;
 import com.youth.banner.loader.ImageLoader;
 
-import java.net.URL;
+
 
 /**
  * @author lifan

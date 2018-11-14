@@ -15,13 +15,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.life.R;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import config.Preferences;
 import main.SearchActivity;
 import main.SearchFragment;
+import msg.MsgActivity;
+import user.LoginActivity;
 
 /**
  * Created by lenovo on 2018/7/12.
@@ -44,10 +49,16 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_news, container, false);
+        unbinder = ButterKnife.bind(this, view);
         initData();
         initView(view);
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
 
-        unbinder = ButterKnife.bind(this, view);
         return view;
     }
 
@@ -113,7 +124,7 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
     @OnClick(R.id.searchedit)
     public void search() {
         Intent intent = new Intent(getActivity(), SearchActivity.class);
-        intent.putExtra("type", SearchFragment.TYPE_News);
+        intent.putExtra("type", SearchFragment.Companion.getTYPE_News());
         getActivity().startActivity(intent);
     }
 
@@ -121,5 +132,15 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+    }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(getContext(), MsgActivity.class));
+        } else {
+            startActivity(new Intent(getContext(), LoginActivity.class));
+        }
+
     }
 }

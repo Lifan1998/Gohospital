@@ -25,7 +25,6 @@ public class NewsAdapter$ViewHolderOne_ViewBinding<T extends NewsAdapter.ViewHol
     target.itemNews1Image3 = Utils.findRequiredViewAsType(source, R.id.item_news1_image3, "field 'itemNews1Image3'", ImageView.class);
     target.itemNews1Author = Utils.findRequiredViewAsType(source, R.id.item_news1_author, "field 'itemNews1Author'", TextView.class);
     target.itemNews1Time = Utils.findRequiredViewAsType(source, R.id.item_news1_time, "field 'itemNews1Time'", TextView.class);
-    target.itemNews1Comment = Utils.findRequiredViewAsType(source, R.id.item_news1_comment, "field 'itemNews1Comment'", TextView.class);
     target.itemNews1Recommend = Utils.findRequiredViewAsType(source, R.id.item_news1_recommend, "field 'itemNews1Recommend'", TextView.class);
   }
 
@@ -41,7 +40,6 @@ public class NewsAdapter$ViewHolderOne_ViewBinding<T extends NewsAdapter.ViewHol
     target.itemNews1Image3 = null;
     target.itemNews1Author = null;
     target.itemNews1Time = null;
-    target.itemNews1Comment = null;
     target.itemNews1Recommend = null;
 
     this.target = null;

@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.qmuiteam:qmui-1.1.3">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/qmui-1.1.3.aar/5dd3c0358741ff5dd65b77b9e9d76e33/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/qmui-1.1.3.aar/5dd3c0358741ff5dd65b77b9e9d76e33/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/qmui-1.1.3.aar/7d318b1d5ae356826d770141f4480fc3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/qmui-1.1.3.aar/7d318b1d5ae356826d770141f4480fc3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -26,6 +26,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.life.R;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,7 +43,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import config.CollectionUtils;
+import config.Preferences;
 import greendao.DatabaseUtils;
+import msg.MsgActivity;
+import user.LoginActivity;
 
 /**
  * @author lifan
@@ -97,7 +102,12 @@ public class DoctorActivity extends Activity {
 
         ButterKnife.bind(this);
         ivLove.setVisibility(View.VISIBLE);
-
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
 
         initDoctor();
         initView();
@@ -230,6 +240,11 @@ public class DoctorActivity extends Activity {
      */
     @OnClick(R.id.iv_love)
     public void selectLove(){
+        if(!Preferences.getInstance().isSign()){
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return;
+        }
         if(ivLove.isSelected()){
             ivLove.setSelected(false);
             CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_DOCTOR,id_doctor,0);
@@ -237,5 +252,15 @@ public class DoctorActivity extends Activity {
             ivLove.setSelected(true);
             CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_DOCTOR,id_doctor,1);
         }
+    }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(this, MsgActivity.class));
+        } else {
+            startActivity(new Intent(this,LoginActivity.class));
+        }
+
     }
 }

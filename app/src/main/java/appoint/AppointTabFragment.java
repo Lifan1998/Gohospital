@@ -204,7 +204,7 @@ public class AppointTabFragment extends Fragment{
                     Doctor doctor = JsonParser.jsonToDoctor(response.toString());
                     doctor.setScheduing(time);
                     doctors.add(doctor);
-                    //appointAdapter.notifyDataSetChanged();
+                    appointAdapter.notifyDataSetChanged();
                 }
             }, new Response.ErrorListener() {
             @Override

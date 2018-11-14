@@ -18,13 +18,13 @@ import java.lang.Override;
 public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements Unbinder {
   protected T target;
 
-  private View view2131296544;
+  private View view2131296662;
 
-  private View view2131296514;
+  private View view2131296631;
 
-  private View view2131296766;
+  private View view2131297052;
 
-  private View view2131296513;
+  private View view2131296630;
 
   @UiThread
   public HospitalActivity_ViewBinding(final T target, View source) {
@@ -40,7 +40,7 @@ public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements
     target.liMenzhen = Utils.findRequiredViewAsType(source, R.id.li_menzhen, "field 'liMenzhen'", ListView.class);
     view = Utils.findRequiredView(source, R.id.layout_return, "field 'layoutReturn' and method 'onViewClicked'");
     target.layoutReturn = Utils.castView(view, R.id.layout_return, "field 'layoutReturn'", LinearLayout.class);
-    view2131296544 = view;
+    view2131296662 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,27 +48,29 @@ public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements
       }
     });
     target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
-    view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg' and method 'onViewClicked'");
+    view = Utils.findRequiredView(source, R.id.iv_msg, "field 'ivMsg', method 'onViewClicked', and method 'msgStart'");
     target.ivMsg = Utils.castView(view, R.id.iv_msg, "field 'ivMsg'", ImageView.class);
-    view2131296514 = view;
+    view2131296631 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.onViewClicked(p0);
+        target.msgStart();
       }
     });
-    view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum' and method 'onViewClicked'");
+    view = Utils.findRequiredView(source, R.id.tv_msg_num, "field 'tvMsgNum', method 'onViewClicked', and method 'msgStart'");
     target.tvMsgNum = Utils.castView(view, R.id.tv_msg_num, "field 'tvMsgNum'", TextView.class);
-    view2131296766 = view;
+    view2131297052 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.onViewClicked(p0);
+        target.msgStart();
       }
     });
     view = Utils.findRequiredView(source, R.id.iv_love, "field 'ivLove' and method 'selectLove'");
     target.ivLove = Utils.castView(view, R.id.iv_love, "field 'ivLove'", ImageView.class);
-    view2131296513 = view;
+    view2131296630 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -96,14 +98,14 @@ public class HospitalActivity_ViewBinding<T extends HospitalActivity> implements
     target.tvMsgNum = null;
     target.ivLove = null;
 
-    view2131296544.setOnClickListener(null);
-    view2131296544 = null;
-    view2131296514.setOnClickListener(null);
-    view2131296514 = null;
-    view2131296766.setOnClickListener(null);
-    view2131296766 = null;
-    view2131296513.setOnClickListener(null);
-    view2131296513 = null;
+    view2131296662.setOnClickListener(null);
+    view2131296662 = null;
+    view2131296631.setOnClickListener(null);
+    view2131296631 = null;
+    view2131297052.setOnClickListener(null);
+    view2131297052 = null;
+    view2131296630.setOnClickListener(null);
+    view2131296630 = null;
 
     this.target = null;
   }

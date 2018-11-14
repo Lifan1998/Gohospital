@@ -41,7 +41,7 @@
                 android:text="|2018.9.30" />
 
             <TextView
-                android:id="@+id/item_news2_comment"
+                android:id="@+id/item_news2_recommend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="3dp"
@@ -54,23 +54,10 @@
                 android:layout_height="15dp"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@id/item_news2_recommend"
+               android:layout_alignParentEnd="true"
                 android:background="@mipmap/ic_thumb_normal" />
 
-            <TextView
-                android:id="@+id/item_news2_recommend"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/item_ask_iv2"
-                android:layout_marginRight="3dp"
-                android:text="3"/>
-            <ImageView
-                android:id="@+id/item_ask_iv2"
-                android:layout_width="17dp"
-                android:layout_height="15dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:background="@mipmap/ic_comment" />
+
 
         </RelativeLayout>
 

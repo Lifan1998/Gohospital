@@ -149,11 +149,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         String httpurl = null;
         if(login_way==0){
 
-            httpurl = App.testHttpUrl+"login?" +"flag="+login_way+"&tel="+username.getText().toString()+
+            httpurl = App.RemoteUrl+"login?" +"flag="+login_way+"&tel="+username.getText().toString()+
                     "&password="+code.getText().toString();
 
         } else {
-            httpurl = App.testHttpUrl+"login?" +"flag="+login_way+"&tel="+username.getText().toString()+
+            httpurl = App.RemoteUrl+"login?" +"flag="+login_way+"&tel="+username.getText().toString()+
                     "&password="+password.getText().toString();
         }
         RequestQueue mQueue = Volley.newRequestQueue(LoginActivity.this);
@@ -168,13 +168,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                             JSONObject jsonObject = new JSONObject(response.toString());
                             JSONObject jsonObject1 = jsonObject.getJSONObject("model");
                             String token = jsonObject1.getString("token");
-                            //SharedPreferences settings = getSharedPreferences("base", 0);
-                            //SharedPreferences.Editor editor = settings.edit();
-                            //editor.putString("token", token);
-                            // 提交本次编辑
-                            //editor.commit();
                             Preferences.getInstance().setToken(token);
+                            user.util.Utils.loginIM(username.getText().toString());
                             Log.v("LoginActivity",token);
+
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -192,6 +189,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
 
     }
+
+
 
 
 

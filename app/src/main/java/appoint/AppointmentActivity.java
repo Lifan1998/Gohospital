@@ -21,6 +21,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.life.R;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import org.json.JSONArray;
 
@@ -33,8 +35,11 @@ import appoint.utils.JsonParser;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import config.Preferences;
 import greendao.DatabaseUtils;
 import main.SearchActivity;
+import msg.MsgActivity;
+import user.LoginActivity;
 
 /**
  * Created by lenovo on 2018/4/18.
@@ -86,7 +91,12 @@ public class AppointmentActivity extends Activity {
         setContentView(R.layout.activity_appoint);
         ButterKnife.bind(this);
         tvTitle.setText("预约挂号");
-        tvMsgNum.setVisibility(View.INVISIBLE);
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
         initView();
         initListView();
     }
@@ -167,5 +177,14 @@ public class AppointmentActivity extends Activity {
 
         }
     }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
 
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(this, MsgActivity.class));
+        } else {
+            startActivity(new Intent(this, LoginActivity.class));
+        }
+
+    }
 }

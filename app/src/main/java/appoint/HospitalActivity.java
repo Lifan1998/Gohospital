@@ -21,6 +21,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.life.R;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,6 +35,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import config.CollectionUtils;
+import config.Preferences;
+import msg.MsgActivity;
+import user.LoginActivity;
 
 /**
  * @author lifan
@@ -83,7 +88,12 @@ public class HospitalActivity extends Activity {
         id_hos = getIntent().getIntExtra("id", id_hos);
         ButterKnife.bind(this);
         tvTitle.setText(getIntent().getStringExtra("name"));
-        tvMsgNum.setVisibility(View.INVISIBLE);
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
         ivLove.setVisibility(View.VISIBLE);
         initView();
         initKeshi();
@@ -254,6 +264,11 @@ public class HospitalActivity extends Activity {
      */
     @OnClick(R.id.iv_love)
     public void selectLove(){
+        if(!Preferences.getInstance().isSign()){
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return;
+        }
         if(ivLove.isSelected()){
             ivLove.setSelected(false);
             CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_HOSPITAL,id_hos,0);
@@ -263,5 +278,15 @@ public class HospitalActivity extends Activity {
             CollectionUtils.collection(getApplicationContext(),CollectionUtils.FLAG_HOSPITAL,id_hos,1);
 
         }
+    }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(this, MsgActivity.class));
+        } else {
+            startActivity(new Intent(this,LoginActivity.class));
+        }
+
     }
 }

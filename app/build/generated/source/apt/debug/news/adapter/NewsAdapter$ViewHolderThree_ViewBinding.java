@@ -22,7 +22,6 @@ public class NewsAdapter$ViewHolderThree_ViewBinding<T extends NewsAdapter.ViewH
     target.itemNews3Intro = Utils.findRequiredViewAsType(source, R.id.item_news3_intro, "field 'itemNews3Intro'", TextView.class);
     target.itemNews3Author = Utils.findRequiredViewAsType(source, R.id.item_news3_author, "field 'itemNews3Author'", TextView.class);
     target.itemNews3Time = Utils.findRequiredViewAsType(source, R.id.item_news3_time, "field 'itemNews3Time'", TextView.class);
-    target.itemNews3Comment = Utils.findRequiredViewAsType(source, R.id.item_news3_comment, "field 'itemNews3Comment'", TextView.class);
     target.itemNews3Recommend = Utils.findRequiredViewAsType(source, R.id.item_news3_recommend, "field 'itemNews3Recommend'", TextView.class);
   }
 
@@ -36,7 +35,6 @@ public class NewsAdapter$ViewHolderThree_ViewBinding<T extends NewsAdapter.ViewH
     target.itemNews3Intro = null;
     target.itemNews3Author = null;
     target.itemNews3Time = null;
-    target.itemNews3Comment = null;
     target.itemNews3Recommend = null;
 
     this.target = null;

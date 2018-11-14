@@ -1,498 +1,904 @@
 -- Merging decision tree log ---
 provider#android.support.v4.content.FileProvider
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:116:9-125:20
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:136:9-144:20
 	android:grantUriPermissions
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:121:13-47
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:140:13-47
 	android:authorities
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:119:13-51
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:138:13-51
 	android:exported
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:120:13-37
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:139:13-37
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:117:13-67
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:137:13-67
 manifest
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:1:1-135:12
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:1:1-135:12
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:1:1-135:12
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:1:1-135:12
-MERGED from [com.youth.banner:banner:1.4.10] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\banner-1.4.10.aar\5ab54c7bff7e7e138cee13b974c20fe7\AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.fresco:fresco:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\fresco-0.14.1.aar\1f80fd4147b5ff0d5a879e9c919e0634\AndroidManifest.xml:2:1-9:12
-MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.3.aar\9cabdb76dfa704b3621e8505c7dbc58c\AndroidManifest.xml:2:1-14:12
-MERGED from [com.jakewharton:butterknife:8.4.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\butterknife-8.4.0.aar\affb9f163a0be7c9864e8073fa7ec92c\AndroidManifest.xml:2:1-7:12
-MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\9bc31f4b52db7466ead276a6e86b9c7c\AndroidManifest.xml:2:1-11:12
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2fc58504ff7a2ab13d75eb2bcf725eec\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\4db38da9aba4dad104fc38308c9ca1cc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.qmuiteam:qmui:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\qmui-1.1.3.aar\5dd3c0358741ff5dd65b77b9e9d76e33\AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.support:design:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\1421e453e0256d1d82cb49713d5c4b52\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\979fe78c79985141250e03dd4a34595b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:2:1-36:12
-MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ucrop-v2.2.3.aar\0ce68329f768acfb3425e8afc13c15ab\AndroidManifest.xml:2:1-12:12
-MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\a6569970a6cd402b7ed000c88800a736\AndroidManifest.xml:2:1-13:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\f14296bb7c266b3d40562b725bec6556\AndroidManifest.xml:2:1-11:12
-MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\782ad0d9109783b592d60a494fe0d4b3\AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\184ee8d21d089134b46b3fe672717092\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\1777cfdee7e8dd527b61da7ad9bbcacf\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\fd67a19cbb5f66f101535d28eee3152f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\57da4910ce4a03d15df49ad877042893\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\64017b01bc6a601cb2c9be6cc8245aa2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\e53a5134dbe1f7b4f52efa533b05b94d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:imagepipeline:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\imagepipeline-0.14.1.aar\5a1e56179ea209309ce017ef916c013d\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-0.14.1.aar\90975b588ba117b3af2fed50f3d33c43\AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\23444b88f38f8bce52b11cadf3a5052e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\2cf645c177a8ba93be0f06f02fb0587e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\dcd1a0a28b1cd7200a639717a527c9af\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\95ce527b4b3262f7b438fc6297bfc5fc\AndroidManifest.xml:17:1-22:12
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\b3b249a5ef31e6263ee1a5e2fef523d3\AndroidManifest.xml:2:1-11:12
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:2:1-26:12
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:1-195:12
+MERGED from [com.youth.banner:banner:1.4.10] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\banner-1.4.10.aar\843f11d3a7ecb8891bbf79f62e763edb\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\95ec821f6132ca5542a7550182be4bf0\AndroidManifest.xml:16:1-19:12
+MERGED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-162:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\982c0c60dcd77b8a2f214b9c11502a6e\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:8.4.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\butterknife-8.4.0.aar\821e29c0fd25a451b2d96b9fbfcb14e7\AndroidManifest.xml:2:1-7:12
+MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\f20b9bba92070553cd3512a958b184b1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\d963f4788bec37570b5cb23b8d641145\AndroidManifest.xml:17:1-28:12
+MERGED from [com.qmuiteam:qmui:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\qmui-1.1.3.aar\7d318b1d5ae356826d770141f4480fc3\AndroidManifest.xml:2:1-9:12
+MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\13e51e7f68fb46f62b30cbea3a0889c8\AndroidManifest.xml:2:1-14:12
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:2:1-36:12
+MERGED from [com.android.support:design:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\f536ba18feef700cc21a74ed1ccbefd5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ucrop-v2.2.3.aar\009f0c040c84ed06a4665933be2baa7b\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\bc96a3fbe45f4e7b2da9c573bb46e4e3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\225d0c632d5fafc48a22cea0bd489cee\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\59ccac5d299b389308899ac8743b87ae\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\90927e0814417f28133c0ccd876360bf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\64d73fc5f2fbac296c9972c279a943ad\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\cd2e633ccab647c0938ab74079e01dff\AndroidManifest.xml:17:1-22:12
+MERGED from [me.everything:overscroll-decor-android:1.0.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\overscroll-decor-android-1.0.4.aar\27aefab151f54b1d41d45bd9a6952e72\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\b0f9be54881b2947f44b58a6adb8aa9d\AndroidManifest.xml:17:1-22:12
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-transformations-3.0.1.aar\5090e3ad920d91e25a23a7abede0bdb8\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\dc944193894b0e8db67d28f3cad5cd9f\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\f0529958ad85147de194a70b5decece4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\cfd0f95e859fe1a892e964b0c65e4929\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\93a92485b6f28a291131f0d2aaf8d84f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\6ae7e2d3a37804cfdb3f25440317f0dd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\7e97f7b0e857335184ba072923d77c2a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\35bfc90042404d74e17c9cac6ef92868\AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a06172b31b735c634f8ccd2cd566ce48\AndroidManifest.xml:2:1-11:12
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:2:1-26:12
 MERGED from [:base_library_pullToRefresh_chenyoca] D:\AndroidStudio\Gohospital\base_library_pullToRefresh_chenyoca\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.fresco:drawee:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\drawee-0.14.1.aar\87a9afe8356edda3907c310809649216\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:fbcore:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\fbcore-0.14.1.aar\ec02c4a0a39da2dbf3b697271c31d3ae\AndroidManifest.xml:2:1-9:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\dc6e8cf7032e7a4da32f8fc3ac46407d\AndroidManifest.xml:15:1-21:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\808531540f175a1bb962b443c7001a5f\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3cc97c8baafacb054120584034c96a14\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\bfd18ece02a1e580e240bc1b9ac02ccb\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\470dcfc2dea59c33669de499392b735e\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:1:1-135:12
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:1:1-135:12
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:1:1-135:12
+MERGED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:2:1-52:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\732890801b4f0a9d0f312addc0bd23df\AndroidManifest.xml:15:1-21:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\997caf3a2264b16eef7f66e00c03b159\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\774348afe4b8f9dc84ee03a768ddaf6c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\bfffade69cf419f18a18c67def1ba032\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b915705d2f80363572538ba495685f02\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:1-195:12
 	package
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:5-31
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:4:5-30
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:5:5-30
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:3:5-28
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:4:5-28
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:6:5-8:41
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:6:5-8:41
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:6:5-8:41
-MERGED from [com.youth.banner:banner:1.4.10] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\banner-1.4.10.aar\5ab54c7bff7e7e138cee13b974c20fe7\AndroidManifest.xml:7:5-9:41
-MERGED from [com.youth.banner:banner:1.4.10] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\banner-1.4.10.aar\5ab54c7bff7e7e138cee13b974c20fe7\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:fresco:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\fresco-0.14.1.aar\1f80fd4147b5ff0d5a879e9c919e0634\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\fresco-0.14.1.aar\1f80fd4147b5ff0d5a879e9c919e0634\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.3.aar\9cabdb76dfa704b3621e8505c7dbc58c\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.3.aar\9cabdb76dfa704b3621e8505c7dbc58c\AndroidManifest.xml:8:5-10:41
-MERGED from [com.jakewharton:butterknife:8.4.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\butterknife-8.4.0.aar\affb9f163a0be7c9864e8073fa7ec92c\AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.4.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\butterknife-8.4.0.aar\affb9f163a0be7c9864e8073fa7ec92c\AndroidManifest.xml:5:5-43
-MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\9bc31f4b52db7466ead276a6e86b9c7c\AndroidManifest.xml:5:5-7:41
-MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\9bc31f4b52db7466ead276a6e86b9c7c\AndroidManifest.xml:5:5-7:41
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2fc58504ff7a2ab13d75eb2bcf725eec\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2fc58504ff7a2ab13d75eb2bcf725eec\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\4db38da9aba4dad104fc38308c9ca1cc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\4db38da9aba4dad104fc38308c9ca1cc\AndroidManifest.xml:20:5-44
-MERGED from [com.qmuiteam:qmui:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\qmui-1.1.3.aar\5dd3c0358741ff5dd65b77b9e9d76e33\AndroidManifest.xml:5:5-7:41
-MERGED from [com.qmuiteam:qmui:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\qmui-1.1.3.aar\5dd3c0358741ff5dd65b77b9e9d76e33\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\1421e453e0256d1d82cb49713d5c4b52\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\1421e453e0256d1d82cb49713d5c4b52\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\979fe78c79985141250e03dd4a34595b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\979fe78c79985141250e03dd4a34595b\AndroidManifest.xml:20:5-44
-MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ucrop-v2.2.3.aar\0ce68329f768acfb3425e8afc13c15ab\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ucrop-v2.2.3.aar\0ce68329f768acfb3425e8afc13c15ab\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\a6569970a6cd402b7ed000c88800a736\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\a6569970a6cd402b7ed000c88800a736\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\f14296bb7c266b3d40562b725bec6556\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\f14296bb7c266b3d40562b725bec6556\AndroidManifest.xml:5:5-7:41
-MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\782ad0d9109783b592d60a494fe0d4b3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\782ad0d9109783b592d60a494fe0d4b3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\184ee8d21d089134b46b3fe672717092\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\184ee8d21d089134b46b3fe672717092\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\1777cfdee7e8dd527b61da7ad9bbcacf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\1777cfdee7e8dd527b61da7ad9bbcacf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\fd67a19cbb5f66f101535d28eee3152f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\fd67a19cbb5f66f101535d28eee3152f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\57da4910ce4a03d15df49ad877042893\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\57da4910ce4a03d15df49ad877042893\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\64017b01bc6a601cb2c9be6cc8245aa2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\64017b01bc6a601cb2c9be6cc8245aa2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\e53a5134dbe1f7b4f52efa533b05b94d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\e53a5134dbe1f7b4f52efa533b05b94d\AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:imagepipeline:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\imagepipeline-0.14.1.aar\5a1e56179ea209309ce017ef916c013d\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\imagepipeline-0.14.1.aar\5a1e56179ea209309ce017ef916c013d\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-0.14.1.aar\90975b588ba117b3af2fed50f3d33c43\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-0.14.1.aar\90975b588ba117b3af2fed50f3d33c43\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\23444b88f38f8bce52b11cadf3a5052e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\23444b88f38f8bce52b11cadf3a5052e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\2cf645c177a8ba93be0f06f02fb0587e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\2cf645c177a8ba93be0f06f02fb0587e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\dcd1a0a28b1cd7200a639717a527c9af\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\dcd1a0a28b1cd7200a639717a527c9af\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\95ce527b4b3262f7b438fc6297bfc5fc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\95ce527b4b3262f7b438fc6297bfc5fc\AndroidManifest.xml:20:5-44
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\b3b249a5ef31e6263ee1a5e2fef523d3\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\b3b249a5ef31e6263ee1a5e2fef523d3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:7:5-9:41
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:7:5-9:41
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [com.youth.banner:banner:1.4.10] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\banner-1.4.10.aar\843f11d3a7ecb8891bbf79f62e763edb\AndroidManifest.xml:7:5-9:41
+MERGED from [com.youth.banner:banner:1.4.10] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\banner-1.4.10.aar\843f11d3a7ecb8891bbf79f62e763edb\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\95ec821f6132ca5542a7550182be4bf0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\95ec821f6132ca5542a7550182be4bf0\AndroidManifest.xml:18:5-42
+MERGED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\982c0c60dcd77b8a2f214b9c11502a6e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\982c0c60dcd77b8a2f214b9c11502a6e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:8.4.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\butterknife-8.4.0.aar\821e29c0fd25a451b2d96b9fbfcb14e7\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.4.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\butterknife-8.4.0.aar\821e29c0fd25a451b2d96b9fbfcb14e7\AndroidManifest.xml:5:5-43
+MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\f20b9bba92070553cd3512a958b184b1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\f20b9bba92070553cd3512a958b184b1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\d963f4788bec37570b5cb23b8d641145\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\d963f4788bec37570b5cb23b8d641145\AndroidManifest.xml:20:5-44
+MERGED from [com.qmuiteam:qmui:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\qmui-1.1.3.aar\7d318b1d5ae356826d770141f4480fc3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.qmuiteam:qmui:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\qmui-1.1.3.aar\7d318b1d5ae356826d770141f4480fc3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\13e51e7f68fb46f62b30cbea3a0889c8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\13e51e7f68fb46f62b30cbea3a0889c8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\f536ba18feef700cc21a74ed1ccbefd5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\f536ba18feef700cc21a74ed1ccbefd5\AndroidManifest.xml:20:5-44
+MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ucrop-v2.2.3.aar\009f0c040c84ed06a4665933be2baa7b\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ucrop-v2.2.3.aar\009f0c040c84ed06a4665933be2baa7b\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\bc96a3fbe45f4e7b2da9c573bb46e4e3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\bc96a3fbe45f4e7b2da9c573bb46e4e3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\225d0c632d5fafc48a22cea0bd489cee\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\225d0c632d5fafc48a22cea0bd489cee\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\59ccac5d299b389308899ac8743b87ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\59ccac5d299b389308899ac8743b87ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\90927e0814417f28133c0ccd876360bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.0.aar\90927e0814417f28133c0ccd876360bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\64d73fc5f2fbac296c9972c279a943ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\64d73fc5f2fbac296c9972c279a943ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\cd2e633ccab647c0938ab74079e01dff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\cd2e633ccab647c0938ab74079e01dff\AndroidManifest.xml:20:5-44
+MERGED from [me.everything:overscroll-decor-android:1.0.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\overscroll-decor-android-1.0.4.aar\27aefab151f54b1d41d45bd9a6952e72\AndroidManifest.xml:8:5-10:41
+MERGED from [me.everything:overscroll-decor-android:1.0.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\overscroll-decor-android-1.0.4.aar\27aefab151f54b1d41d45bd9a6952e72\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\b0f9be54881b2947f44b58a6adb8aa9d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\b0f9be54881b2947f44b58a6adb8aa9d\AndroidManifest.xml:20:5-44
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-transformations-3.0.1.aar\5090e3ad920d91e25a23a7abede0bdb8\AndroidManifest.xml:8:5-10:41
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-transformations-3.0.1.aar\5090e3ad920d91e25a23a7abede0bdb8\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\dc944193894b0e8db67d28f3cad5cd9f\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\dc944193894b0e8db67d28f3cad5cd9f\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\f0529958ad85147de194a70b5decece4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\f0529958ad85147de194a70b5decece4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\cfd0f95e859fe1a892e964b0c65e4929\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\cfd0f95e859fe1a892e964b0c65e4929\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\93a92485b6f28a291131f0d2aaf8d84f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\93a92485b6f28a291131f0d2aaf8d84f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\6ae7e2d3a37804cfdb3f25440317f0dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\6ae7e2d3a37804cfdb3f25440317f0dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\7e97f7b0e857335184ba072923d77c2a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\7e97f7b0e857335184ba072923d77c2a\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\35bfc90042404d74e17c9cac6ef92868\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\35bfc90042404d74e17c9cac6ef92868\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a06172b31b735c634f8ccd2cd566ce48\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a06172b31b735c634f8ccd2cd566ce48\AndroidManifest.xml:5:5-7:41
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:7:5-9:41
 MERGED from [:base_library_pullToRefresh_chenyoca] D:\AndroidStudio\Gohospital\base_library_pullToRefresh_chenyoca\build\intermediates\manifests\full\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:base_library_pullToRefresh_chenyoca] D:\AndroidStudio\Gohospital\base_library_pullToRefresh_chenyoca\build\intermediates\manifests\full\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\drawee-0.14.1.aar\87a9afe8356edda3907c310809649216\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\drawee-0.14.1.aar\87a9afe8356edda3907c310809649216\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\fbcore-0.14.1.aar\ec02c4a0a39da2dbf3b697271c31d3ae\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:0.14.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\fbcore-0.14.1.aar\ec02c4a0a39da2dbf3b697271c31d3ae\AndroidManifest.xml:5:5-7:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\dc6e8cf7032e7a4da32f8fc3ac46407d\AndroidManifest.xml:19:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\dc6e8cf7032e7a4da32f8fc3ac46407d\AndroidManifest.xml:19:5-43
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\808531540f175a1bb962b443c7001a5f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\808531540f175a1bb962b443c7001a5f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3cc97c8baafacb054120584034c96a14\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3cc97c8baafacb054120584034c96a14\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\bfd18ece02a1e580e240bc1b9ac02ccb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\bfd18ece02a1e580e240bc1b9ac02ccb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\470dcfc2dea59c33669de499392b735e\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\470dcfc2dea59c33669de499392b735e\AndroidManifest.xml:20:5-44
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:6:5-8:41
-INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:6:5-8:41
+MERGED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:7:5-9:41
+MERGED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:7:5-9:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\732890801b4f0a9d0f312addc0bd23df\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.1.aar\732890801b4f0a9d0f312addc0bd23df\AndroidManifest.xml:19:5-43
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\997caf3a2264b16eef7f66e00c03b159\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\997caf3a2264b16eef7f66e00c03b159\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\774348afe4b8f9dc84ee03a768ddaf6c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\774348afe4b8f9dc84ee03a768ddaf6c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\bfffade69cf419f18a18c67def1ba032\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\bfffade69cf419f18a18c67def1ba032\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b915705d2f80363572538ba495685f02\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b915705d2f80363572538ba495685f02\AndroidManifest.xml:20:5-44
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:8:9-38
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:8:9-35
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:10:5-67
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:11:5-67
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:11:5-67
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:11:5-67
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:11:5-67
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:10:22-64
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:13:5-80
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:13:5-80
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:13:5-80
-	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:13:22-77
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:14:5-82
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:12:5-81
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:12:5-81
-	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:14:22-80
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:11:22-64
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:16:5-83
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:16:5-84
 	android:name
 		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:16:22-81
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:18:5-79
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:17:5-79
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:18:22-76
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:17:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:19:5-76
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:18:5-76
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:19:22-73
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:18:22-73
 uses-permission#android.permission.FLASHLIGHT
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:21:5-69
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:20:5-69
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:21:22-66
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:20:22-66
 uses-permission#android.permission.VIBRATE
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:22:5-66
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:21:5-66
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:22:22-63
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:21:22-63
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:24:5-80
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:13:5-80
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:24:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:25:5-81
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:12:5-81
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:25:22-78
 uses-permission#android.permission.CAMERA
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:27:5-64
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:28:5-65
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:27:22-62
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:28:22-62
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:28:5-70
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:29:5-71
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:28:22-68
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:29:22-68
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:29:5-74
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:30:5-75
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:29:22-72
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:30:22-72
 uses-permission#android.permission.BLUETOOTH
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:32:5-68
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:33:5-68
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:32:22-65
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:33:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:33:5-74
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:34:5-74
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:33:22-71
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:34:22-71
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:34:5-79
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:35:5-80
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:34:22-77
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:35:22-77
 uses-permission#android.permission.BROADCAST_STICKY
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:35:5-74
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:36:5-75
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:35:22-72
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:36:22-72
 uses-permission#android.permission.WAKE_LOCK
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:36:5-68
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:37:5-68
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:36:22-65
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:37:22-65
 uses-feature#android.hardware.camera
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:37:5-60
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:39:5-60
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:37:19-57
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:39:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:38:5-70
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:40:5-70
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:38:19-67
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:40:19-67
 uses-feature#0x00020000
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:39:5-78
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:41:5-43:35
 	android:glEsVersion
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:39:19-51
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:42:9-41
 	android:required
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:39:52-75
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:43:9-32
+permission#com.example.life.permission.RECEIVE_MSG
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:46:5-48:47
+	android:protectionLevel
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:48:9-44
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:47:9-63
+uses-permission#com.example.life.permission.RECEIVE_MSG
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:50:5-79
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:50:22-76
 application
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:42:5-132:19
-MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.3.aar\9cabdb76dfa704b3621e8505c7dbc58c\AndroidManifest.xml:12:5-20
-MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.3.aar\9cabdb76dfa704b3621e8505c7dbc58c\AndroidManifest.xml:12:5-20
-MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\9bc31f4b52db7466ead276a6e86b9c7c\AndroidManifest.xml:9:5-20
-MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\9bc31f4b52db7466ead276a6e86b9c7c\AndroidManifest.xml:9:5-20
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:7:5-12:19
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2fc58504ff7a2ab13d75eb2bcf725eec\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2fc58504ff7a2ab13d75eb2bcf725eec\AndroidManifest.xml:22:5-26:19
-MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:11:5-34:19
-MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:11:5-34:19
-MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\a6569970a6cd402b7ed000c88800a736\AndroidManifest.xml:11:5-20
-MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\a6569970a6cd402b7ed000c88800a736\AndroidManifest.xml:11:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\f14296bb7c266b3d40562b725bec6556\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\f14296bb7c266b3d40562b725bec6556\AndroidManifest.xml:9:5-20
-MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\782ad0d9109783b592d60a494fe0d4b3\AndroidManifest.xml:11:5-12:19
-MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\782ad0d9109783b592d60a494fe0d4b3\AndroidManifest.xml:11:5-12:19
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\b3b249a5ef31e6263ee1a5e2fef523d3\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\b3b249a5ef31e6263ee1a5e2fef523d3\AndroidManifest.xml:9:5-20
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:17:5-24:19
-MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:17:5-24:19
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:52:5-193:19
+MERGED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-160:19
+MERGED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-160:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\982c0c60dcd77b8a2f214b9c11502a6e\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\982c0c60dcd77b8a2f214b9c11502a6e\AndroidManifest.xml:9:5-20
+MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\f20b9bba92070553cd3512a958b184b1\AndroidManifest.xml:9:5-20
+MERGED from [com.ms-square:expandableTextView:0.1.4] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\expandableTextView-0.1.4.aar\f20b9bba92070553cd3512a958b184b1\AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:7:5-12:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\d963f4788bec37570b5cb23b8d641145\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\d963f4788bec37570b5cb23b8d641145\AndroidManifest.xml:22:5-26:19
+MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\13e51e7f68fb46f62b30cbea3a0889c8\AndroidManifest.xml:11:5-12:19
+MERGED from [com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\library-1.1.0-SNAPSHOT.aar\13e51e7f68fb46f62b30cbea3a0889c8\AndroidManifest.xml:11:5-12:19
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:11:5-34:19
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:11:5-34:19
+MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\dc944193894b0e8db67d28f3cad5cd9f\AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\glide-4.5.0.aar\dc944193894b0e8db67d28f3cad5cd9f\AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\35bfc90042404d74e17c9cac6ef92868\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.5.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.5.0.aar\35bfc90042404d74e17c9cac6ef92868\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a06172b31b735c634f8ccd2cd566ce48\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a06172b31b735c634f8ccd2cd566ce48\AndroidManifest.xml:9:5-20
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:17:5-24:19
+MERGED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:17:5-24:19
 MERGED from [:base_library_pullToRefresh_chenyoca] D:\AndroidStudio\Gohospital\base_library_pullToRefresh_chenyoca\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-20
 MERGED from [:base_library_pullToRefresh_chenyoca] D:\AndroidStudio\Gohospital\base_library_pullToRefresh_chenyoca\build\intermediates\manifests\full\debug\AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:45:9-41
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:56:9-41
 	android:icon
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:44:9-41
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:55:9-41
 	android:allowBackup
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:43:9-35
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:54:9-35
 	android:theme
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:46:9-40
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:57:9-40
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:53:9-34
 activity#init.SplashActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:47:9-54:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:58:9-67:20
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:49:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:60:13-49
 	android:theme
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:48:13-44
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:61:13-44
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:47:19-53
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:59:13-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:50:13-53:29
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:62:13-66:29
 action#android.intent.action.MAIN
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:51:17-69
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:63:17-69
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:51:25-66
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:63:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:52:17-77
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:65:17-77
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:52:27-74
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:65:27-74
 activity#main.MainActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:55:9-58:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:68:9-71:69
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:57:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:70:13-49
 	android:theme
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:56:13-57
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:71:13-57
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:55:19-51
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:69:13-45
 activity#user.LoginActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:59:9-61:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:72:9-74:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:60:9-45
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:74:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:59:19-52
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:73:13-46
 activity#user.ForgetPassActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:62:9-64:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:75:9-77:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:63:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:77:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:62:19-57
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:76:13-51
 activity#user.RegisterActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:65:9-67:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:78:9-80:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:66:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:80:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:65:19-55
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:79:13-49
 activity#appoint.AppointmentActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:68:9-70:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:81:9-83:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:69:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:83:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:68:19-61
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:82:13-55
 activity#my.MyInforActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:71:9-73:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:84:9-86:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:72:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:86:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:71:19-52
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:85:13-46
 activity#setting.SettingActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:74:9-76:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:87:9-89:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:75:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:89:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:74:19-57
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:88:13-51
 activity#appoint.HospitalActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:77:9-79:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:90:9-92:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:78:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:92:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:77:19-58
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:91:13-52
 activity#appoint.ConfirmActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:80:9-82:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:93:9-95:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:81:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:95:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:80:19-57
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:94:13-51
 activity#appoint.DeptActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:83:9-85:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:96:9-98:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:84:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:98:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:83:19-54
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:97:13-48
 activity#appoint.DoctorActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:86:9-88:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:99:9-101:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:87:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:101:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:86:19-56
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:100:13-50
 activity#home.ForecastActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:89:9-91:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:102:9-104:61
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:90:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:104:13-49
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:89:19-55
-activity#news.NewsOpenActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:92:9-94:20
-	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:93:13-49
-	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:92:19-55
-activity#ask.AskOpenActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:95:9-97:20
-	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:96:13-49
-	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:95:19-53
-activity#ask.AskNewActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:98:9-100:20
-	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:99:13-49
-	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:98:19-52
-activity#my.MyLoveActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:101:9-104:20
-	android:screenOrientation
 		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:103:13-49
-	android:theme
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:102:13-57
-	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:101:19-51
-activity#main.SearchActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:105:9-108:20
+activity#news.NewsOpenActivity
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:105:9-107:61
 	android:screenOrientation
 		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:107:13-49
-	android:theme
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:106:13-57
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:105:19-53
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:106:13-49
+activity#ask.AskOpenActivity
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:108:9-110:61
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:110:13-49
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:109:13-47
+activity#ask.AskNewActivity
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:111:9-113:61
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:113:13-49
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:112:13-46
+activity#my.MyLoveActivity
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:114:9-117:69
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:116:13-49
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:117:13-57
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:115:13-45
+activity#main.SearchActivity
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:118:9-121:69
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:120:13-49
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:121:13-57
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:119:13-47
 activity#home.ForecastResultActivity
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:109:9-112:20
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:122:9-125:69
 	android:screenOrientation
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:111:13-49
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:124:13-49
 	android:theme
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:110:13-57
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:125:13-57
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:109:19-61
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:123:13-55
+activity#msg.MsgActivity
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:126:9-129:69
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:128:13-49
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:129:13-57
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:127:13-43
+activity#com.example.life.KotlinAboutActivity
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:130:9-133:81
+	android:screenOrientation
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:132:13-49
+	android:theme
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:133:13-69
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:131:13-48
 meta-data#com.netease.nim.appKey
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:127:9-129:64
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:146:9-148:64
 	android:value
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:129:13-61
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:148:13-61
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:128:13-50
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:147:13-50
+service#com.netease.nimlib.service.NimService
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:151:9-153:39
+	android:process
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:153:13-36
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:152:13-65
+service#com.netease.nimlib.service.NimService$Aux
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:156:9-158:39
+	android:process
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:158:13-36
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:157:13-69
+service#com.netease.nimlib.job.NIMJobService
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:161:9-165:39
+	android:process
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:165:13-36
+	android:exported
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:163:13-36
+	android:permission
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:164:13-69
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:162:13-64
+receiver#com.netease.nimlib.service.NimReceiver
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:168:9-176:20
+	android:process
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:171:13-36
+	android:exported
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:170:13-37
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:169:13-66
+intent-filter#android.intent.action.BOOT_COMPLETED+android.net.conn.CONNECTIVITY_CHANGE
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:172:13-175:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:173:17-79
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:173:25-76
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:174:17-79
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:174:25-76
+receiver#com.netease.nimlib.service.ResponseReceiver
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:179:9-80
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:179:19-77
+service#com.netease.nimlib.service.ResponseService
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:182:9-78
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:182:18-75
+provider#com.netease.nimlib.ipc.NIMContentProvider
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:186:9-190:39
+	android:process
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:190:13-36
+	android:authorities
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:188:13-64
+	android:exported
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:189:13-37
+	android:name
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:187:13-69
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:122:13-124:61
+ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:141:13-143:61
 	android:resource
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:124:17-58
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:143:17-58
 	android:name
-		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:123:17-67
-provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:8:9-11:40
-	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:10:13-72
-	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:11:13-37
-	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\5a572d0539b3422fa2936ff70d8ce7d1\AndroidManifest.xml:9:13-64
-meta-data#android.support.VERSION
-ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2fc58504ff7a2ab13d75eb2bcf725eec\AndroidManifest.xml:23:9-25:38
+		ADDED from D:\AndroidStudio\Gohospital\app\src\main\AndroidManifest.xml:142:17-67
+meta-data#com.netease.nim.uikit.support.glide.NIMGlideModule
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:10:9-12:43
 	android:value
-		ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2fc58504ff7a2ab13d75eb2bcf725eec\AndroidManifest.xml:25:13-35
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:12:13-40
 	android:name
-		ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2fc58504ff7a2ab13d75eb2bcf725eec\AndroidManifest.xml:24:13-51
-provider#com.luck.picture.lib.PictureFileProvider
-ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:12:9-20:20
-	android:grantUriPermissions
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:16:13-47
-	android:authorities
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:14:13-60
-	android:exported
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:15:13-37
-	android:name
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:13:13-68
-activity#com.luck.picture.lib.PictureSelectorActivity
-ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:22:9-24:55
-	android:windowSoftInputMode
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:24:13-52
-	android:name
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:23:13-72
-activity#com.luck.picture.lib.PicturePreviewActivity
-ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:25:9-80
-	android:name
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:25:19-77
-activity#com.luck.picture.lib.PictureVideoPlayActivity
-ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:26:9-29:50
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:13-78
+activity#com.netease.nim.uikit.business.session.activity.P2PMessageActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:19:9-24:70
 	android:screenOrientation
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:29:13-47
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:22:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:24:13-67
 	android:configChanges
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:28:13-74
-	android:name
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:27:13-73
-activity#com.luck.picture.lib.PictureExternalPreviewActivity
-ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:30:9-88
-	android:name
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:30:19-85
-activity#com.yalantis.ucrop.UCropActivity
-ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:31:9-69
-	android:name
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:31:19-66
-activity#com.yalantis.ucrop.PictureMultiCuttingActivity
-ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:32:9-83
-	android:name
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:32:19-80
-activity#com.luck.picture.lib.PicturePlayAudioActivity
-ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:33:9-82
-	android:name
-		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\64e9317b0855822685675e8ce40a1864\AndroidManifest.xml:33:19-79
-uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
-ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:15:5-83
-	android:name
-		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:15:22-80
-activity#com.azhon.appupdate.activity.PermissionActivity
-ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:18:9-21:53
-	android:label
-		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:20:13-29
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:21:13-63
 	android:theme
-		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:21:13-50
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:23:13-69
 	android:name
-		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:19:13-75
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:13-94
+activity#com.netease.nim.uikit.business.session.activity.TeamMessageActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:9-30:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:28:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:30:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:27:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:26:13-95
+activity#com.netease.nim.uikit.business.team.activity.NormalTeamInfoActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:33:9-38:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:36:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:38:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:35:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:37:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:34:13-95
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamInfoActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:39:9-44:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:42:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:44:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:41:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:43:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:40:13-97
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamMemberActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:45:9-50:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:48:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:50:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:47:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:49:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:46:13-99
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamAnnounceActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:51:9-56:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:54:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:56:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:53:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:55:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:52:13-101
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamMemberInfoActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:57:9-62:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:60:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:62:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:59:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:61:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:58:13-103
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamNicknameActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:63:9-68:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:66:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:68:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:65:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:67:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:64:13-101
+activity#com.netease.nim.uikit.business.team.activity.AdvancedTeamCreateAnnounceActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:69:9-74:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:72:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:74:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:71:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:73:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:70:13-107
+activity#com.netease.nim.uikit.business.team.activity.TeamPropertySettingActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:75:9-80:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:78:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:80:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:77:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:79:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:76:13-100
+activity#com.netease.nim.uikit.business.contact.selector.activity.ContactSelectActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:83:9-89:67
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:87:13-49
+	android:label
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:86:13-53
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:89:13-64
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:85:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:88:13-69
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:84:13-106
+activity#com.netease.nim.uikit.business.ait.selector.AitContactSelectorActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:92:9-95:72
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:94:13-49
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:95:13-69
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:93:13-98
+activity#com.netease.nim.uikit.common.media.picker.activity.PickImageActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:98:9-101:59
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:100:13-49
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:101:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:99:13-96
+activity#com.netease.nim.uikit.common.media.picker.activity.CropImageActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:102:9-105:59
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:104:13-49
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:105:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:103:13-96
+activity#com.netease.nim.uikit.common.media.picker.activity.PickerAlbumActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:106:9-109:59
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:108:13-49
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:109:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:107:13-98
+activity#com.netease.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:110:9-113:59
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:112:13-49
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:113:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:111:13-105
+activity#com.netease.nim.uikit.common.media.picker.activity.PreviewImageFromLocalActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:114:9-119:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:117:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:119:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:116:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:118:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:115:13-108
+activity#com.netease.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:120:9-126:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:124:13-49
+	android:label
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:123:13-53
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:126:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:122:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:125:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:121:13-109
+activity#com.netease.nim.uikit.business.session.activity.CaptureVideoActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:129:9-134:70
+	android:screenOrientation
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:132:13-49
+	android:windowSoftInputMode
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:134:13-67
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:131:13-63
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:133:13-56
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:130:13-96
+activity#com.netease.nim.uikit.business.session.activity.WatchVideoActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:135:9-139:48
+	android:label
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:138:13-47
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:137:13-74
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:139:13-45
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:136:13-94
+activity#com.netease.nim.uikit.business.session.activity.WatchMessagePictureActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:142:9-145:48
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:144:13-51
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:145:13-45
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:143:13-103
+activity#com.netease.nim.uikit.business.session.activity.WatchPicAndVideoMenuActivity
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:146:9-149:48
+	android:configChanges
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:148:13-51
+	android:theme
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:149:13-45
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:147:13-104
+provider#com.netease.nim.uikit.common.media.picker.model.GenericFileProvider
+ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:151:9-159:20
+	android:grantUriPermissions
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:155:13-47
+	android:authorities
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:153:13-73
+	android:exported
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:154:13-37
+	android:name
+		ADDED from [:uikit1] D:\AndroidStudio\Gohospital\uikit\build\intermediates\manifests\full\debug\AndroidManifest.xml:152:13-95
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picasso-2.71828.aar\6524a433a4fc88b4d9e8fef523faf88b\AndroidManifest.xml:9:13-64
+meta-data#android.support.VERSION
+ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\d963f4788bec37570b5cb23b8d641145\AndroidManifest.xml:23:9-25:38
+	android:value
+		ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\d963f4788bec37570b5cb23b8d641145\AndroidManifest.xml:25:13-35
+	android:name
+		ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\d963f4788bec37570b5cb23b8d641145\AndroidManifest.xml:24:13-51
+provider#com.luck.picture.lib.PictureFileProvider
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:14:13-60
+	android:exported
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:13:13-68
+activity#com.luck.picture.lib.PictureSelectorActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:22:9-24:55
+	android:windowSoftInputMode
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:24:13-52
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:23:13-72
+activity#com.luck.picture.lib.PicturePreviewActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:25:9-80
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:25:19-77
+activity#com.luck.picture.lib.PictureVideoPlayActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:26:9-29:50
+	android:screenOrientation
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:29:13-47
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:28:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:27:13-73
+activity#com.luck.picture.lib.PictureExternalPreviewActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:30:9-88
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:30:19-85
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:31:9-69
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:31:19-66
+activity#com.yalantis.ucrop.PictureMultiCuttingActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:32:9-83
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:32:19-80
+activity#com.luck.picture.lib.PicturePlayAudioActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:33:9-82
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.2.3] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\picture_library-v2.2.3.aar\ad63cff6e64e28b6f0234bbce19d0f53\AndroidManifest.xml:33:19-79
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:15:5-83
+	android:name
+		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:15:22-80
+activity#com.azhon.appupdate.activity.PermissionActivity
+ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:18:9-21:53
+	android:label
+		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:20:13-29
+	android:theme
+		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:21:13-50
+	android:name
+		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:19:13-75
 service#com.azhon.appupdate.service.DownloadService
-ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:23:9-79
+ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:23:9-79
 	android:name
-		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\c2559c99e774c3a27880ae2b9378b578\AndroidManifest.xml:23:18-76
+		ADDED from [com.azhon:appupdate:1.6.0] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\appupdate-1.6.0.aar\867470da226b195c26b66104fbfde7e8\AndroidManifest.xml:23:18-76
+uses-permission#com.sec.android.provider.badge.permission.READ
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:19:22-83
+uses-permission#com.sec.android.provider.badge.permission.WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:20:5-87
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:20:22-84
+uses-permission#com.htc.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:23:22-78
+uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:24:22-80
+uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:27:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:27:22-85
+uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:28:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:28:22-89
+uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:31:5-84
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:31:22-81
+uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:34:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:34:22-80
+uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:37:5-91
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:37:22-88
+uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:38:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:38:22-89
+uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:39:5-93
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:39:22-90
+uses-permission#android.permission.READ_APP_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:42:5-73
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:42:22-70
+uses-permission#com.oppo.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:45:5-82
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:45:22-79
+uses-permission#com.oppo.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:46:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:46:22-80
+uses-permission#me.everything.badger.permission.BADGE_COUNT_READ
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:49:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:49:22-85
+uses-permission#me.everything.badger.permission.BADGE_COUNT_WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:50:5-89
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\lenovo\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.17.aar\524c19d58a1b2b4af3ea3f5a066253da\AndroidManifest.xml:50:22-86

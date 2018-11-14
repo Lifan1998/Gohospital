@@ -11,16 +11,24 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tl_tab"
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            app:tabIndicatorColor="@color/apptheme"
-            app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/apptheme"
-            app:tabTextColor="@color/qmui_config_color_gray_3" />
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
 
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tl_tab"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                app:tabIndicatorColor="@color/apptheme"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/apptheme"
+                app:tabTextColor="@color/qmui_config_color_gray_3" />
 
+        </android.support.v7.widget.CardView>
         <android.support.v4.view.ViewPager
             android:id="@+id/vp_pager"
             android:layout_width="match_parent"

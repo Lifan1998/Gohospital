@@ -1,7 +1,9 @@
 package home;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -9,10 +11,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.life.R;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.msg.MsgService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import config.Preferences;
+import msg.MsgActivity;
+import user.LoginActivity;
 
 /**
  * @author lifan
@@ -51,11 +58,27 @@ public class ForecastResultActivity extends Activity {
         tvTitle.setText("健康评估");
         tvForecastResult.setText(result+"%");
         forecastName.setText(name+"  您的预测结果如下！");
+        int unreadNum = NIMClient.getService(MsgService.class).getTotalUnreadCount();
+        if(unreadNum==0){
+            tvMsgNum.setVisibility(View.INVISIBLE);
+        }else {
+            tvMsgNum.setText(unreadNum+"");
+        }
 
     }
     @OnClick(R.id.layout_return)
     public void exit(){
         finish();
+    }
+    @OnClick({R.id.iv_msg,R.id.tv_msg_num})
+    public void msgStart(){
+
+        if (Preferences.getInstance().isSign()){
+            startActivity(new Intent(this, MsgActivity.class));
+        } else {
+            startActivity(new Intent(this, LoginActivity.class));
+        }
+
     }
 
 }

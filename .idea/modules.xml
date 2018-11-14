@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Gohospital.iml" filepath="$PROJECT_DIR$/Gohospital.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/base_library_pullToRefresh_chenyoca/base_library_pullToRefresh_chenyoca.iml" filepath="$PROJECT_DIR$/base_library_pullToRefresh_chenyoca/base_library_pullToRefresh_chenyoca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uikit/uikit1.iml" filepath="$PROJECT_DIR$/uikit/uikit1.iml" />
     </modules>
   </component>
 </project>

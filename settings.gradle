@@ -1,3 +1,4 @@
-include ':app'
+include ':app', ':uikit1'
 
 include ':base_library_pullToRefresh_chenyoca'
+project(':uikit1').projectDir = new File('uikit')

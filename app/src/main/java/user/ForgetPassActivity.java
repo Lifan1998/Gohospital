@@ -34,6 +34,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import config.Preferences;
 import user.util.Utils;
 import config.App;
 
@@ -118,11 +119,8 @@ public class ForgetPassActivity extends Activity implements OnClickListener {
                             JSONObject jsonObject = new JSONObject(response.toString());
                             JSONObject jsonObject1 = jsonObject.getJSONObject("model");
                             String token = jsonObject1.getString("token");
-                            SharedPreferences settings = getSharedPreferences("base", 0);
-                            SharedPreferences.Editor editor = settings.edit();
-                            editor.putString("token", token);
-                            // 提交本次编辑
-                            editor.commit();
+                            Preferences.getInstance().setToken(token);
+                            user.util.Utils.loginIM(username.getText().toString());
                             Log.v("LoginActivity",token);
 
                         } catch (JSONException e) {
@@ -143,7 +141,6 @@ public class ForgetPassActivity extends Activity implements OnClickListener {
                 //在这里设置需要post的参数
                 Map<String, String> map = new HashMap<String, String>();
                 map.put("tel",username.getText().toString() );
-
                 map.put("password",password.getText().toString());
                 return map;
             }

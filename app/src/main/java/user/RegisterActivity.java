@@ -31,6 +31,7 @@ import com.example.life.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import config.Preferences;
 import user.util.Utils;
 import config.App;
 
@@ -112,11 +113,8 @@ public class RegisterActivity extends Activity implements OnClickListener {
                                 JSONObject jsonObject = new JSONObject(response.toString());
                                 JSONObject jsonObject1 = jsonObject.getJSONObject("model");
                                 String token = jsonObject1.getString("token");
-                                SharedPreferences settings = getSharedPreferences("base", 0);
-                                SharedPreferences.Editor editor = settings.edit();
-                                editor.putString("token", token);
-                                // 提交本次编辑
-                                editor.commit();
+                                Preferences.getInstance().setToken(token);
+                                user.util.Utils.loginIM(username.getText().toString());
 
                             } catch (JSONException e) {
                                 e.printStackTrace();

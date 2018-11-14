@@ -94,7 +94,7 @@ public class NewsAdapter extends BaseAdapter {
             Picasso.get().load(imageUrls.get(2)).fit().into(viewHolderOne.itemNews1Image3);
             Log.v("Adapter",imageUrls.get(0));
             viewHolderOne.itemNews1Title.setText(result.getTitle());
-            viewHolderOne.itemNews1Comment.setText(result.getComment()+"");
+            //viewHolderOne.itemNews1Comment.setText(result.getComment()+"");
             viewHolderOne.itemNews1Time.setText(result.getTime());
             viewHolderOne.itemNews1Author.setText(result.getAuthor()+"|");
             viewHolderOne.itemNews1Recommend.setText(result.getRecommend()+"");
@@ -113,7 +113,7 @@ public class NewsAdapter extends BaseAdapter {
             Picasso.get().load(imageUrls.get(0)).fit().into(viewHolderTwo.itemNews2Image1);
 
             viewHolderTwo.itemNews2Title.setText(result.getTitle());
-            viewHolderTwo.itemNews2Comment.setText(result.getComment()+"");
+            //viewHolderTwo.itemNews2Comment.setText(result.getComment()+"");
             viewHolderTwo.itemNews2Time.setText(result.getTime());
             viewHolderTwo.itemNews2Author.setText(result.getAuthor()+"|");
             viewHolderTwo.itemNews2Recommend.setText(result.getRecommend()+"");
@@ -130,7 +130,7 @@ public class NewsAdapter extends BaseAdapter {
             }
             viewHolderThree.itemNews3Title.setText(result.getTitle());
             viewHolderThree.itemNews3Intro.setText(result.getIntro());
-            viewHolderThree.itemNews3Comment.setText(result.getComment()+"");
+            //viewHolderThree.itemNews3Comment.setText(result.getComment()+"");
             viewHolderThree.itemNews3Time.setText(result.getTime());
             viewHolderThree.itemNews3Author.setText(result.getAuthor()+"|");
             viewHolderThree.itemNews3Recommend.setText(result.getRecommend()+"");
@@ -181,8 +181,7 @@ public class NewsAdapter extends BaseAdapter {
         TextView itemNews1Author;
         @BindView(R.id.item_news1_time)
         TextView itemNews1Time;
-        @BindView(R.id.item_news1_comment)
-        TextView itemNews1Comment;
+
         @BindView(R.id.item_news1_recommend)
         TextView itemNews1Recommend;
 
@@ -198,8 +197,7 @@ public class NewsAdapter extends BaseAdapter {
         TextView itemNews2Author;
         @BindView(R.id.item_news2_time)
         TextView itemNews2Time;
-        @BindView(R.id.item_news2_comment)
-        TextView itemNews2Comment;
+
         @BindView(R.id.item_news2_recommend)
         TextView itemNews2Recommend;
         @BindView(R.id.item_news2_image1)
@@ -219,8 +217,7 @@ public class NewsAdapter extends BaseAdapter {
         TextView itemNews3Author;
         @BindView(R.id.item_news3_time)
         TextView itemNews3Time;
-        @BindView(R.id.item_news3_comment)
-        TextView itemNews3Comment;
+
         @BindView(R.id.item_news3_recommend)
         TextView itemNews3Recommend;
 

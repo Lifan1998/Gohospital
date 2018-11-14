@@ -22,7 +22,6 @@ public class NewsAdapter$ViewHolderTwo_ViewBinding<T extends NewsAdapter.ViewHol
     target.itemNews2Title = Utils.findRequiredViewAsType(source, R.id.item_news2_title, "field 'itemNews2Title'", TextView.class);
     target.itemNews2Author = Utils.findRequiredViewAsType(source, R.id.item_news2_author, "field 'itemNews2Author'", TextView.class);
     target.itemNews2Time = Utils.findRequiredViewAsType(source, R.id.item_news2_time, "field 'itemNews2Time'", TextView.class);
-    target.itemNews2Comment = Utils.findRequiredViewAsType(source, R.id.item_news2_comment, "field 'itemNews2Comment'", TextView.class);
     target.itemNews2Recommend = Utils.findRequiredViewAsType(source, R.id.item_news2_recommend, "field 'itemNews2Recommend'", TextView.class);
     target.itemNews2Image1 = Utils.findRequiredViewAsType(source, R.id.item_news2_image1, "field 'itemNews2Image1'", ImageView.class);
   }
@@ -36,7 +35,6 @@ public class NewsAdapter$ViewHolderTwo_ViewBinding<T extends NewsAdapter.ViewHol
     target.itemNews2Title = null;
     target.itemNews2Author = null;
     target.itemNews2Time = null;
-    target.itemNews2Comment = null;
     target.itemNews2Recommend = null;
     target.itemNews2Image1 = null;
 
