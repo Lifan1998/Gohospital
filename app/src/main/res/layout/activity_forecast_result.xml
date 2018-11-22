@@ -20,13 +20,19 @@
             android:layout_above="@id/tv_forecast_result"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="70dp"
-            android:text="李帆，您的预测结果如下！" />
+            android:text="李帆，您的预测结果如下:"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_above="@id/tv_forecast_result"
-            android:text="您的患癌风险为"/>
+            android:layout_centerHorizontal="true"
+            android:text="您的患癌风险为"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_forecast_result"
@@ -57,10 +63,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="*数据仅供参考"/>
+            android:layout_marginBottom="5dp"
+            android:text="*数据仅供参考"
+            android:textStyle="italic" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
